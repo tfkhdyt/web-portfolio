@@ -1,85 +1,93 @@
 import type { NextPage } from 'next'
+import BackToTop from '../components/BackToTop'
+import Layout from '../components/Layout'
+import { useEffect, useState } from 'react'
+import { themeChange } from 'theme-change'
 import Head from 'next/head'
-import Image from 'next/image'
+import Hero from '../components/Hero'
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    themeChange(false)
+    // 👆 false parameter is required for react project
+  }, [])
+  
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>TFKHDYT - Web Portfolio</title>
       </Head>
-
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
+      <Layout>
+        <Hero />
+        <p className='relative'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id ligula
+          egestas, maximus tellus sit amet, gravida justo. Integer rhoncus et
+          tellus rutrum fringilla. Vestibulum nulla lorem, consectetur at
+          euismod sed, pretium non massa. Duis justo odio, tristique quis
+          malesuada vel, aliquam in ante. Phasellus sed consequat arcu. Praesent
+          euismod, erat eu posuere malesuada, est eros fermentum mi, eget
+          rhoncus tortor nisl eget est. Aenean dapibus lacus sit amet lacus
+          malesuada sagittis. Maecenas dignissim lobortis elit euismod porta.
+          Mauris vel quam et massa aliquam finibus in vel eros. Mauris congue
+          neque ut semper fermentum. Pellentesque ac mauris nisl. Aliquam erat
+          volutpat. Curabitur ut mi sit amet tortor efficitur ullamcorper.
+          Mauris sed dolor laoreet, efficitur odio et, semper est. Nam nunc
+          velit, rhoncus eget nulla quis, finibus consectetur tellus.
+          Suspendisse eu ex eu dolor dapibus cursus. Duis nec ligula felis. Nunc
+          eget sapien ornare felis congue commodo at non enim. Sed vitae ipsum
+          posuere, suscipit eros eget, pharetra ligula. Vivamus eget nunc
+          malesuada, placerat libero ut, lobortis dolor. Aliquam erat volutpat.
+          Orci varius natoque penatibus et magnis dis parturient montes,
+          nascetur ridiculus mus. Duis hendrerit at turpis id congue. Sed eget
+          nunc eu massa lacinia placerat. Praesent mattis mi felis, vel maximus
+          diam pellentesque rutrum. Praesent porttitor mi non tortor accumsan
+          semper. Phasellus in dui ac neque venenatis porta vitae volutpat
+          risus. Pellentesque vestibulum mauris vitae augue laoreet, non
+          bibendum tellus cursus. Vivamus eu mi et urna scelerisque semper.
+          Curabitur vel ultrices orci. Pellentesque faucibus vitae urna et
+          pharetra. Donec ultricies fringilla dolor sit amet iaculis. Etiam eu
+          tincidunt dui, quis molestie nulla. Vestibulum a eros ultricies ante
+          laoreet iaculis. Vivamus nec sem non orci vestibulum dictum eget ac
+          arcu. Aliquam vitae enim odio. Cras molestie lacinia ante et tempor.
+          Cras interdum ex a neque cursus, non viverra urna vehicula. Phasellus
+          efficitur suscipit leo non blandit. Curabitur cursus nisl quis ipsum
+          tempus, non porta magna dapibus. Aliquam lorem ipsum, egestas eu
+          faucibus elementum, dictum ultricies nisi. Nunc ornare a ligula ut
+          consectetur. Pellentesque faucibus fringilla tempor. Nullam non ex
+          risus. Vivamus dapibus dui sed magna varius tristique. Maecenas
+          venenatis a nisi in semper. Etiam dictum consequat odio, ut ultricies
+          sem ullamcorper ut. Praesent ac nunc tortor. Nulla at ex metus. Fusce
+          semper ante vitae tortor iaculis mattis. Donec euismod diam ac dapibus
+          venenatis. Duis laoreet lacus in tortor eleifend, vitae condimentum
+          tellus tristique. Nunc cursus hendrerit erat et volutpat. Ut dictum
+          ornare cursus. Nulla eleifend interdum metus sit amet sodales.
+          Curabitur ipsum metus, dignissim in volutpat nec, cursus vitae nisi.
+          Fusce hendrerit sodales luctus. Sed in pulvinar tellus. Nunc sed
+          mauris nec augue pharetra faucibus sodales ut lorem. Maecenas
+          consequat ex sit amet mollis ultrices. Maecenas fringilla sapien eget
+          ligula rutrum accumsan. Curabitur non tortor lacus. Proin blandit,
+          tellus a aliquam luctus, libero eros pretium lorem, eget mattis urna
+          enim blandit arcu. Vestibulum maximus lacus at auctor venenatis.
+          Aenean facilisis mollis sapien. Pellentesque in massa eleifend,
+          sollicitudin mi porttitor, cursus tellus. Mauris scelerisque, ante sed
+          varius aliquet, dui nisi euismod erat, id ultricies mauris eros at
+          risus. Nunc a mi vel urna porta pretium ut id nisl. Nulla facilisi.
+          Nunc suscipit pulvinar suscipit. Ut ac mollis metus, mattis commodo
+          odio. Vestibulum molestie risus nisi, a rutrum leo venenatis in.
+          Quisque varius lacus eget fermentum rutrum. Donec vulputate vehicula
+          quam, malesuada porta velit. Morbi bibendum rhoncus ipsum, vitae
+          interdum orci sodales sed. Aenean id sem consequat, euismod neque
+          eget, congue sem. Integer placerat vel nulla a imperdiet. Nunc commodo
+          risus leo, vitae tempor eros tincidunt et. Proin ornare sapien in
+          tristique pharetra. Sed finibus purus leo, vitae tempor nisi
+          sollicitudin et. Sed at ligula nisi. Mauris ut felis volutpat, pretium
+          augue et, suscipit orci. Morbi molestie semper tortor sit amet
+          viverra.{' '}
         </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
-    </div>
+        <BackToTop />
+      </Layout>
+    </>
   )
 }
 
