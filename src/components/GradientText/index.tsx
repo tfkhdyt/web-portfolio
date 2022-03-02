@@ -4,15 +4,17 @@ const GradientText = ({
   children,
   style,
   from,
-  to
+  to,
 }: {
-  children: ReactNode,
-  style?: string,
-  from: string,
+  children: ReactNode
+  style?: string
+  from: string
   to: string
 }) => {
   return (
-    <h1 className={`bg-gradient-to-br ${from} ${to} bg-clip-text text-transparent ${style}`}>
+    <h1
+      className={`bg-gradient-to-br ${from} ${to} bg-clip-text text-transparent ${style}`}
+    >
       {children}
     </h1>
   )

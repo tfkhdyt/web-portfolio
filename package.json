@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier -cw ./src",
+    "lint": "eslint --fix ./src"
   },
   "dependencies": {
     "daisyui": "^2.2.2",

@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
-import BackToTop from '../components/BackToTop'
 import Layout from '../components/Layout'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { themeChange } from 'theme-change'
 import Head from 'next/head'
 import Hero from '../components/Hero'
@@ -11,7 +10,6 @@ const Home: NextPage = () => {
     themeChange(false)
     // 👆 false parameter is required for react project
   }, [])
-  
 
   return (
     <>
@@ -20,6 +18,9 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <Hero />
+        <div id='about' className='scroll-mt-20 text-3xl font-bold'>
+          About
+        </div>
         <p className='relative'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id ligula
           egestas, maximus tellus sit amet, gravida justo. Integer rhoncus et
@@ -85,7 +86,6 @@ const Home: NextPage = () => {
           augue et, suscipit orci. Morbi molestie semper tortor sit amet
           viverra.{' '}
         </p>
-        <BackToTop />
       </Layout>
     </>
   )
