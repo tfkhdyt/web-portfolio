@@ -5,6 +5,7 @@ import { themeChange } from 'theme-change'
 import Head from 'next/head'
 import Hero from '../components/Hero'
 import About from '../components/About/About'
+import Skills from '../components/Skills/Skills'
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <Layout>
         <Hero />
         <About />
+        <Skills />
       </Layout>
     </>
   )
