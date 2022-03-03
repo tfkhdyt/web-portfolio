@@ -22,8 +22,8 @@ const Navbar = () => {
   return (
     <div
       className={`navbar sticky top-0 z-50 w-full ${
-        scrollY >= 140 ? 'bg-base-100 shadow-md' : 'bg-ghost'
-      } transition-all duration-300`}
+        scrollY >= 140 ? 'bg-base-100 shadow-lg' : 'bg-ghost'
+      } transition-all duration-500`}
     >
       <div className='flex-none md:hidden'>
         <label htmlFor='my-drawer-3' className='btn btn-ghost btn-square'>

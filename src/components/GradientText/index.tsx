@@ -12,11 +12,11 @@ const GradientText = ({
   to: string
 }) => {
   return (
-    <h1
+    <span
       className={`bg-gradient-to-br ${from} ${to} bg-clip-text text-transparent ${style}`}
     >
       {children}
-    </h1>
+    </span>
   )
 }
 

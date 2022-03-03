@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 import GradientText from '../GradientText'
 import SocialMediaIcons from '../SocialMediaIcons'
@@ -15,6 +16,17 @@ const variants = {
 }
 
 const Hero = () => {
+  const [scrollY, setScrollY] = useState<number>(0)
+
+  useEffect(() => {
+    document
+      .querySelector('.drawer-content')!
+      .addEventListener('scroll', () => {
+        const element: Element = document.querySelector('.drawer-content')!
+        // console.log(element.scrollTop)
+        setScrollY(element.scrollTop)
+      })
+  }, [])
   const handleArrow = () => {
     document.querySelector('#about')!.scrollIntoView({
       behavior: 'smooth',
@@ -87,7 +99,9 @@ const Hero = () => {
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className='-mb-96 h-10 w-10 animate-bounce'
+              className={`-mb-80 h-10 w-10 animate-bounce ${
+                scrollY >= 140 && 'pointer-events-none opacity-0'
+              } transition-all duration-500`}
               fill='none'
               viewBox='0 0 24 24'
               stroke='currentColor'

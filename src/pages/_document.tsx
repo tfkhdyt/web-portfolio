@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html className='scroll-smooth'>
         <Head>
           <link rel='preconnect' href='https://fontbit.io' />
           <link
