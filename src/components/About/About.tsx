@@ -63,8 +63,8 @@ const About = () => {
               <p>
                 Hi everyone, my name is{' '}
                 <GradientText
-                  from='from-orange-500'
-                  to='to-violet-700'
+                  from='from-yellow-400'
+                  to='to-amber-500'
                   style='inline font-bold'
                 >
                   Taufik Hidayat

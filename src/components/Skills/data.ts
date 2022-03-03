@@ -1,42 +1,42 @@
 export const skills = [
   {
     title: 'HTML',
-    icon: '',
+    icon: 'html.svg',
     type: 'Language'
   },
   {
     title: 'CSS',
-    icon: '',
+    icon: 'css.svg',
     type: 'Language'
   },
   {
     title: 'JavaScript',
-    icon: '',
+    icon: 'js.svg',
     type: 'Language'
   },
   {
     title: 'TypeScript',
-    icon: '',
+    icon: 'ts.svg',
     type: 'Language'
   },
   {
     title: 'React',
-    icon: '',
+    icon: 'react.svg',
     type: 'Library'
   },
   {
     title: 'Next.js',
-    icon: '',
-    type: 'Framework'
+    icon: 'next.svg',
+    type: 'JS Framework'
   },
   {
     title: 'jQuery',
-    icon: '',
+    icon: 'jquery.svg',
     type: 'Library'
   },
   {
     title: 'Bootstrap',
-    icon: '',
+    icon: 'bootstrap.svg',
     type: 'CSS Framework'
   },
   {
