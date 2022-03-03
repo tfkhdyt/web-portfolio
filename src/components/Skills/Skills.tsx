@@ -1,8 +1,7 @@
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import GradientText from '../GradientText'
+import { AnimatePresence, motion } from 'framer-motion'
 import { skills } from './data'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import SkillBox from './SkillBox'
 
 const variants = {
   hidden: {
@@ -22,7 +21,7 @@ const variants = {
 }
 
 const About = () => {
-  const [category, setCategory] = useState<string[]>([
+  const [category] = useState<string[]>([
     ...new Set(skills.map((value) => value.type)),
   ])
   const [activeTab, setActiveTab] = useState(category[0])
@@ -64,10 +63,13 @@ const About = () => {
                   onClick={() => handleTabClick(value)}
                   className={`tab tab-bordered ${
                     activeTab === value && 'tab-active'
-                  } transition-all duration-500`}
+                  } space-x-2 transition-all duration-500`}
                   key={value}
                 >
-                  {value}
+                  <span>{value}</span>
+                  <span className={`badge badge-outline badge-sm`}>
+                    {skills.filter((e) => e.type === value).length}
+                  </span>
                 </a>
               ))}
             </motion.div>
@@ -80,29 +82,13 @@ const About = () => {
                     data-tip={value.title}
                     key={value.title}
                   >
-                    <motion.div
-                      variants={variants}
-                      initial='startFade'
-                      transition={{ duration: 0.75 }}
-                      whileInView='endFade'
-                      viewport={{ once: true }}
-                    >
-                      <div className='space-y-2 rounded-3xl bg-base-200 py-5 shadow-md shadow-base-300/75 transition duration-500 hover:bg-base-300'>
-                        {value.icon ? (
-                          <div className='flex justify-center'>
-                            <img
-                              src={`/icons/${value.icon}`}
-                              alt={`${value.title} icon`}
-                              className='pointer-events-none h-20'
-                            />
-                          </div>
-                        ) : (
-                          <p className='flex justify-center font-semibold leading-none text-base-content'>
-                            {value.title}
-                          </p>
-                        )}
-                      </div>
-                    </motion.div>
+                    <AnimatePresence exitBeforeEnter={true}>
+                      <SkillBox
+                        title={value.title}
+                        icon={value.icon}
+                        variants={variants}
+                      />
+                    </AnimatePresence>
                   </div>
                 ))}
             </div>
