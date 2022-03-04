@@ -73,7 +73,7 @@ const About = () => {
                 </a>
               ))}
             </motion.div>
-            <div className='grid grid-cols-2 gap-4 md:grid-cols-4'>
+            <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
               {skills
                 .filter((value) => value.type === activeTab)
                 .map((value) => (

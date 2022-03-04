@@ -20,9 +20,9 @@ export const skills = [
     type: 'Language',
   },
   {
-    title: 'React',
+    title: 'React (Library)',
     icon: 'react.svg',
-    type: 'Library',
+    type: 'JS Framework',
   },
   {
     title: 'Next.js',
@@ -30,9 +30,9 @@ export const skills = [
     type: 'JS Framework',
   },
   {
-    title: 'jQuery',
+    title: 'jQuery (Library)',
     icon: 'jquery.svg',
-    type: 'Library',
+    type: 'JS Framework',
   },
   {
     title: 'Bootstrap',
@@ -45,12 +45,12 @@ export const skills = [
     type: 'CSS Framework',
   },
   {
-    title: 'daisyUI',
+    title: 'daisyUI (Component)',
     icon: 'daisy.svg',
     type: 'CSS Framework',
   },
   {
-    title: 'Node.js',
+    title: 'Node.js (Runtime)',
     icon: 'node.svg',
     type: 'JS Framework',
   },
@@ -78,5 +78,50 @@ export const skills = [
     title: 'PHP',
     icon: 'php.svg',
     type: 'Language',
+  },
+  {
+    title: 'Pascal',
+    icon: 'pascal.png',
+    type: 'Language',
+  },
+  {
+    title: 'EJS',
+    icon: 'ejs.svg',
+    type: 'Language',
+  },
+  {
+    title: 'Golang',
+    icon: 'golang.svg',
+    type: 'Language',
+  },
+  {
+    title: 'Express',
+    icon: 'express.svg',
+    type: 'JS Framework',
+  },
+  {
+    title: 'NestJS',
+    icon: 'nest.svg',
+    type: 'JS Framework',
+  },
+  {
+    title: 'Telegraf',
+    icon: 'telegraf.svg',
+    type: 'JS Framework',
+  },
+  {
+    title: 'MongoDB',
+    icon: 'mongo.svg',
+    type: 'DBMS',
+  },
+  {
+    title: 'MySQL',
+    icon: 'mysql.svg',
+    type: 'DBMS',
+  },
+  {
+    title: 'SQLite',
+    icon: 'sqlite.svg',
+    type: 'DBMS',
   },
 ]
