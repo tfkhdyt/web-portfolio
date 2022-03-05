@@ -5,7 +5,7 @@ const SkillBox = ({ title, icon, variants }: ISkillBox) => (
   <motion.div
     variants={variants}
     initial={{ x: -25, opacity: 0 }}
-    transition={{ duration: 0.75 }}
+    transition={{ duration: 1 }}
     whileInView={{ x: 0, opacity: 1 }}
     exit={{ x: 25, opacity: 0 }}
     viewport={{ once: true }}

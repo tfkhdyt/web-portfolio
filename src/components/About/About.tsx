@@ -46,7 +46,7 @@ const About = () => {
               <motion.div
                 variants={variants}
                 initial='hidden'
-                transition={{ duration: 0.75 }}
+                transition={{ duration: 1 }}
                 whileInView='visible'
                 viewport={{ once: true }}
                 className='avatar'
@@ -64,7 +64,7 @@ const About = () => {
             <motion.div
               variants={variants}
               initial='hidden'
-              transition={{ duration: 0.75 }}
+              transition={{ duration: 1 }}
               whileInView='visible'
               viewport={{ once: true }}
               className='flex flex-col justify-start space-y-4 text-justify'
@@ -72,8 +72,8 @@ const About = () => {
               <p>
                 Hi everyone, my name is{' '}
                 <GradientText
-                  from='from-sky-400'
-                  to='to-amber-400'
+                  from='from-rose-600'
+                  to='to-indigo-600'
                   style='inline font-bold'
                 >
                   Taufik Hidayat

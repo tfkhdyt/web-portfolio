@@ -11,6 +11,14 @@ const variants = {
     opacity: 1,
     y: 0,
   },
+  slideToRightStart: {
+    x: -25,
+    opacity: 0,
+  },
+  slideToRightEnd: {
+    x: 0,
+    opacity: 1,
+  },
 }
 
 const Resume = () => {
@@ -39,9 +47,16 @@ const Resume = () => {
           </motion.div>
           <div className='grid grid-cols-1 gap-8'>
             <div>
-              <h1 className='mb-4 text-2xl font-bold text-base-100'>
+              <motion.h1
+                variants={variants}
+                initial='slideToRightStart'
+                transition={{ duration: 1 }}
+                whileInView='slideToRightEnd'
+                viewport={{ once: true }}
+                className='mb-4 text-2xl font-bold text-base-100'
+              >
                 Work Experience
-              </h1>
+              </motion.h1>
               <Card
                 title='Internship'
                 location='PT. Inovindo Digital Media'
@@ -57,15 +72,30 @@ const Resume = () => {
               </Card>
             </div>
             <div>
-              <h1 className='mb-4 text-2xl font-bold text-base-100'>
+              <motion.h1
+                variants={variants}
+                initial='slideToRightStart'
+                transition={{ duration: 1 }}
+                whileInView='slideToRightEnd'
+                viewport={{ once: true }}
+                className='mb-4 text-2xl font-bold text-base-100'
+              >
                 Education
-              </h1>
-              <Card
-                title='Vocational High School'
-                location='SMKN 7 Baleendah'
-                jurusan='Software Engineering'
-                time='2017 - 2020'
-              ></Card>
+              </motion.h1>
+              <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
+                <Card
+                  title='Vocational High School'
+                  location='SMKN 7 Baleendah'
+                  jurusan='Software Engineering'
+                  time='2017 - 2020'
+                ></Card>
+                <Card
+                  title='University'
+                  location='Universitas Bale Bandung'
+                  jurusan='Informatics Engineering'
+                  time='2020 - now'
+                ></Card>
+              </div>
             </div>
           </div>
         </div>

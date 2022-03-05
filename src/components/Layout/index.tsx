@@ -30,7 +30,7 @@ const Layout = ({ children }: LayoutProps) => {
         <div className=''>{children}</div>
       </div>
       <div className='drawer-side'>
-        <label htmlFor='my-drawer-3' className='drawer-overlay'></label>
+        <label htmlFor='my-drawer-3' className='gpu drawer-overlay'></label>
         <ul className='menu w-4/6 overflow-y-auto bg-base-100 p-4'>
           {/* Sidebar content here */}
           {menu.map((value) => {

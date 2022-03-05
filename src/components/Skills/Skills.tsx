@@ -39,7 +39,7 @@ const About = () => {
           <motion.div
             variants={variants}
             initial='hidden'
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 1 }}
             whileInView='visible'
             viewport={{ once: true }}
             className='flex w-full justify-center text-3xl font-black'
@@ -50,7 +50,7 @@ const About = () => {
             <motion.div
               variants={variants}
               initial='hidden'
-              transition={{ duration: 0.75 }}
+              transition={{ duration: 1 }}
               whileInView='visible'
               viewport={{ once: true }}
               className='tabs flex justify-center'
