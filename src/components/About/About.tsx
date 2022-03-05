@@ -16,7 +16,7 @@ const variants = {
 
 const About = () => {
   return (
-    <div>
+    <div id='about'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 1440 320'
@@ -28,10 +28,7 @@ const About = () => {
         ></path>
       </svg>
       {/* content */}
-      <div
-        className='-my-px w-screen scroll-mt-8 bg-blue-500 py-16 text-accent-content'
-        id='about'
-      >
+      <div className='-my-px w-screen bg-blue-500 text-accent-content'>
         <div className='container mx-auto space-y-10 px-6 md:px-12'>
           {/* title */}
           <motion.div
@@ -45,7 +42,7 @@ const About = () => {
             About
           </motion.div>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
-            <div className='flex justify-center md:justify-start'>
+            <div className='flex justify-center'>
               <motion.div
                 variants={variants}
                 initial='hidden'
@@ -54,7 +51,7 @@ const About = () => {
                 viewport={{ once: true }}
                 className='avatar'
               >
-                <div className='w-48 md:w-full'>
+                <div className='w-36 md:w-5/6'>
                   <Image
                     src={about.picture}
                     width={500}
@@ -70,13 +67,13 @@ const About = () => {
               transition={{ duration: 0.75 }}
               whileInView='visible'
               viewport={{ once: true }}
-              className='flex flex-col justify-start space-y-4 text-justify font-medium'
+              className='flex flex-col justify-start space-y-4 text-justify'
             >
               <p>
                 Hi everyone, my name is{' '}
                 <GradientText
-                  from='from-yellow-400'
-                  to='to-amber-500'
+                  from='from-sky-400'
+                  to='to-amber-400'
                   style='inline font-bold'
                 >
                   Taufik Hidayat

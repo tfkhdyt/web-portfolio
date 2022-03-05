@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Hero from '../components/Hero'
 import About from '../components/About/About'
 import Skills from '../components/Skills/Skills'
+import Resume from '../components/Resume/Resume'
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <Hero />
         <About />
         <Skills />
+        <Resume />
       </Layout>
     </>
   )

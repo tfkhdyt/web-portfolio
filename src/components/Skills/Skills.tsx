@@ -31,13 +31,10 @@ const About = () => {
   }
 
   return (
-    <div>
+    <div id='skills'>
       {/* content */}
-      <div
-        className='-my-px w-screen scroll-mt-4 bg-base-100 py-16 text-base-content'
-        id='skills'
-      >
-        <div className='container mx-auto space-y-10 px-6 md:px-12'>
+      <div className='mb-8 w-screen bg-base-100 py-16 text-base-content'>
+        <div className='container mx-auto space-y-10 px-6 md:h-[34rem] md:px-12'>
           {/* title */}
           <motion.div
             variants={variants}
@@ -82,7 +79,7 @@ const About = () => {
                     data-tip={value.title}
                     key={value.title}
                   >
-                    <AnimatePresence exitBeforeEnter={true}>
+                    <AnimatePresence exitBeforeEnter>
                       <SkillBox
                         title={value.title}
                         icon={value.icon}
