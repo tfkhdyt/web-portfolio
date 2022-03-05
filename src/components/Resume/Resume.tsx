@@ -1,6 +1,4 @@
-import Image from 'next/image'
 import { motion } from 'framer-motion'
-import GradientText from '../GradientText'
 import Card from './Card'
 // import { about } from './data'
 
@@ -67,8 +65,7 @@ const Resume = () => {
                 location='SMKN 7 Baleendah'
                 jurusan='Software Engineering'
                 time='2017 - 2020'
-              >
-              </Card>
+              ></Card>
             </div>
           </div>
         </div>
