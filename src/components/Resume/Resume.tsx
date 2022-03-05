@@ -1,5 +1,19 @@
 import { motion } from 'framer-motion'
+import { Line } from 'react-chartjs-2'
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+} from 'chart.js'
+
 import Card from './Card'
+import { useRef, useEffect, useState } from 'react'
 // import { about } from './data'
 
 const variants = {
@@ -22,6 +36,31 @@ const variants = {
 }
 
 const Resume = () => {
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler
+  )
+  const chartRef = useRef(null)
+  const [gradient, setGradient] = useState()
+
+  useEffect(() => {
+    const chart = chartRef.current
+
+    if (chart) {
+      const gradient = chart.ctx.createLinearGradient(0, 0, 0, 400)
+      gradient.addColorStop(0, 'rgba(250,174,50,1)')
+      gradient.addColorStop(0.5, 'rgba(250,174,50,0.5)')
+      gradient.addColorStop(1, 'rgba(250,174,50,0)')
+      setGradient(gradient)
+    }
+  }, [])
+
   return (
     <div id='resume'>
       <svg
@@ -94,7 +133,22 @@ const Resume = () => {
                   location='Universitas Bale Bandung'
                   jurusan='Informatics Engineering'
                   time='2020 - now'
-                ></Card>
+                >
+                  <Line
+                    ref={chartRef}
+                    data={{
+                      labels: ['1', '2', '3'],
+                      datasets: [
+                        {
+                          label: 'Grade Point',
+                          data: [3.5, 3.83, 3.9],
+                          fill: true,
+                          backgroundColor: gradient
+                        },
+                      ],
+                    }}
+                  />
+                </Card>
               </div>
             </div>
           </div>
