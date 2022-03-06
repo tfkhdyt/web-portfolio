@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Chart } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
+  LineController,
   CategoryScale,
   LinearScale,
   PointElement,
@@ -15,6 +16,18 @@ import {
 import Card from './Card'
 import { useRef, useEffect, useState } from 'react'
 import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
+
+ChartJS.register(
+  LineController,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+  Filler
+)
 
 const variants = {
   hidden: {
@@ -36,16 +49,6 @@ const variants = {
 }
 
 const Resume = () => {
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    PointElement,
-    LineElement,
-    Title,
-    Tooltip,
-    Legend,
-    Filler
-  )
   const chartKuliahref = useRef<ChartJS>(null)
   const chartSMKref = useRef<ChartJS>(null)
   const [kuliahDataSets, setKuliahDataSets] = useState({})
