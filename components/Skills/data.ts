@@ -124,4 +124,9 @@ export const skills = [
     icon: 'sqlite.svg',
     type: 'DBMS',
   },
+  {
+    title: 'Socket.io (Library)',
+    icon: 'socketio.svg',
+    type: 'JS Framework',
+  },
 ]
