@@ -1,18 +1,10 @@
-import { motion } from 'framer-motion'
-
 import { ICardProps } from '.'
 
 const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
   return (
-    <motion.div
-      initial={{ x: -25, opacity: 0 }}
-      whileInView={{ x: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-      className='card w-full bg-base-100 text-base-content shadow-xl'
-    >
+    <div className='card w-full bg-base-100 text-base-content shadow-xl'>
       <div className='card-body'>
-        <h2 className='card-title mb-2 text-xl font-black'>{title}</h2>
+        <h2 className='card-title -mt-2 mb-1 text-xl font-black'>{title}</h2>
         <div className='space-y-2 font-medium md:-my-2 md:flex md:items-center md:space-y-0 md:space-x-2'>
           <div className='flex flex-col'>
             <p>{location}</p>
@@ -26,7 +18,7 @@ const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
         </div>
         {children}
       </div>
-    </motion.div>
+    </div>
   )
 }
 

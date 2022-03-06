@@ -9,12 +9,13 @@ import {
   Title,
   Tooltip,
   Legend,
-  Filler
+  Filler,
+  Chart,
 } from 'chart.js'
 
 import Card from './Card'
 import { useRef, useEffect, useState } from 'react'
-// import { about } from './data'
+import { ips, chartKuliahOptions, chartKuliahPlugins } from './data'
 
 const variants = {
   hidden: {
@@ -46,20 +47,25 @@ const Resume = () => {
     Legend,
     Filler
   )
-  const chartRef = useRef(null)
-  const [gradient, setGradient] = useState()
+  const chartRef = useRef<Chart>(null)
+  const [kuliahDataSets, setKuliahDataSets] = useState({})
 
   useEffect(() => {
     const chart = chartRef.current
-
     if (chart) {
-      const gradient = chart.ctx.createLinearGradient(0, 0, 0, 400)
-      gradient.addColorStop(0, 'rgba(250,174,50,1)')
-      gradient.addColorStop(0.5, 'rgba(250,174,50,0.5)')
-      gradient.addColorStop(1, 'rgba(250,174,50,0)')
-      setGradient(gradient)
+      setKuliahDataSets({
+        backgroundColor: createGradient(chart.ctx),
+        fill: true,
+      })
     }
   }, [])
+
+  const createGradient = (ctx: CanvasRenderingContext2D) => {
+    const gradient = ctx.createLinearGradient(0, 0, 0, 140)
+    gradient.addColorStop(0, 'rgba(59, 130, 246, 1)')
+    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)')
+    return gradient
+  }
 
   return (
     <div id='resume'>
@@ -85,17 +91,16 @@ const Resume = () => {
             Resume
           </motion.div>
           <div className='grid grid-cols-1 gap-8'>
-            <div>
-              <motion.h1
-                variants={variants}
-                initial='slideToRightStart'
-                transition={{ duration: 1 }}
-                whileInView='slideToRightEnd'
-                viewport={{ once: true }}
-                className='mb-4 text-2xl font-bold text-base-100'
-              >
+            <motion.div
+              variants={variants}
+              initial='hidden'
+              transition={{ duration: 1 }}
+              whileInView='visible'
+              viewport={{ once: true }}
+            >
+              <h1 className='mb-4 text-2xl font-bold text-base-100'>
                 Work Experience
-              </motion.h1>
+              </h1>
               <Card
                 title='Internship'
                 location='PT. Inovindo Digital Media'
@@ -109,18 +114,17 @@ const Resume = () => {
                   <li>Blog Article Publishing</li>
                 </ul>
               </Card>
-            </div>
-            <div>
-              <motion.h1
-                variants={variants}
-                initial='slideToRightStart'
-                transition={{ duration: 1 }}
-                whileInView='slideToRightEnd'
-                viewport={{ once: true }}
-                className='mb-4 text-2xl font-bold text-base-100'
-              >
+            </motion.div>
+            <motion.div
+              variants={variants}
+              initial='hidden'
+              transition={{ duration: 1 }}
+              whileInView='visible'
+              viewport={{ once: true }}
+            >
+              <h1 className='mb-4 text-2xl font-bold text-base-100'>
                 Education
-              </motion.h1>
+              </h1>
               <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
                 <Card
                   title='Vocational High School'
@@ -140,17 +144,19 @@ const Resume = () => {
                       labels: ['1', '2', '3'],
                       datasets: [
                         {
+                          ...kuliahDataSets,
                           label: 'Grade Point',
-                          data: [3.5, 3.83, 3.9],
-                          fill: true,
-                          backgroundColor: gradient
+                          data: ips,
+                          pointHitRadius: 10,
                         },
                       ],
                     }}
+                    options={chartKuliahOptions}
+                    plugins={chartKuliahPlugins}
                   />
                 </Card>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

@@ -1,23 +1,33 @@
-const getAge = (dateString: string) => {
-  const today = new Date()
-  const birthDate = new Date(dateString)
-  let age = today.getFullYear() - birthDate.getFullYear()
-  const m = today.getMonth() - birthDate.getMonth()
-  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--
-  }
-  return age
+export const ips = [3.5, 3.83, 3.9]
+
+const ipk: string = (
+  ips.reduce((acc, cur) => acc + cur, 0) / ips.length
+).toFixed(2)
+
+export const chartKuliahOptions = {
+  aspectRatio: 1.3,
+  scales: {
+    x: {
+      title: {
+        display: true,
+        text: 'Semester',
+      },
+    },
+    y: {
+      display: true,
+      beginAtZero: true,
+      min: 0,
+      max: 4.0,
+      ticks: {
+        stepSize: 1,
+      },
+    },
+  },
 }
 
-export const about = {
-  picture: '/avatar.jpg',
-  description: [
-    `I live in Bandung, Indonesia. I was born in Majalengka, 1 April 2002. I'm ${getAge(
-      '2002-04-01'
-    )} years old. I'm an Informatics Student from Universitas Bale Bandung. `,
-    'My main tech stack is MN3 Stack (MongoDB, NestJS, Next.js, Node.js).',
-    'Coding has been my passion and hobby since I was 15 years old. I love computer since I was a kid. Besides coding, I love listening to music. My favorite genres are Pop Punk, Post-hardcore, Metalcore, Nu-metal, and Electronicore. I like playing games too. My favorite genre is shooting games',
-    'Sometimes I watch anime, but I prefer watching western movies and series, especially MCU (Marvel Cinematic Universe).',
-    'I spend lots of time on Facebook sharing memes and shitposts.',
-  ],
+export const chartKuliahPlugins = {
+  subtitle: {
+    display: true,
+    text: `GPA: ${ipk}`,
+  },
 }
