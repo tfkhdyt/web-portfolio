@@ -2,7 +2,7 @@ import { ICardProps } from '.'
 
 const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
   return (
-    <div className='card w-full bg-base-100 text-base-content shadow-xl'>
+    <div className='card w-full bg-base-100 text-base-content shadow-xl transition-all duration-500 hover:bg-base-300'>
       <div className='card-body'>
         <h2 className='card-title -mt-2 mb-1 text-xl font-black'>{title}</h2>
         <div className='space-y-2 font-medium md:-my-2 md:flex md:items-center md:space-y-0 md:space-x-2'>
