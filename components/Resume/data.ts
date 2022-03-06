@@ -9,7 +9,7 @@ const nilaiRataSemester: string = (
 ).toFixed(2)
 
 export const chartKuliahOptions = {
-  aspectRatio: 1.4,
+  maintainAspectRatio: false,
   scales: {
     x: {
       title: {
@@ -20,11 +20,11 @@ export const chartKuliahOptions = {
     y: {
       display: true,
       // beginAtZero: true,
-      // min: 3.0,
+      min: 3.4,
       // max: 4.0,
-      ticks: {
-        stepSize: 0.1,
-      },
+      /* ticks: {
+        stepSize: 0.5,
+      }, */
     },
   },
   plugins: {
@@ -36,7 +36,7 @@ export const chartKuliahOptions = {
 }
 
 export const chartSMKOptions = {
-  aspectRatio: 1.4,
+  maintainAspectRatio: false,
   scales: {
     x: {
       title: {

@@ -36,11 +36,11 @@ const Hero = () => {
 
   return (
     <div
-      className='hero top-0 -mt-20 min-h-screen w-screen bg-gradient-to-bl from-primary-content via-base-100 to-base-100'
+      className='hero top-0 -mt-20 min-h-screen w-screen bg-gradient-to-bl from-primary-content via-base-100 to-base-100 pb-px'
       id='hero'
     >
       <div className='hero-content'>
-        <div className='max-w-md px-4'>
+        <div className='max-w-md px-4 md:max-w-lg'>
           <motion.h1
             variants={variants}
             initial='hidden'
@@ -48,7 +48,7 @@ const Hero = () => {
             transition={{
               duration: 1,
             }}
-            className='text-2xl font-bold'
+            className='text-2xl font-bold md:text-4xl'
           >
             Hi, my name is
           </motion.h1>
@@ -59,7 +59,7 @@ const Hero = () => {
             transition={{
               duration: 1,
             }}
-            className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold tracking-normal text-transparent'
+            className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold leading-3 tracking-normal text-transparent md:text-6xl'
           >
             Taufik Hidayat
           </motion.h1>
@@ -70,7 +70,7 @@ const Hero = () => {
             transition={{
               duration: 1,
             }}
-            className='pt-2 pb-4 font-medium'
+            className='pt-2 pb-4 font-medium md:text-xl'
           >
             I'm a{' '}
             <GradientText

@@ -151,22 +151,24 @@ const Resume = () => {
                   jurusan='Software Engineering'
                   time='2017 - 2020'
                 >
-                  <Chart
-                    type='line'
-                    ref={chartSMKref}
-                    data={{
-                      labels: ['1', '2', '3', '4', '5', '6'],
-                      datasets: [
-                        {
-                          ...SMKDataSets,
-                          label: 'Grade Point',
-                          data: nilaiSemester,
-                          pointHitRadius: 10,
-                        },
-                      ],
-                    }}
-                    options={chartSMKOptions}
-                  />
+                  <div className='min-h-[200px]'>
+                    <Chart
+                      type='line'
+                      ref={chartSMKref}
+                      data={{
+                        labels: ['1', '2', '3', '4', '5', '6'],
+                        datasets: [
+                          {
+                            ...SMKDataSets,
+                            label: 'Grade Point',
+                            data: nilaiSemester,
+                            pointHitRadius: 10,
+                          },
+                        ],
+                      }}
+                      options={chartSMKOptions}
+                    />
+                  </div>
                 </Card>
                 <Card
                   title='University'
@@ -174,22 +176,24 @@ const Resume = () => {
                   jurusan='Informatics Engineering'
                   time='2020 - now'
                 >
-                  <Chart
-                    type='line'
-                    ref={chartKuliahref}
-                    data={{
-                      labels: ['1', '2', '3'],
-                      datasets: [
-                        {
-                          ...kuliahDataSets,
-                          label: 'Grade Point',
-                          data: ips,
-                          pointHitRadius: 10,
-                        },
-                      ],
-                    }}
-                    options={chartKuliahOptions}
-                  />
+                  <div className='min-h-[200px]'>
+                    <Chart
+                      type='line'
+                      ref={chartKuliahref}
+                      data={{
+                        labels: ['1', '2', '3'],
+                        datasets: [
+                          {
+                            ...kuliahDataSets,
+                            label: 'Grade Point',
+                            data: ips,
+                            pointHitRadius: 10,
+                          },
+                        ],
+                      }}
+                      options={chartKuliahOptions}
+                    />
+                  </div>
                 </Card>
               </div>
             </motion.div>
