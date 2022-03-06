@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Chart, Line } from 'react-chartjs-2'
+import { Chart } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -81,7 +81,7 @@ const Resume = () => {
   }
 
   return (
-    <div id='resume'>
+    <div>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 1440 320'
@@ -90,7 +90,10 @@ const Resume = () => {
         <path d='M0,32L48,42.7C96,53,192,75,288,101.3C384,128,480,160,576,165.3C672,171,768,149,864,122.7C960,96,1056,64,1152,48C1248,32,1344,32,1392,32L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'></path>
       </svg>
       {/* content */}
-      <div className='-my-px w-screen bg-blue-500 text-accent-content'>
+      <div
+        className='-my-px w-screen scroll-mt-24 bg-blue-500 text-accent-content'
+        id='resume'
+      >
         <div className='container mx-auto space-y-8 px-6 md:px-12 lg:px-56'>
           {/* title */}
           <motion.div

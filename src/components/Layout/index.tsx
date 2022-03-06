@@ -27,7 +27,7 @@ const Layout = ({ children }: LayoutProps) => {
         {/* Navbar */}
         <Navbar />
         {/* Page content here */}
-        <div className=''>{children}</div>
+        <div>{children}</div>
       </div>
       <div className='drawer-side'>
         <label htmlFor='my-drawer-3' className='gpu drawer-overlay'></label>

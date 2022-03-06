@@ -19,6 +19,15 @@ const Navbar = () => {
       })
   }, [])
 
+  const handleDrawer = (target: string) => {
+    setTimeout(() => {
+      document.querySelector(target)!.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }, 150)
+  }
+
   return (
     <>
       {/* <div
@@ -61,15 +70,23 @@ const Navbar = () => {
             {menu.map((value) => {
               return (
                 <li key={value.title}>
-                  <a href={value.to} className='font-semibold'>
+                  <label
+                    className='font-semibold'
+                    onClick={() => handleDrawer(value.to)}
+                  >
                     {value.title}
-                  </a>
+                  </label>
                 </li>
+                // <li key={value.title}>
+                //   <a href={value.to} className='font-semibold'>
+                //     {value.title}
+                //   </a>
+                // </li>
               )
             })}
           </ul>
         </div>
-        <div className='mr-2 flex-none md:mr-4 md:mr-0'>
+        <div className='mr-2 flex-none'>
           <div className='form-control'>
             <label className='label cursor-pointer space-x-1'>
               <span className='label-text'>🌞</span>
