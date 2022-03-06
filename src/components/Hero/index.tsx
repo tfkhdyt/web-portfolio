@@ -36,7 +36,7 @@ const Hero = () => {
 
   return (
     <div
-      className='hero top-0 -mt-20 min-h-screen bg-gradient-to-bl from-primary-content via-base-100 to-base-100'
+      className='hero top-0 -mt-20 min-h-screen w-screen bg-gradient-to-bl from-primary-content via-base-100 to-base-100'
       id='hero'
     >
       <div className='hero-content'>

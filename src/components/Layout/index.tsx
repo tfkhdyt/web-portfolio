@@ -23,7 +23,7 @@ const Layout = ({ children }: LayoutProps) => {
         className='drawer-toggle'
         ref={checkbox}
       />
-      <div className='drawer-content flex flex-col'>
+      <div className='drawer-content flex flex-col overflow-x-hidden'>
         {/* Navbar */}
         <Navbar />
         {/* Page content here */}
