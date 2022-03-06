@@ -25,5 +25,10 @@
         "react-hooks/exhaustive-deps": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
         "react/no-unescaped-entities": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

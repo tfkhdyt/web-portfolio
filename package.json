@@ -4,8 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier -cw ./src",
-    "lint": "eslint --fix ./src"
+    "format": "prettier -cw ./{pages,components}/**/*.{ts,tsx}",
+    "lint": "eslint --fix ./{pages,components}/**/*.{ts,tsx}"
   },
   "dependencies": {
     "chart.js": "^3.7.1",
