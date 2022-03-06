@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Line } from 'react-chartjs-2'
+import { Chart, Line } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -10,12 +10,11 @@ import {
   Tooltip,
   Legend,
   Filler,
-  Chart,
 } from 'chart.js'
 
 import Card from './Card'
 import { useRef, useEffect, useState } from 'react'
-import { ips, chartKuliahOptions, chartKuliahPlugins } from './data'
+import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
 const variants = {
   hidden: {
@@ -47,21 +46,35 @@ const Resume = () => {
     Legend,
     Filler
   )
-  const chartRef = useRef<Chart>(null)
+  const chartKuliahref = useRef<ChartJS>(null)
+  const chartSMKref = useRef<ChartJS>(null)
   const [kuliahDataSets, setKuliahDataSets] = useState({})
+  const [SMKDataSets, setSMKDataSets] = useState({})
 
   useEffect(() => {
-    const chart = chartRef.current
+    const chart = chartKuliahref.current
     if (chart) {
       setKuliahDataSets({
         backgroundColor: createGradient(chart.ctx),
+        color: '#708090',
         fill: true,
+        tension: 0.4,
+      })
+    }
+
+    const chartSMK = chartSMKref.current
+    if (chartSMK) {
+      setSMKDataSets({
+        backgroundColor: createGradient(chartSMK.ctx),
+        color: '#708090',
+        fill: true,
+        tension: 0.4,
       })
     }
   }, [])
 
   const createGradient = (ctx: CanvasRenderingContext2D) => {
-    const gradient = ctx.createLinearGradient(0, 0, 0, 140)
+    const gradient = ctx.createLinearGradient(0, 0, 0, 150)
     gradient.addColorStop(0, 'rgba(59, 130, 246, 1)')
     gradient.addColorStop(1, 'rgba(59, 130, 246, 0)')
     return gradient
@@ -78,7 +91,7 @@ const Resume = () => {
       </svg>
       {/* content */}
       <div className='-my-px w-screen bg-blue-500 text-accent-content'>
-        <div className='container mx-auto space-y-8 px-6 md:px-12'>
+        <div className='container mx-auto space-y-8 px-6 md:px-12 lg:px-56'>
           {/* title */}
           <motion.div
             variants={variants}
@@ -131,15 +144,33 @@ const Resume = () => {
                   location='SMKN 7 Baleendah'
                   jurusan='Software Engineering'
                   time='2017 - 2020'
-                ></Card>
+                >
+                  <Chart
+                    type='line'
+                    ref={chartSMKref}
+                    data={{
+                      labels: ['1', '2', '3', '4', '5', '6'],
+                      datasets: [
+                        {
+                          ...SMKDataSets,
+                          label: 'Grade Point',
+                          data: nilaiSemester,
+                          pointHitRadius: 10,
+                        },
+                      ],
+                    }}
+                    options={chartSMKOptions}
+                  />
+                </Card>
                 <Card
                   title='University'
                   location='Universitas Bale Bandung'
                   jurusan='Informatics Engineering'
                   time='2020 - now'
                 >
-                  <Line
-                    ref={chartRef}
+                  <Chart
+                    type='line'
+                    ref={chartKuliahref}
                     data={{
                       labels: ['1', '2', '3'],
                       datasets: [
@@ -152,7 +183,6 @@ const Resume = () => {
                       ],
                     }}
                     options={chartKuliahOptions}
-                    plugins={chartKuliahPlugins}
                   />
                 </Card>
               </div>

@@ -29,7 +29,7 @@ const About = () => {
       </svg>
       {/* content */}
       <div className='-my-px w-screen bg-blue-500 text-accent-content'>
-        <div className='container mx-auto space-y-10 px-6 md:px-12'>
+        <div className='container mx-auto space-y-10 px-6 md:px-12 lg:px-56'>
           {/* title */}
           <motion.div
             variants={variants}

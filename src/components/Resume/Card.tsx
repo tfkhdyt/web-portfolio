@@ -16,7 +16,7 @@ const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
             {time}
           </span>
         </div>
-        {children}
+        <div className='mt-4'>{children}</div>
       </div>
     </div>
   )
