@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import About from '../components/About/About'
 import Skills from '../components/Skills/Skills'
 import Resume from '../components/Resume/Resume'
+import MetaTags from '../components/MetaTags/MetaTags'
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -17,7 +18,8 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>TFKHDYT - Web Portfolio</title>
+        <MetaTags />
+        <title>TAUFIK HIDAYAT - Web Portfolio</title>
       </Head>
       <Layout>
         <Hero />
