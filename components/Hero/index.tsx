@@ -40,7 +40,7 @@ const Hero = () => {
       id='hero'
     >
       <div className='hero-content'>
-        <div className='max-w-md px-4 md:max-w-2xl'>
+        <div className='max-w-md px-4 md:max-w-4xl'>
           <div className='flex grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
             <div>
               <motion.h1
