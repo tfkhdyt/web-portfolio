@@ -33,7 +33,7 @@ const Navbar = () => {
     <div
       className={`min-w-screen navbar sticky inset-x-0 top-0 z-10 ${
         scrollY >= 140 ? 'bg-base-100/50 backdrop-blur' : 'bg-ghost'
-      } transition-all duration-300`}
+      } transition-all duration-500`}
     >
       <div className='flex-none md:hidden'>
         <label htmlFor='my-drawer-3' className='btn btn-ghost btn-square'>
@@ -53,8 +53,8 @@ const Navbar = () => {
         </label>
       </div>
       <div
-        className={`flex-1 items-center space-x-1 text-xl font-bold transition-all duration-300 md:ml-2 ${
-          scrollY < 250 && 'opacity-0'
+        className={`flex-1 items-center space-x-1 text-xl font-bold transition-all duration-500 md:ml-2 ${
+          scrollY <= 140 && 'opacity-0'
         }`}
       >
         <Icon />

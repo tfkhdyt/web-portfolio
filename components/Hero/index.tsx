@@ -61,7 +61,7 @@ const Hero = () => {
                 transition={{
                   duration: 1,
                 }}
-                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold leading-3 tracking-normal text-transparent md:text-6xl'
+                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold tracking-normal text-transparent md:text-6xl'
               >
                 Taufik Hidayat
               </motion.h1>
@@ -115,7 +115,7 @@ const Hero = () => {
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className={`-mb-80 h-10 w-10 animate-bounce ${
-                scrollY >= 250 && 'pointer-events-none opacity-0'
+                scrollY >= 140 && 'pointer-events-none opacity-0'
               } transition-all duration-500`}
               fill='none'
               viewBox='0 0 24 24'

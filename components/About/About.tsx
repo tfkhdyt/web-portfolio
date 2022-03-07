@@ -16,7 +16,7 @@ const variants = {
 
 const About = () => {
   return (
-    <div className='w-screen'>
+    <div className='mt-2 w-screen'>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 1440 320'
