@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { menu } from '../Layout/data'
+import Icon from './Icon'
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState<number>(0)
@@ -52,11 +53,12 @@ const Navbar = () => {
         </label>
       </div>
       <div
-        className={`mx-2 flex-1 px-2 text-xl font-bold transition-all duration-300 ${
+        className={`flex-1 text-xl font-bold transition-all duration-500 space-x-1 md:ml-2 ${
           scrollY < 140 && 'opacity-0'
         }`}
       >
-        TFKHDYT
+        <Icon />
+        <span>TFKHDYT</span>
       </div>
       <div className='hidden flex-none md:block'>
         <ul className='menu menu-horizontal'>
