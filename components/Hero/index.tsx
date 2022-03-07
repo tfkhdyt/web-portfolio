@@ -102,7 +102,7 @@ const Hero = () => {
               }}
               className='hidden md:flex'
             >
-              <img src='/illustration1.svg' className='pointer-events-none' />
+              <img src='/illustration3.svg' className='pointer-events-none' />
             </motion.div>
           </div>
           <motion.div
