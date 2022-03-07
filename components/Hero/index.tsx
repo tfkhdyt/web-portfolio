@@ -40,56 +40,71 @@ const Hero = () => {
       id='hero'
     >
       <div className='hero-content'>
-        <div className='max-w-md px-4 md:max-w-lg'>
-          <motion.h1
-            variants={variants}
-            initial='hidden'
-            animate='visible'
-            transition={{
-              duration: 1,
-            }}
-            className='text-2xl font-bold md:text-4xl'
-          >
-            Hi, my name is
-          </motion.h1>
-          <motion.h1
-            variants={variants}
-            initial='hidden'
-            animate='visible'
-            transition={{
-              duration: 1,
-            }}
-            className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold leading-3 tracking-normal text-transparent md:text-6xl'
-          >
-            Taufik Hidayat
-          </motion.h1>
-          <motion.p
-            variants={variants}
-            initial='hidden'
-            animate='visible'
-            transition={{
-              duration: 1,
-            }}
-            className='pt-2 pb-4 font-medium md:text-xl'
-          >
-            I'm a{' '}
-            <GradientText
-              from='from-rose-400'
-              to='to-violet-600'
-              style='inline font-semibold'
+        <div className='max-w-md px-4 md:max-w-2xl'>
+          <div className='flex grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
+            <div>
+              <motion.h1
+                variants={variants}
+                initial='hidden'
+                animate='visible'
+                transition={{
+                  duration: 1,
+                }}
+                className='text-2xl font-bold md:text-4xl'
+              >
+                Hi, my name is
+              </motion.h1>
+              <motion.h1
+                variants={variants}
+                initial='hidden'
+                animate='visible'
+                transition={{
+                  duration: 1,
+                }}
+                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold leading-3 tracking-normal text-transparent md:text-6xl'
+              >
+                Taufik Hidayat
+              </motion.h1>
+              <motion.p
+                variants={variants}
+                initial='hidden'
+                animate='visible'
+                transition={{
+                  duration: 1,
+                }}
+                className='pt-2 pb-4 font-medium md:text-xl'
+              >
+                I'm a{' '}
+                <GradientText
+                  from='from-rose-400'
+                  to='to-violet-600'
+                  style='inline font-semibold'
+                >
+                  Full Stack Developer
+                </GradientText>{' '}
+                from Bandung, Indonesia
+              </motion.p>
+              <SocialMediaIcons
+                variants={variants}
+                initial='hidden'
+                animate='visible'
+                transition={{
+                  duration: 1,
+                }}
+              />
+            </div>
+            <motion.div
+              variants={variants}
+              initial='hidden'
+              animate='visible'
+              transition={{
+                duration: 1,
+              }}
+              className='hidden md:flex'
             >
-              Full Stack Developer
-            </GradientText>{' '}
-            from Bandung, Indonesia
-          </motion.p>
-          <SocialMediaIcons
-            variants={variants}
-            initial='hidden'
-            animate='visible'
-            transition={{
-              duration: 1,
-            }}
-          />
+              <img src='/illustration1.svg' className='pointer-events-none' />
+            </motion.div>
+          </div>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, y: 0 }}
