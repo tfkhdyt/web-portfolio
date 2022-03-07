@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import About from '../components/About/About'
 import Skills from '../components/Skills/Skills'
 import Resume from '../components/Resume/Resume'
+import Projects from '../components/Projects/Projects'
 import MetaTags from '../components/MetaTags/MetaTags'
 
 const Home: NextPage = () => {
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <About />
         <Skills />
         <Resume />
+        <Projects />
       </Layout>
     </>
   )
