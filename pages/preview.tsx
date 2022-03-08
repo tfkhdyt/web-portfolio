@@ -1,7 +1,12 @@
 const Preview = () => {
+  const mode = {
+    dev: '/',
+    prod: 'https://aljabar-linier-matriks-kelompok-2.vercel.app/',
+  }
   return (
     <iframe
-      src='https://aljabar-linier-matriks-kelompok-2.vercel.app/'
+      src={mode.dev}
+      // src={mode.prod}
       frameBorder='0'
       width='1366'
       height='768'

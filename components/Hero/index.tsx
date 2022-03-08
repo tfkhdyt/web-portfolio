@@ -27,6 +27,7 @@ const Hero = () => {
         setScrollY(element.scrollTop)
       })
   }, [])
+
   const handleArrow = () => {
     document.querySelector('#about')!.scrollIntoView({
       behavior: 'smooth',
@@ -36,7 +37,7 @@ const Hero = () => {
 
   return (
     <div
-      className='hero top-0 -mt-20 min-h-screen w-screen bg-gradient-to-bl from-primary-content via-base-100 to-base-100 pb-px'
+      className='hero top-0 -mt-20 min-h-screen w-screen bg-gradient-to-bl from-blue-500/10 via-base-100 to-base-100 pb-px'
       id='hero'
     >
       <div className='hero-content'>
