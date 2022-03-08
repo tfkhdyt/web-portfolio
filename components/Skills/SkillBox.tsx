@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+
 import { ISkillBox } from './index.d'
 
 const SkillBox = ({ title, icon, variants }: ISkillBox) => (

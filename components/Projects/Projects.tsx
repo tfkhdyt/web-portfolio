@@ -1,7 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import { projects } from './data'
+import dynamic from 'next/dynamic'
 import { useState } from 'react'
-import ProjectCard from './ProjectCard'
+
+import { projects } from './data'
+
+const ProjectCard = dynamic(() => import('./ProjectCard'))
 
 const variants = {
   hidden: {

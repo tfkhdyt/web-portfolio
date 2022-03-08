@@ -1,8 +1,9 @@
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 
-import GradientText from '../GradientText'
-import SocialMediaIcons from '../SocialMediaIcons'
+const GradientText = dynamic(() => import('../GradientText'))
+const SocialMediaIcons = dynamic(() => import( '../SocialMediaIcons'))
 
 const variants = {
   hidden: {
@@ -62,7 +63,7 @@ const Hero = () => {
                 transition={{
                   duration: 1,
                 }}
-                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold tracking-normal text-transparent md:text-6xl'
+                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold text-transparent md:text-6xl'
               >
                 Taufik Hidayat
               </motion.h1>

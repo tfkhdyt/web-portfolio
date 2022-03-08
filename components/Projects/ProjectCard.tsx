@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
+
 import { IProjectCard } from './index.d'
 
 const ProjectCard = ({
@@ -83,8 +84,6 @@ const ProjectCard = ({
         <Image
           src={`/projects/${picture}`}
           className='inset-0 aspect-video rounded-2xl'
-          width={1080}
-          height={608}
           layout='fill'
           alt={`${name} thumbnail`}
           priority
