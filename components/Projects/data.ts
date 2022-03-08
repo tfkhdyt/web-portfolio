@@ -1,6 +1,6 @@
 export const projects = [
   {
-    name: 'Web Portfolio',
+    name: 'Portfolio Website',
     description: "You're here",
     type: 'Website',
     tags: ['TypeScript', 'Next.js', 'Tailwind CSS'],
@@ -70,5 +70,37 @@ export const projects = [
     tags: ['JavaScript', 'Bootstrap'],
     picture: '30days.jpg',
     repoLink: 'https://github.com/tfkhdyt/30DaysJagoJavaScript',
+  },
+  {
+    name: 'School Website',
+    description: 'SMKN 7 Baleendah school website with dynamic data',
+    type: 'Website',
+    tags: ['PHP', 'Bootstrap'],
+    picture: 'web-sekolah.jpg',
+    repoLink: 'https://github.com/tfkhdyt/web-sekolah',
+  },
+  {
+    name: 'Old Portfolio Website',
+    description: 'My old portfolio website',
+    type: 'Website',
+    tags: ['JavaScript', 'Bootstrap'],
+    picture: 'old-web-portfolio.jpeg',
+    repoLink: 'https://github.com/tfkhdyt/tfkhdyt-portfolio',
+  },
+  {
+    name: 'YouTube DL Bot',
+    description: 'Telegram Bot to download youtube videos',
+    type: 'Bot',
+    tags: ['Node.js', 'JavaScript', 'Telegraf'],
+    picture: 'ytdl-bot-thumb.jpg',
+    repoLink: 'https://github.com/tfkhdyt/youtube-dl-bot',
+  },
+  {
+    name: 'POPOWI',
+    description: 'Popcat.click clone with Jokowi as the character',
+    type: 'Website',
+    tags: ['JavaScript', 'React', 'Bootstrap'],
+    picture: 'popowi.jpg',
+    repoLink: 'https://github.com/tfkhdyt/popclick',
   },
 ]

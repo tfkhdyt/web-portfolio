@@ -1,6 +1,6 @@
 export default {
-  header: 'TAUFIK HIDAYAT - Web Portfolio',
-  title: 'TAUFIK HIDAYAT - Web Portfolio',
+  header: 'TAUFIK HIDAYAT - Portfolio Website',
+  title: 'TAUFIK HIDAYAT - Portfolio Website',
   favicon: '/thumbnail.jpg',
   link: 'https://tfkhdyt.my.id',
   deskripsi:

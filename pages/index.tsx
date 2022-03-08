@@ -23,7 +23,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <MetaTags />
-        <title>TAUFIK HIDAYAT - Web Portfolio</title>
+        <title>TAUFIK HIDAYAT - Portfolio Website</title>
       </Head>
       <Layout>
         <Hero />
