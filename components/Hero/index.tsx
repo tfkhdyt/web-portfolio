@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
 const GradientText = dynamic(() => import('../GradientText'))
-const SocialMediaIcons = dynamic(() => import( '../SocialMediaIcons'))
+const SocialMediaIcons = dynamic(() => import('../SocialMediaIcons'))
 
 const variants = {
   hidden: {

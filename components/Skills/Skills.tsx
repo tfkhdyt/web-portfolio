@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import { skills } from './data'
 
-const SkillBox = dynamic(() => import('./SkillBox')) 
+const SkillBox = dynamic(() => import('./SkillBox'))
 
 const variants = {
   hidden: {

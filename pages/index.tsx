@@ -8,10 +8,10 @@ const Layout = dynamic(() => import('../components/Layout'))
 // import Layout from '../components/Layout'
 const Hero = dynamic(() => import('../components/Hero'))
 const About = dynamic(() => import('../components/About/About'))
-const Skills = dynamic(() => import( '../components/Skills/Skills'))
+const Skills = dynamic(() => import('../components/Skills/Skills'))
 const Resume = dynamic(() => import('../components/Resume/Resume'))
-const Projects = dynamic(() => import( '../components/Projects/Projects'))
-const MetaTags = dynamic(() => import( '../components/MetaTags/MetaTags'))
+const Projects = dynamic(() => import('../components/Projects/Projects'))
+const MetaTags = dynamic(() => import('../components/MetaTags/MetaTags'))
 
 const Home: NextPage = () => {
   useEffect(() => {

@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { LayoutProps } from './index.d'
 import { menu } from './data'
 
-const Navbar = dynamic(() => import( '../Navbar'))
+const Navbar = dynamic(() => import('../Navbar'))
 
 const Layout = ({ children }: LayoutProps) => {
   const checkbox = useRef<HTMLInputElement>(null)

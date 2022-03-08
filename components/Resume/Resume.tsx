@@ -17,7 +17,7 @@ import {
 
 import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
-const Card = dynamic(() => import('./Card')) 
+const Card = dynamic(() => import('./Card'))
 
 ChartJS.register(
   LineController,
