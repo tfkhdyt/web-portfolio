@@ -60,6 +60,7 @@ const About = () => {
                     width={500}
                     height={500}
                     className='rounded-full'
+                    alt='Foto gweh'
                   />
                 </div>
               </motion.div>

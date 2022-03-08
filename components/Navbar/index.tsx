@@ -33,7 +33,7 @@ const Navbar = () => {
     <div
       className={`min-w-screen navbar sticky inset-x-0 top-0 z-50 ${
         scrollY >= 140 ? 'bg-base-100/50 backdrop-blur' : 'bg-ghost'
-      } transition-all duration-500`}
+      } transition-all duration-500 lg:px-48`}
     >
       <div className='flex-none md:hidden'>
         <label htmlFor='my-drawer-3' className='btn btn-ghost btn-square'>

@@ -17,6 +17,7 @@ const SkillBox = ({ title, icon, variants }: ISkillBox) => (
             src={`/icons/${icon}`}
             alt={`${title} icon`}
             className={`pointer-events-none h-16`}
+            height='100'
           />
         </div>
       ) : (
