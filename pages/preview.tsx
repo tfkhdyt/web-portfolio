@@ -1,6 +1,6 @@
 const Preview = () => {
   const mode = {
-    dev: 'https://pukultikus.tfkhdyt.my.id/',
+    dev: 'http://localhost:8080',
     prod: 'https://aljabar-linier-matriks-kelompok-2.vercel.app/',
   }
   return (
