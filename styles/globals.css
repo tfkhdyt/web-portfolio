@@ -10,3 +10,8 @@
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
+
+:root {
+  --tw-text-opacity: 1;
+  --chart-text-color: hsl(var(--ac) / var(--tw-text-opacity));
+}

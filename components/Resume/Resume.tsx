@@ -30,6 +30,7 @@ ChartJS.register(
   Legend,
   Filler
 )
+ChartJS.defaults.color = '#708090'
 
 const variants = {
   hidden: {
@@ -61,7 +62,7 @@ const Resume = () => {
     if (chart) {
       setKuliahDataSets({
         backgroundColor: createGradient(chart.ctx),
-        color: '#708090',
+        // color: '#708090',
         fill: true,
         tension: 0.4,
       })
@@ -71,7 +72,8 @@ const Resume = () => {
     if (chartSMK) {
       setSMKDataSets({
         backgroundColor: createGradient(chartSMK.ctx),
-        color: '#708090',
+        // color: '#708090',
+        // color: getComputedStyle(document.documentElement).getPropertyValue('text-base-content'),
         fill: true,
         tension: 0.4,
       })
@@ -153,7 +155,7 @@ const Resume = () => {
                   jurusan='Software Engineering'
                   time='2017 - 2020'
                 >
-                  <div className='min-h-[200px]'>
+                  <div className='min-h-[200px] text-base-content'>
                     <Chart
                       type='line'
                       ref={chartSMKref}
@@ -178,7 +180,7 @@ const Resume = () => {
                   jurusan='Informatics Engineering'
                   time='2020 - now'
                 >
-                  <div className='min-h-[200px]'>
+                  <div className='min-h-[200px] text-base-content'>
                     <Chart
                       type='line'
                       ref={chartKuliahref}
