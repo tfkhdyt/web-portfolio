@@ -103,4 +103,28 @@ export const projects = [
     picture: 'popowi.jpg',
     repoLink: 'https://github.com/tfkhdyt/popclick',
   },
+  {
+    name: 'Donation Page',
+    description: 'Simple Donation Page',
+    type: 'Website',
+    tags: ['JavaScript', 'Bootstrap'],
+    picture: 'donation-page.jpg',
+    repoLink: 'https://github.com/tfkhdyt/donation-page',
+  },
+  {
+    name: 'CRUD Express',
+    description: 'Simple CRUD with Authentication',
+    type: 'Website',
+    tags: ['Node.js', 'Express', 'Bootstrap'],
+    picture: 'banner crud express.jpg',
+    repoLink: 'https://github.com/tfkhdyt/data-tanaman-express',
+  },
+  {
+    name: 'YouTube DL',
+    description: 'A script to download videos from YouTube',
+    type: 'CLI',
+    tags: ['Bash', 'youtube-dlp'],
+    picture: 'ytdl.jpg',
+    repoLink: 'https://github.com/tfkhdyt/youtube-dl',
+  },
 ]
