@@ -1,4 +1,4 @@
-import {useForm} from '@formspree/react'
+import { useForm } from '@formspree/react'
 import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
@@ -7,7 +7,6 @@ import { variants } from '../../animations/variants'
 const InputForm = dynamic(() => import('./InputForm'))
 const TextArea = dynamic(() => import('./TextArea'))
 const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID as string
-
 
 const Form = () => {
   const [state, handleSubmit] = useForm(`${FORM_ID}`)
@@ -32,7 +31,7 @@ const Form = () => {
         <TextArea label='Message' name='message' />
       </div>
       <div className='w-full'>
-        <button className="btn">Submit</button>
+        <button className='btn'>Submit</button>
       </div>
     </motion.div>
   )

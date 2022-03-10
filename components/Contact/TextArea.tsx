@@ -1,4 +1,4 @@
-import { IInputForm } from "."
+import { IInputForm } from '.'
 
 const TextArea = ({ label, name }: IInputForm) => {
   return (

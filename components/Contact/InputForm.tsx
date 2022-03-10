@@ -1,4 +1,4 @@
-import { IInputForm } from "."
+import { IInputForm } from '.'
 
 const InputForm = ({ label, name, type = 'text' }: IInputForm) => {
   return (
