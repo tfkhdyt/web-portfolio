@@ -21,6 +21,6 @@ export const menu = [
   },
   {
     title: 'Contact',
-    to: '#contacts',
+    to: '#contact',
   },
 ]

@@ -40,7 +40,7 @@ const Projects = () => {
         className='mb-8 w-screen scroll-mt-8 bg-base-100 py-16 text-base-content'
         id='projects'
       >
-        <div className='container mx-auto space-y-10 px-6 md:h-[34rem] md:px-12 lg:px-56'>
+        <div className='container mx-auto space-y-10 px-6 md:px-12 lg:px-56'>
           {/* title */}
           <motion.div
             variants={variants}
