@@ -1,40 +1,17 @@
+import {useForm} from '@formspree/react'
 import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 
-import { IInputForm } from './index'
 import { variants } from '../../animations/variants'
 
-const InputForm = ({ label, name, type = 'text' }: IInputForm) => {
-  return (
-    <div className='form-control'>
-      <label className='label pt-0'>
-        <span className='label-text font-bold text-base-100'>{label}</span>
-      </label>
-      <input
-        type={type}
-        placeholder='Type here'
-        name={name}
-        className='input input-bordered w-full font-medium text-base-content/90'
-      />
-    </div>
-  )
-}
+const InputForm = dynamic(() => import('./InputForm'))
+const TextArea = dynamic(() => import('./TextArea'))
+const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID as string
 
-const TextArea = ({ label, name }: IInputForm) => {
-  return (
-    <div className='form-control'>
-      <label className='label pt-0'>
-        <span className='label-text font-bold text-base-100'>{label}</span>
-      </label>
-      <textarea
-        name={name}
-        className='textarea textarea-bordered h-24 font-medium text-base-content/90'
-        placeholder='Type here'
-      ></textarea>
-    </div>
-  )
-}
 
 const Form = () => {
+  const [state, handleSubmit] = useForm(`${FORM_ID}`)
+
   return (
     <motion.div
       variants={variants}
@@ -55,7 +32,7 @@ const Form = () => {
         <TextArea label='Message' name='message' />
       </div>
       <div className='w-full'>
-        <button className='btn'>Submit</button>
+        <button className="btn">Submit</button>
       </div>
     </motion.div>
   )
