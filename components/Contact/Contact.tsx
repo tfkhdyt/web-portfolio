@@ -2,9 +2,9 @@ import { motion } from 'framer-motion'
 import dynamic from 'next/dynamic'
 
 import { contacts } from './data'
-import Form from './Form'
 
 const ContactSection = dynamic(() => import('./ContactSection'))
+const Form = dynamic(() => import('./Form'))
 
 // import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
