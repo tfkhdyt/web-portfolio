@@ -2,25 +2,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
 import { projects } from './data'
+import { variants } from '../../animations/variants'
 
 import ProjectCard from './ProjectCard'
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    y: 35,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-  startFade: {
-    opacity: 0,
-  },
-  endFade: {
-    opacity: 1,
-  },
-}
 
 const Projects = () => {
   const [category] = useState<string[]>([
@@ -43,9 +27,8 @@ const Projects = () => {
           {/* title */}
           <motion.div
             variants={variants}
-            initial='hidden'
-            transition={{ duration: 1 }}
-            whileInView='visible'
+            initial='fromBottom'
+            whileInView='toTop'
             viewport={{ once: true }}
             className='flex w-full justify-center text-3xl font-black'
           >
@@ -55,9 +38,8 @@ const Projects = () => {
           <div className='space-y-8'>
             <motion.div
               variants={variants}
-              initial='hidden'
-              transition={{ duration: 1 }}
-              whileInView='visible'
+              initial='fromBottom'
+              whileInView='toTop'
               viewport={{ once: true }}
               className='tabs flex flex-nowrap overflow-x-auto md:justify-center'
             >

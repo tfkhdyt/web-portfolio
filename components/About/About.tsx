@@ -2,19 +2,10 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 import { about } from './data'
+import { variants } from '../../animations/variants'
 
 import GradientText from '../GradientText'
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    y: 35,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-}
+import Link from 'next/link'
 
 const About = () => {
   return (
@@ -38,9 +29,8 @@ const About = () => {
           {/* title */}
           <motion.div
             variants={variants}
-            initial='hidden'
-            transition={{ duration: 1 }}
-            whileInView='visible'
+            initial='fromBottom'
+            whileInView='toTop'
             viewport={{ once: true }}
             className='flex w-full justify-center text-3xl font-black'
           >
@@ -50,9 +40,8 @@ const About = () => {
             <div className='flex justify-center'>
               <motion.div
                 variants={variants}
-                initial='hidden'
-                transition={{ duration: 1 }}
-                whileInView='visible'
+                initial='fromBottom'
+                whileInView='toTop'
                 viewport={{ once: true }}
                 className='avatar'
               >
@@ -69,9 +58,8 @@ const About = () => {
             </div>
             <motion.div
               variants={variants}
-              initial='hidden'
-              transition={{ duration: 1 }}
-              whileInView='visible'
+              initial='fromBottom'
+              whileInView='toTop'
               viewport={{ once: true }}
               className='flex flex-col justify-start space-y-4 text-justify'
             >
@@ -88,11 +76,34 @@ const About = () => {
                 Free/Libre and Open Source Software Enthusiast, and Professional
                 Googler.
               </p>
-              {about.description.map((value, i) => (
-                <span key={i}>
-                  <p>{value}</p>
-                </span>
-              ))}
+              {about.description.map((value, i) => {
+                let arr: string[] = []
+                if (i == 3) {
+                  arr = value.split('|')
+                  return (
+                    <div className='inline'>
+                      {arr[0]}
+                      <span>
+                        and here's my{' '}
+                        <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
+                          <a
+                            className='underline decoration-rose-600 decoration-wavy underline-offset-2 transition-all duration-500 hover:font-bold hover:text-rose-600 '
+                            target='_blank'
+                          >
+                            music playlist.
+                          </a>
+                        </Link>
+                      </span>
+                      {arr[1]}
+                    </div>
+                  )
+                }
+                return (
+                  <span key={i}>
+                    <p>{value}</p>
+                  </span>
+                )
+              })}
             </motion.div>
           </div>
         </div>

@@ -1,19 +1,10 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
+import { variants } from '../../animations/variants'
+
 import GradientText from '../GradientText'
 import SocialMediaIcons from '../SocialMediaIcons'
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    x: -25,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-  },
-}
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState<number>(0)
@@ -43,38 +34,16 @@ const Hero = () => {
       <div className='hero-content'>
         <div className='max-w-md px-4 md:max-w-3xl lg:max-w-5xl'>
           <div className='flex grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
-            <div>
-              <motion.h1
-                variants={variants}
-                initial='hidden'
-                animate='visible'
-                transition={{
-                  duration: 1,
-                }}
-                className='text-2xl font-bold md:text-4xl'
-              >
-                Hi, my name is
-              </motion.h1>
-              <motion.h1
-                variants={variants}
-                initial='hidden'
-                animate='visible'
-                transition={{
-                  duration: 1,
-                }}
-                className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold text-transparent md:text-6xl'
-              >
+            <motion.div
+              variants={variants}
+              initial='fromLeft'
+              animate='toRight'
+            >
+              <h1 className='text-2xl font-bold md:text-4xl'>Hi, my name is</h1>
+              <h1 className='bg-gradient-to-br from-sky-400 to-blue-700 bg-clip-text py-2 text-4xl font-extrabold text-transparent md:text-6xl'>
                 Taufik Hidayat
-              </motion.h1>
-              <motion.p
-                variants={variants}
-                initial='hidden'
-                animate='visible'
-                transition={{
-                  duration: 1,
-                }}
-                className='pt-2 pb-4 font-medium md:text-xl'
-              >
+              </h1>
+              <p className='pt-2 pb-4 font-medium md:text-xl'>
                 I'm a{' '}
                 <GradientText
                   from='from-rose-400'
@@ -84,7 +53,7 @@ const Hero = () => {
                   Full Stack Developer
                 </GradientText>{' '}
                 from Bandung, Indonesia
-              </motion.p>
+              </p>
               <div className='text-base-content'>
                 <SocialMediaIcons
                   variants={variants}
@@ -95,23 +64,19 @@ const Hero = () => {
                   }}
                 />
               </div>
-            </div>
+            </motion.div>
             <motion.div
               variants={variants}
-              initial='hidden'
-              animate='visible'
-              transition={{
-                duration: 1,
-              }}
+              initial='fromBottom'
+              animate='toTop'
               className='hidden md:flex'
             >
               <img src='/illustration3.svg' className='pointer-events-none' />
             </motion.div>
           </div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial='startFade'
+            animate='endFade'
             className='grid place-items-center'
             onClick={handleArrow}
           >

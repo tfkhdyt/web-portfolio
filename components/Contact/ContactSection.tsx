@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 
 import { IContactSection } from './index.d'
+import { variants } from '../../animations/variants'
 
 const ContactSection = ({ icon, title, content }: IContactSection) => {
   const Icon = icon
@@ -11,10 +12,10 @@ const ContactSection = ({ icon, title, content }: IContactSection) => {
 
   return (
     <motion.div
-      initial={{ y: 25, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
+      variants={variants}
+      initial='fromBottom'
+      whileInView='toTop'
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
       className='flex items-center space-x-3 md:space-x-4'
     >
       <div>

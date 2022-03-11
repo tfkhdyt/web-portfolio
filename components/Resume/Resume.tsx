@@ -15,6 +15,7 @@ import {
 } from 'chart.js'
 
 import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
+import { variants } from '../../animations/variants'
 
 import Card from './Card'
 
@@ -30,25 +31,6 @@ ChartJS.register(
   Filler
 )
 ChartJS.defaults.color = '#708090'
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    y: 35,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-  slideToRightStart: {
-    x: -25,
-    opacity: 0,
-  },
-  slideToRightEnd: {
-    x: 0,
-    opacity: 1,
-  },
-}
 
 const Resume = () => {
   const chartKuliahref = useRef<ChartJS>(null)
@@ -104,9 +86,8 @@ const Resume = () => {
           {/* title */}
           <motion.div
             variants={variants}
-            initial='hidden'
-            transition={{ duration: 1 }}
-            whileInView='visible'
+            initial='fromBottom'
+            whileInView='toTop'
             viewport={{ once: true }}
             className='flex w-full justify-center text-3xl font-black'
           >
@@ -115,9 +96,8 @@ const Resume = () => {
           <div className='grid grid-cols-1 gap-8'>
             <motion.div
               variants={variants}
-              initial='hidden'
-              transition={{ duration: 1 }}
-              whileInView='visible'
+              initial='fromBottom'
+              whileInView='toTop'
               viewport={{ once: true }}
             >
               <h1 className='mb-4 text-2xl font-bold text-base-100'>
@@ -139,9 +119,8 @@ const Resume = () => {
             </motion.div>
             <motion.div
               variants={variants}
-              initial='hidden'
-              transition={{ duration: 1 }}
-              whileInView='visible'
+              initial='fromBottom'
+              whileInView='toTop'
               viewport={{ once: true }}
             >
               <h1 className='mb-4 text-2xl font-bold text-base-100'>

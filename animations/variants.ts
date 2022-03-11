@@ -7,12 +7,18 @@ export const variants = {
     y: 0,
     opacity: 1
   },
-  fromleft: {
+  fromLeft: {
     x: -25,
     opacity: 0
   },
   toRight: {
     x: 0,
     opacity: 1
+  },
+  startFade: {
+    opacity: 0,
+  },
+  endFade: {
+    opacity: 1,
   },
 }

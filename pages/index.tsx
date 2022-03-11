@@ -43,7 +43,9 @@ const Home: NextPage = () => {
         draggable
         bodyClassName='font-body font-medium'
       />
-      <MotionConfig transition={{ duration: 1 }}>
+      <MotionConfig
+        transition={{ duration: 1, type: 'tween', ease: 'backInOut' }}
+      >
         <Layout>
           <Hero />
           <About />

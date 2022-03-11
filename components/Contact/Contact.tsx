@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 
 import { contacts } from './data'
+import { variants } from '../../animations/variants'
 
 import ContactSection from './ContactSection'
 import Form from './Form'
@@ -8,25 +9,6 @@ import Form from './Form'
 // import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
 // const Card = dynamic(() => import('./Card'))
-
-const variants = {
-  hidden: {
-    opacity: 0,
-    y: 35,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-  slideToRightStart: {
-    x: -25,
-    opacity: 0,
-  },
-  slideToRightEnd: {
-    x: 0,
-    opacity: 1,
-  },
-}
 
 const Contact = () => {
   return (
@@ -47,9 +29,8 @@ const Contact = () => {
           {/* title */}
           <motion.div
             variants={variants}
-            initial='hidden'
-            transition={{ duration: 1 }}
-            whileInView='visible'
+            initial='fromBottom'
+            whileInView='toTop'
             viewport={{ once: true }}
             className='flex w-full justify-center text-3xl font-black'
           >
