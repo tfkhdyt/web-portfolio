@@ -32,7 +32,7 @@ const Form = () => {
     })
   }
 
-  if (state.errors.length >= 1) {
+  if (state.errors.length >= 1 && !state.succeeded) {
     state.errors.forEach((error) => {
       toast.error(
         `${capitalize(error.field as string)} field's value ${error.message}`,
@@ -77,8 +77,9 @@ const Form = () => {
             <button
               className={`btn w-full md:w-fit ${
                 state.submitting && 'loading pointer-events-none opacity-50'
-              } no-animation transition-all duration-500`}
-              disabled={haveSentMessage}
+              } no-animation transition-all duration-500 ${
+                haveSentMessage && 'pointer-events-none opacity-50'
+              }`}
             >
               Send Message
             </button>
