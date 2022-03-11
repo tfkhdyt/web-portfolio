@@ -25,11 +25,11 @@ const Layout = ({ children }: LayoutProps) => {
         className='drawer-toggle'
         ref={checkbox}
       />
-      <div className='drawer-content flex flex-col overflow-x-hidden'>
+      <div className='drawer-content overflow-x-hidden'>
         {/* Navbar */}
         <Navbar />
         {/* Page content here */}
-        <div>{children}</div>
+        {children}
       </div>
       <div className='drawer-side'>
         <label htmlFor='my-drawer-3' className='gpu drawer-overlay'></label>

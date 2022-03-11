@@ -90,7 +90,9 @@ const ProjectCard = ({
           } rounded-2xl transition duration-500 ease-in-out`}
           layout='fill'
           alt={`${name} thumbnail`}
-          priority
+          placeholder='blur'
+          blurDataURL={`/projects/${picture}`}
+          // priority
         />
       </div>
     </motion.div>
