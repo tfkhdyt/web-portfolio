@@ -91,7 +91,8 @@ const ProjectCard = ({
           layout='fill'
           alt={`${name} thumbnail`}
           placeholder='blur'
-          blurDataURL={`/projects/${picture}`}
+          //blurDataURL={`/projects/${picture}`}
+          blurDataURL='/placeholder.webp'
           // priority
         />
       </div>
