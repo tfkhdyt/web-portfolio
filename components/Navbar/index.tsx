@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
-import dynamic from 'next/dynamic'
 
 import { menu } from '../Layout/data'
 
-const Icon = dynamic(() => import('./Icon'))
+import Icon from './Icon'
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState<number>(0)

@@ -1,10 +1,9 @@
-import dynamic from 'next/dynamic'
 import { useRef } from 'react'
 
 import { LayoutProps } from './index.d'
 import { menu } from './data'
 
-const Navbar = dynamic(() => import('../Navbar'))
+import Navbar from '../Navbar'
 
 const Layout = ({ children }: LayoutProps) => {
   const checkbox = useRef<HTMLInputElement>(null)

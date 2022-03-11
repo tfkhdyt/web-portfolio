@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 
-const GradientText = dynamic(() => import('../GradientText'))
-const SocialMediaIcons = dynamic(() => import('../SocialMediaIcons'))
+import GradientText from '../GradientText'
+import SocialMediaIcons from '../SocialMediaIcons'
 
 const variants = {
   hidden: {

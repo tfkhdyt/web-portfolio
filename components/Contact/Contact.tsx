@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 
 import { contacts } from './data'
 
-const ContactSection = dynamic(() => import('./ContactSection'))
-const Form = dynamic(() => import('./Form'))
+import ContactSection from './ContactSection'
+import Form from './Form'
 
 // import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 

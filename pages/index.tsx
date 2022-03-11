@@ -3,20 +3,19 @@ import 'react-toastify/dist/ReactToastify.min.css'
 import { MotionConfig } from 'framer-motion'
 import { themeChange } from 'theme-change'
 import type { NextPage } from 'next'
-import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Footer from '../components/Footer/Footer'
 
-const Layout = dynamic(() => import('../components/Layout'))
+import Layout from '../components/Layout'
 // import Layout from '../components/Layout'
-const Hero = dynamic(() => import('../components/Hero'))
-const About = dynamic(() => import('../components/About/About'))
-const Skills = dynamic(() => import('../components/Skills/Skills'))
-const Resume = dynamic(() => import('../components/Resume/Resume'))
-const Projects = dynamic(() => import('../components/Projects/Projects'))
-const MetaTags = dynamic(() => import('../components/MetaTags/MetaTags'))
-const Contact = dynamic(() => import('../components/Contact/Contact'))
+import Hero from '../components/Hero'
+import About from '../components/About/About'
+import Skills from '../components/Skills/Skills'
+import Resume from '../components/Resume/Resume'
+import Projects from '../components/Projects/Projects'
+import MetaTags from '../components/MetaTags/MetaTags'
+import Contact from '../components/Contact/Contact'
 
 const Home: NextPage = () => {
   useEffect(() => {

@@ -1,7 +1,6 @@
 import { useRef, useEffect, useState } from 'react'
 import { Chart } from 'react-chartjs-2'
 import { motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import {
   Chart as ChartJS,
   LineController,
@@ -17,7 +16,7 @@ import {
 
 import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
-const Card = dynamic(() => import('./Card'))
+import Card from './Card'
 
 ChartJS.register(
   LineController,

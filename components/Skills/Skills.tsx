@@ -1,10 +1,9 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import { useState } from 'react'
 
 import { skills } from './data'
 
-const SkillBox = dynamic(() => import('./SkillBox'))
+import SkillBox from './SkillBox'
 
 const variants = {
   hidden: {
