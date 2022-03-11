@@ -1,6 +1,6 @@
 import { IInputForm } from '.'
 
-const TextArea = ({ label, name }: IInputForm) => {
+const TextArea = ({ label, name, ...rest }: IInputForm) => {
   return (
     <div className='form-control'>
       <label className='label pt-0'>
@@ -9,8 +9,8 @@ const TextArea = ({ label, name }: IInputForm) => {
       <textarea
         name={name}
         className='textarea textarea-bordered h-24 resize-none font-medium text-base-content/90'
-        placeholder='Type here'
         required
+        {...rest}
       ></textarea>
     </div>
   )

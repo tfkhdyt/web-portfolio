@@ -35,14 +35,19 @@ const Form = () => {
       <form className='flex w-full flex-col space-y-4' onSubmit={handleSubmit}>
         <div className='flex w-full flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4'>
           <div className='w-full md:w-3/6'>
-            <InputForm label='Name' name='name' />
+            <InputForm label='Name' name='name' placeholder='Your name' />
           </div>
           <div className='w-full md:w-3/6'>
-            <InputForm label='Email' name='email' type='email' />
+            <InputForm
+              label='Email'
+              name='email'
+              type='email'
+              placeholder='Your email'
+            />
           </div>
         </div>
         <div className='w-full'>
-          <TextArea label='Message' name='message' />
+          <TextArea label='Message' name='message' placeholder='Your message' />
         </div>
         <div className='w-full'>
           <button

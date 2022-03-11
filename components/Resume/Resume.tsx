@@ -178,7 +178,7 @@ const Resume = () => {
                   title='University'
                   location='Universitas Bale Bandung'
                   jurusan='Informatics Engineering'
-                  time='2020 - now'
+                  time='2020 - Now'
                 >
                   <div className='min-h-[200px] text-base-content'>
                     <Chart

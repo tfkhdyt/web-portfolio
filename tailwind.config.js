@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Fira Sans', 'sans-serif'],
+        body: ['Be Vietnam Pro', 'Fira Sans', 'sans-serif'],
       },
     },
   },

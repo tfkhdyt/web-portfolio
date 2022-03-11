@@ -42,7 +42,7 @@ const Hero = () => {
       id='hero'
     >
       <div className='hero-content'>
-        <div className='max-w-md px-4 md:max-w-3xl lg:max-w-4xl'>
+        <div className='max-w-md px-4 md:max-w-3xl lg:max-w-5xl'>
           <div className='flex grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
             <div>
               <motion.h1
@@ -86,14 +86,16 @@ const Hero = () => {
                 </GradientText>{' '}
                 from Bandung, Indonesia
               </motion.p>
-              <SocialMediaIcons
-                variants={variants}
-                initial='hidden'
-                animate='visible'
-                transition={{
-                  duration: 1,
-                }}
-              />
+              <div className='text-base-content'>
+                <SocialMediaIcons
+                  variants={variants}
+                  initial='hidden'
+                  animate='visible'
+                  transition={{
+                    duration: 1,
+                  }}
+                />
+              </div>
             </div>
             <motion.div
               variants={variants}

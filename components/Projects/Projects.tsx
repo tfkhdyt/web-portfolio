@@ -60,14 +60,14 @@ const Projects = () => {
               transition={{ duration: 1 }}
               whileInView='visible'
               viewport={{ once: true }}
-              className='tabs flex justify-center'
+              className='tabs flex flex-nowrap overflow-x-auto md:justify-center'
             >
               {category.map((value) => (
                 <a
                   onClick={() => handleTabClick(value)}
                   className={`tab tab-bordered ${
                     activeTab === value && 'tab-active'
-                  } space-x-2 transition-all duration-500`}
+                  } shrink-0 space-x-2 transition-all duration-500`}
                   key={value}
                 >
                   <span>{value}</span>

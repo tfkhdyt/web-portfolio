@@ -1,6 +1,6 @@
 import { IInputForm } from '.'
 
-const InputForm = ({ label, name, type = 'text' }: IInputForm) => {
+const InputForm = ({ label, name, type = 'text', ...rest }: IInputForm) => {
   return (
     <div className='form-control'>
       <label className='label pt-0'>
@@ -8,10 +8,10 @@ const InputForm = ({ label, name, type = 'text' }: IInputForm) => {
       </label>
       <input
         type={type}
-        placeholder='Type here'
         name={name}
         className='input input-bordered w-full font-medium text-base-content/90'
         required
+        {...rest}
       />
     </div>
   )

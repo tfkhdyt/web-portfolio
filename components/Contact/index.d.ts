@@ -10,4 +10,5 @@ export interface IInputForm {
   label: string
   name: string
   type?: string
+  placeholder: string
 }

@@ -40,7 +40,7 @@ const About = () => {
         className='mb-8 w-screen scroll-mt-8 bg-base-100 py-16 text-base-content'
         id='skills'
       >
-        <div className='container mx-auto space-y-10 px-6 md:h-[34rem] md:px-12 lg:px-56'>
+        <div className='container mx-auto space-y-10 px-6 md:h-[35rem] md:px-12 lg:px-56'>
           {/* title */}
           <motion.div
             variants={variants}
@@ -59,14 +59,14 @@ const About = () => {
               transition={{ duration: 1 }}
               whileInView='visible'
               viewport={{ once: true }}
-              className='tabs flex justify-center'
+              className='tabs flex flex-nowrap justify-start overflow-x-auto md:justify-center'
             >
               {category.map((value) => (
                 <a
                   onClick={() => handleTabClick(value)}
                   className={`tab tab-bordered ${
                     activeTab === value && 'tab-active'
-                  } space-x-2 transition-all duration-500`}
+                  } shrink-0 space-x-2 transition-all duration-500`}
                   key={value}
                 >
                   <span>{value}</span>

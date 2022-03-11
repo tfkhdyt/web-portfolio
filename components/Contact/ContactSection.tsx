@@ -23,14 +23,14 @@ const ContactSection = ({ icon, title, content }: IContactSection) => {
         </div>
       </div>
       <div>
-        <p className='text-xl font-semibold'>{title}</p>
+        <p className='text-xl font-bold'>{title}</p>
         <div
           className='tooltip'
           data-tip={`Click to copy the ${title.toLowerCase()}${
             title === 'Telegram' ? ' username' : ''
           }`}
         >
-          <p onClick={handleCopy} className='text-base-300'>
+          <p onClick={handleCopy} className='text-base-200'>
             {content}
           </p>
         </div>

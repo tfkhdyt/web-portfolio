@@ -6,6 +6,7 @@ import type { NextPage } from 'next'
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
 import Head from 'next/head'
+import Footer from '../components/Footer/Footer'
 
 const Layout = dynamic(() => import('../components/Layout'))
 // import Layout from '../components/Layout'
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
           <Resume />
           <Projects />
           <Contact />
+          <Footer />
         </Layout>
       </MotionConfig>
     </>

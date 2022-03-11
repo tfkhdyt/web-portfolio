@@ -41,7 +41,7 @@ const Layout = ({ children }: LayoutProps) => {
               <li key={value.title}>
                 <label
                   htmlFor='my-drawer-3'
-                  className='font-semibold'
+                  className='font-semibold hover:bg-blue-500'
                   onClick={() => handleDrawer(value.to)}
                 >
                   {value.title}

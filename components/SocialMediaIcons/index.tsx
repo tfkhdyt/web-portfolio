@@ -16,7 +16,7 @@ const SocialMediaIcons = ({ ...rest }) => {
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='fill-base-content [fillRule:evenodd] [clipRule:evenodd] [strokeLinejoin:round] [strokeMiterlimit:1.41421]'
+                  className='fill-current [fillRule:evenodd] [clipRule:evenodd] [strokeLinejoin:round] [strokeMiterlimit:1.41421]'
                 >
                   <path d={value.icon} />
                 </svg>
