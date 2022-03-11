@@ -11,6 +11,7 @@ const InputForm = ({ label, name, type = 'text' }: IInputForm) => {
         placeholder='Type here'
         name={name}
         className='input input-bordered w-full font-medium text-base-content/90'
+        required
       />
     </div>
   )

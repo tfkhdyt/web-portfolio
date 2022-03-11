@@ -8,8 +8,9 @@ const TextArea = ({ label, name }: IInputForm) => {
       </label>
       <textarea
         name={name}
-        className='textarea textarea-bordered h-24 font-medium text-base-content/90'
+        className='textarea textarea-bordered h-24 resize-none font-medium text-base-content/90'
         placeholder='Type here'
+        required
       ></textarea>
     </div>
   )
