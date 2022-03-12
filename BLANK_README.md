@@ -246,7 +246,7 @@ Click the button below to support me via donation
 [issues-shield]: https://img.shields.io/github/issues/tfkhdyt/web-portfolio.svg?style=for-the-badge
 [issues-url]: https://github.com/tfkhdyt/web-portfolio/issues
 [license-shield]: https://img.shields.io/github/license/tfkhdyt/web-portfolio.svg?style=for-the-badge
-[license-url]: https://github.com/tfkhdyt/web-portfolio/blob/master/LICENSE.txt
+[license-url]: https://github.com/tfkhdyt/web-portfolio/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/taufik-hidayat-6793aa200
 [product-screenshot]: public/projects/web-portfolio.jpg
