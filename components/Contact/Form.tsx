@@ -27,6 +27,7 @@ const Form = () => {
         }
       )
       toast.success('Message has been sent, thank you for reaching me out')
+      form.current!.reset()
     } catch (err) {
       if (axios.isAxiosError(err) && err.response) {
         switch (err.response.status) {
@@ -48,7 +49,6 @@ const Form = () => {
       }
     }
     setIsLoading(false)
-    form.current!.reset()
   }
 
   return (
