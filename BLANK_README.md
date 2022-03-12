@@ -7,8 +7,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -24,8 +22,6 @@
 [![GPL 3.0 License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -39,8 +35,6 @@
     Portfolio website that I built using my current preferred tech stack
     <br />
     <!-- <a href="https://github.com/tfkhdyt/web-portfolio"><strong>Explore the docs »</strong></a> -->
-    <br />
-    <br />
     <a href="https://tfkhdyt.my.id">View Demo</a>
     ·
     <a href="https://github.com/tfkhdyt/web-portfolio/issues">Report Bug</a>
