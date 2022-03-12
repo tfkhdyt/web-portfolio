@@ -19,8 +19,7 @@ const Form = () => {
     e.preventDefault()
     setIsLoading(true)
     try {
-      await axios.post(
-        /* process.env.NEXT_PUBLIC_MESSAGE_FORM_API + */ 'http://localhost:4000/message',
+      await axios.post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message',
         {
           name,
           email,
