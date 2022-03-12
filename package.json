@@ -21,13 +21,11 @@
     "theme-change": "^2.0.2"
   },
   "devDependencies": {
-    "@types/js-cookie": "^3.0.1",
     "@types/node": "17.0.4",
     "@types/react": "17.0.38",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.13.0",
     "autoprefixer": "^10.4.0",
-    "dotenv": "^16.0.0",
     "eslint": "^8.10.0",
     "eslint-plugin-react": "^7.29.2",
     "postcss": "^8.4.5",
