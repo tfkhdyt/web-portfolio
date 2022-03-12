@@ -11,5 +11,5 @@ export interface IInputForm {
   name: string
   type?: string
   placeholder: string
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void
 }

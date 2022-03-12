@@ -92,7 +92,7 @@ const Form = () => {
             label='Message'
             name='message'
             placeholder='Your message'
-            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
               setMessage(e.target.value)
             }
           />
