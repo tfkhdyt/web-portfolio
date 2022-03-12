@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { ChangeEvent, FC } from 'react'
 
 export interface IContactSection {
   icon: FC
@@ -11,4 +11,5 @@ export interface IInputForm {
   name: string
   type?: string
   placeholder: string
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
 }

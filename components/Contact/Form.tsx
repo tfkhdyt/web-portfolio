@@ -1,45 +1,55 @@
-import { useForm } from '@formspree/react'
-import { useEffect, useState } from 'react'
+import { ChangeEvent, useState, useRef, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
-import Cookies from 'js-cookie'
+import axios from 'axios'
 
 import { variants } from '../../animations/variants'
 
 import InputForm from './InputForm'
 import TextArea from './TextArea'
-const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID as string
-
-const capitalize = (str: string) => {
-  return str.charAt(0).toUpperCase() + str.slice(1)
-}
 
 const Form = () => {
-  const [state, handleSubmit] = useForm(FORM_ID)
-  const [haveSentMessage, setHaveSentMessage] = useState(false)
+  const [name, setName] = useState<string>()
+  const [email, setEmail] = useState<string>()
+  const [message, setMessage] = useState<string>()
+  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const form = useRef<HTMLFormElement>(null)
 
-  useEffect(() => {
-    setHaveSentMessage(Boolean(Cookies.get('haveSentMessage')))
-  }, [])
-
-  if (state.succeeded) {
-    toast.success('Message has been sent, thank you for reaching me out', {
-      toastId: 'success',
-      onOpen: () => {
-        Cookies.set('haveSentMessage', 'true', { expires: 30 })
-        setHaveSentMessage(true)
-      },
-    })
-  }
-
-  if (state.errors.length >= 1 && !state.succeeded) {
-    state.errors.forEach((error) => {
-      toast.error(
-        `${capitalize(error.field as string)} field's value ${error.message}`,
-        { toastId: 'error' }
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    setIsLoading(true)
+    try {
+      await axios.post(
+        /* process.env.NEXT_PUBLIC_MESSAGE_FORM_API + */ 'http://localhost:4000/message',
+        {
+          name,
+          email,
+          message,
+        }
       )
-    })
-    console.log('Formspree errors:', state.errors)
+      toast.success('Message has been sent, thank you for reaching me out')
+    } catch (err) {
+      if (axios.isAxiosError(err) && err.response) {
+        switch (err.response.status) {
+          case 500:
+            toast.error('Server error! Try it next time')
+            break
+          case 429:
+            toast.warning("You're sending message too often! Try it next time")
+            break
+          case 400:
+            err.response.data.message.forEach((error: string) => {
+              toast.error(error.charAt(0).toUpperCase() + error.slice(1))
+            })
+            break
+          default:
+            toast.error('Unknown error')
+            break
+        }
+      }
+    }
+    setIsLoading(false)
+    form.current!.reset()
   }
 
   return (
@@ -50,10 +60,21 @@ const Form = () => {
       viewport={{ once: true }}
       className='w-full'
     >
-      <form className='flex w-full flex-col space-y-4' onSubmit={handleSubmit}>
+      <form
+        className='flex w-full flex-col space-y-4'
+        onSubmit={handleSubmit}
+        ref={form}
+      >
         <div className='flex w-full flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4'>
           <div className='w-full md:w-3/6'>
-            <InputForm label='Name' name='name' placeholder='Your name' />
+            <InputForm
+              label='Name'
+              name='name'
+              placeholder='Your name'
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setName(e.target.value)
+              }
+            />
           </div>
           <div className='w-full md:w-3/6'>
             <InputForm
@@ -61,30 +82,39 @@ const Form = () => {
               name='email'
               type='email'
               placeholder='Your email'
+              onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
             />
           </div>
         </div>
         <div className='w-full'>
-          <TextArea label='Message' name='message' placeholder='Your message' />
+          <TextArea
+            label='Message'
+            name='message'
+            placeholder='Your message'
+            onChange={(e: ChangeEvent<HTMLInputElement>) =>
+              setMessage(e.target.value)
+            }
+          />
         </div>
         <div className='w-full'>
-          <div
+          {/*<div
             className={`${
               haveSentMessage ? 'tooltip tooltip-bottom' : undefined
             } w-full`}
             data-tip='Message is limited to 1 message per month'
+            >*/}
+          <button
+            type='submit'
+            className={`btn w-full md:w-fit ${
+              isLoading && 'loading pointer-events-none opacity-50'
+            } no-animation transition-all duration-500`}
           >
-            <button
-              className={`btn w-full md:w-fit ${
-                state.submitting && 'loading pointer-events-none opacity-50'
-              } no-animation transition-all duration-500 ${
-                haveSentMessage && 'pointer-events-none opacity-50'
-              }`}
-            >
-              Send Message
-            </button>
-          </div>
+            Send Message
+          </button>
         </div>
+        {/*</div>*/}
       </form>
     </motion.div>
   )
