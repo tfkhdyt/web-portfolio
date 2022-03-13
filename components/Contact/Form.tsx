@@ -19,13 +19,11 @@ const Form = () => {
     e.preventDefault()
     setIsLoading(true)
     try {
-      await axios.post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message',
-        {
-          name,
-          email,
-          message,
-        }
-      )
+      await axios.post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message', {
+        name,
+        email,
+        message,
+      })
       toast.success('Message has been sent, thank you for reaching me out')
       form.current!.reset()
     } catch (err) {

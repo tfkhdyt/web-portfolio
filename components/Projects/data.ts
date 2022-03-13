@@ -40,6 +40,15 @@ export const projects = [
     repoLink: 'https://github.com/tfkhdyt/bayarcoek',
   },
   {
+    name: 'Message Form to Telegram API',
+    description:
+      'REST API to send message from HTML form into Telegram Messages',
+    type: 'API',
+    tags: ['NestJS', 'TypeScript', 'Node.js'],
+    picture: 'message_form_to_telegram_api.jpg',
+    repoLink: 'https://github.com/tfkhdyt/message-form-to-telegram-api',
+  },
+  {
     name: 'Coursework',
     description: 'All of my college coursework',
     type: 'Misc',
