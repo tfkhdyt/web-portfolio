@@ -15,3 +15,7 @@
   --tw-text-opacity: 1;
   --chart-text-color: hsl(var(--ac) / var(--tw-text-opacity));
 }
+
+img {
+  pointer-events: none;
+}

@@ -45,7 +45,7 @@ const About = () => {
                 viewport={{ once: true }}
                 className='avatar'
               >
-                <div className='w-36 md:w-5/6'>
+                {/* <div className='w-36 md:w-5/6'>
                   <Image
                     src={about.picture}
                     width={500}
@@ -53,6 +53,23 @@ const About = () => {
                     className='rounded-full'
                     alt='Foto gweh'
                   />
+                </div> */}
+                <div className='group relative aspect-square h-fit w-36 rounded-full bg-base-100 md:w-5/6'>
+                  <motion.div
+                    variants={variants}
+                    initial={{ y: 150, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.9, ease: 'easeInOut', duration: 1 }}
+                  >
+                    <Image
+                      src='/tfkhdyt_avatar.png'
+                      width={500}
+                      height={500}
+                      className='absolute transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:scale-150 md:group-hover:translate-y-8'
+                      alt='Foto gweh'
+                    />
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
@@ -87,7 +104,7 @@ const About = () => {
                         and here's my{' '}
                         <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
                           <a
-                            className='underline decoration-rose-600 decoration-wavy underline-offset-2 transition-all duration-500 hover:font-bold hover:text-rose-600 '
+                            className='underline decoration-rose-600 decoration-wavy transition-all duration-500 hover:font-bold hover:text-rose-600 '
                             target='_blank'
                           >
                             music playlist.
