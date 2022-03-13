@@ -84,7 +84,7 @@ const ProjectCard = ({
         <Image
           src={`/projects/${picture}`}
           className={`inset-0 aspect-video ${
-            isHovered && 'scale-125'
+            isHovered && 'scale-125 backdrop-blur'
           } rounded-2xl transition duration-500 ease-in-out`}
           layout='fill'
           alt={`${name} thumbnail`}
