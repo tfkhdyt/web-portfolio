@@ -81,7 +81,7 @@ const About = () => {
                 if (i == 3) {
                   arr = value.split('|')
                   return (
-                    <div className='inline'>
+                    <div className='inline' key={i}>
                       {arr[0]}
                       <span>
                         and here's my{' '}
