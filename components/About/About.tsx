@@ -66,6 +66,7 @@ const About = () => {
                       src='/tfkhdyt_avatar.png'
                       width={500}
                       height={500}
+                      placeholder='blur'
                       className='absolute transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:scale-150 md:group-hover:translate-y-8'
                       alt='Foto gweh'
                     />
