@@ -8,7 +8,7 @@ const SocialMediaIcons = ({ ...rest }) => {
     <motion.div className='flex space-x-2' {...rest}>
       {data.map((value) => {
         return (
-          <div key={value.title}>
+          <div className='tooltip' data-tip={value.title} key={value.title}>
             <Link href={value.link}>
               <a target='_blank'>
                 <svg

@@ -66,7 +66,6 @@ const About = () => {
                       src='/tfkhdyt_avatar.png'
                       width={500}
                       height={500}
-                      placeholder='blur'
                       className='absolute transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:scale-150 md:group-hover:translate-y-8'
                       alt='Foto gweh'
                     />
@@ -105,7 +104,7 @@ const About = () => {
                         and here's my{' '}
                         <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
                           <a
-                            className='underline decoration-rose-600 decoration-wavy transition-all duration-500 hover:font-bold hover:text-rose-600 '
+                            className='underline decoration-red-500 decoration-dotted decoration-2 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
                             target='_blank'
                           >
                             music playlist.
