@@ -5,6 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
+import Script from 'next/script'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -33,6 +34,12 @@ export default class MyDocument extends Document {
           <link rel='manifest' href='/manifest.json' />
           <link rel='apple-touch-icon' href='/icon-512x512.png' />
           <meta name='theme-color' content='#3B82F6' />
+        <Script
+          async
+          defer
+          data-website-id='285223d1-eb6c-4b6e-a2a2-c0ca69ce122c'
+          src='https://umami-production-4221.up.railway.app/umami.js'
+        />
         </Head>
         <body className='font-body'>
           <Main />
