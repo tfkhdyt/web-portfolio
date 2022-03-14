@@ -32,7 +32,6 @@ const Home: NextPage = () => {
         <Script
           async
           defer
-          data-domains='tfkhdyt.my.id'
           data-website-id='285223d1-eb6c-4b6e-a2a2-c0ca69ce122c'
           src='https://umami-production-4221.up.railway.app/umami.js'
         />
