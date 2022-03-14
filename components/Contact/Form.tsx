@@ -4,6 +4,7 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 
 import { variants } from '../../animations/variants'
+import { errorHandling } from './errorHandling'
 
 import InputForm from './InputForm'
 import TextArea from './TextArea'
@@ -18,7 +19,21 @@ const Form = () => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
-    try {
+
+    const result = await axios
+      .post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message', {
+        name,
+        email,
+        message,
+      })
+      .catch((err) => errorHandling(err))
+    setIsLoading(false)
+    if (!result) return
+
+    toast.success('Message has been sent, thank you for reaching me out')
+    form.current!.reset()
+
+    /* try {
       await axios.post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message', {
         name,
         email,
@@ -46,7 +61,7 @@ const Form = () => {
         }
       }
     }
-    setIsLoading(false)
+    setIsLoading(false) */
   }
 
   return (
