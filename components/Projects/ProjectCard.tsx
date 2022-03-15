@@ -38,7 +38,7 @@ const ProjectCard = ({
       onMouseLeave={onLeave}
     >
       <div
-        className={`relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg transition duration-500 ease-in-out umami--mouseenter--${name}--project-card ${
+        className={`relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg transition duration-500 ease-in-out ${
           isHovered && 'ring ring-[#3ABFF8]'
         }`}
       >
@@ -64,7 +64,9 @@ const ProjectCard = ({
             <Link href={repoLink}>
               <a
                 //  data-theme='dracula'
-                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${name}-repo-link ${
+                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${name
+                  .split(' ')
+                  .join('-')}-repo-link ${
                   isButtonClickable || 'pointer-events-none'
                 }`}
                 target='_blank'
