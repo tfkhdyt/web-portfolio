@@ -66,7 +66,7 @@ const ProjectCard = ({
               <a
                 //  data-theme='dracula'
                 className={`group btn btn-outline btn-xs mt-1.5 umami--click--${_name}-repo-link ${isButtonClickable || 'pointer-events-none'}`}
-                target='_blank'
+                // target='_blank'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
