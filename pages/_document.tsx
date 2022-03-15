@@ -5,7 +5,6 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
-import Script from 'next/script'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -41,10 +40,12 @@ export default class MyDocument extends Document {
             data-website-id='285223d1-eb6c-4b6e-a2a2-c0ca69ce122c'
             src='https://umami.tfkhdyt.my.id/umami.js'
             ></script> */}
-          <Script
-            data-domains='tfkhdyt.my.id'
+          <script
+            async
+            defer
             data-website-id='285223d1-eb6c-4b6e-a2a2-c0ca69ce122c'
             src='https://umami.tfkhdyt.my.id/umami.js'
+            data-domains='tfkhdyt.my.id'
           />
         </Head>
         <body className='font-body'>
