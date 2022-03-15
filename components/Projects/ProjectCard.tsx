@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -15,6 +15,7 @@ const ProjectCard = ({
 }: IProjectCard) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isButtonClickable, setIsButtonClickable] = useState(false)
+  let umami: (eventName: string) => void
   const _name = name.replace(/\s+/g, '-')
 
   const onHover = () => {
@@ -28,6 +29,10 @@ const ProjectCard = ({
     setIsButtonClickable(false)
     setIsHovered(false)
   }
+
+  useEffect(() => {
+    umami = window.umami
+  }, [])
 
   return (
     <motion.div
@@ -62,7 +67,7 @@ const ProjectCard = ({
                 </div>
               ))}
             </div>
-            <div className={`umami--click--${_name}-repo-link`}>
+            <div /* className={`umami--click--${_name}-repo-link`} */ onClick={() => umami(_name + '-repo-link')}>
               <Link href={repoLink}>
                 <a
                   //  data-theme='dracula'
