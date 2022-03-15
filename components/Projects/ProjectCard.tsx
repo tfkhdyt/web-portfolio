@@ -15,7 +15,6 @@ const ProjectCard = ({
 }: IProjectCard) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isButtonClickable, setIsButtonClickable] = useState(false)
-  let umami: (eventName: string) => void
   const _name = name.replace(/\s+/g, '-')
 
   const onHover = () => {
@@ -30,9 +29,11 @@ const ProjectCard = ({
     setIsHovered(false)
   }
 
-  useEffect(() => {
-    umami = window.umami
-  }, [])
+  const umami = (eventName: string) => {
+    if (window.umami && typeof window.umami === 'function') {
+      window.umami(eventName)
+    }
+  }
 
   return (
     <motion.div
@@ -67,7 +68,11 @@ const ProjectCard = ({
                 </div>
               ))}
             </div>
-            <div /* className={`umami--click--${_name}-repo-link`} */ onClick={() => umami(_name + '-repo-link')}>
+            <div
+              /* className={`umami--click--${_name}-repo-link`} */ onClick={() =>
+                umami(_name + '-repo-link')
+              }
+            >
               <Link href={repoLink}>
                 <a
                   //  data-theme='dracula'
