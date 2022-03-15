@@ -38,7 +38,7 @@ const ProjectCard = ({
       onMouseLeave={onLeave}
     >
       <div
-        className={`relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg transition duration-500 ease-in-out umami--hover--${name}--project-card ${
+        className={`relative aspect-video w-full overflow-hidden rounded-2xl shadow-lg transition duration-500 ease-in-out umami--mouseenter--${name}--project-card ${
           isHovered && 'ring ring-[#3ABFF8]'
         }`}
       >
