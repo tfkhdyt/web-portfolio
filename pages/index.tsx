@@ -44,7 +44,7 @@ const Home: NextPage = () => {
         bodyClassName='font-body font-medium'
       />
       <MotionConfig
-        transition={{ duration: 1, type: 'tween', ease: 'backInOut' }}
+        transition={{ duration: 1.5, type: 'tween', ease: 'backInOut' }}
       >
         <Layout>
           <Hero />

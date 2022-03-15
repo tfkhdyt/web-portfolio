@@ -9,7 +9,9 @@ const SkillBox = ({ title, icon, variants }: ISkillBox) => (
     whileInView='toRight'
     viewport={{ once: true }}
   >
-    <div className='space-y-2 rounded-2xl bg-base-200 p-6 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300'>
+    <div
+      className={`space-y-2 rounded-2xl bg-base-200 p-6 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 umami--hover--${title}-skill-box`}
+    >
       {icon ? (
         <div className='flex justify-center'>
           <img

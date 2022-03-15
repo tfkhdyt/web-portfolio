@@ -10,7 +10,10 @@ const SocialMediaIcons = ({ ...rest }) => {
         return (
           <div className='tooltip' data-tip={value.title} key={value.title}>
             <Link href={value.link}>
-              <a target='_blank'>
+              <a
+                target='_blank'
+                className={`umami--click--${value.title}-link`}
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'

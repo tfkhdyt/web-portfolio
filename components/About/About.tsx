@@ -104,7 +104,7 @@ const About = () => {
                         and here's my{' '}
                         <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
                           <a
-                            className='underline decoration-red-500 decoration-dotted decoration-2 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
+                            className='umami--click--music-playlist-link underline decoration-red-500 decoration-dotted decoration-2 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
                             target='_blank'
                           >
                             music playlist.
