@@ -15,7 +15,7 @@ const ProjectCard = ({
 }: IProjectCard) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isButtonClickable, setIsButtonClickable] = useState(false)
-  const _name = name.replace(/\ /g, '-')
+  const _name = name.replace(/\s+/g, '-')
 
   const onHover = () => {
     setTimeout(() => {
