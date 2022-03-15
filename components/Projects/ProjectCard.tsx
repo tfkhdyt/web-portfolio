@@ -32,10 +32,11 @@ const ProjectCard = ({
 
   return (
     <motion.div
+      key={name}
       variants={variants}
       initial='fromLeft'
       whileInView='toRight'
-      exit='fromLeft'
+      exit='exitToRight'
       viewport={{ once: true }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}

@@ -21,4 +21,11 @@ export const variants = {
   endFade: {
     opacity: 1,
   },
+  exitToRight: {
+    x: 25,
+    opacity: 0,
+    transition: {
+      duration: 0.50
+    }
+  }
 }

@@ -7,7 +7,7 @@ const SkillBox = ({ title, icon, variants }: ISkillBox) => (
     variants={variants}
     initial='fromLeft'
     whileInView='toRight'
-    exit='fromLeft'
+    exit='exitToRight'
     viewport={{ once: true }}
   >
     <div

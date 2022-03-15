@@ -59,8 +59,8 @@ const Projects = () => {
               ))}
             </motion.div>
             {/* content */}
-            <AnimatePresence exitBeforeEnter>
-              <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+            <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+              <AnimatePresence exitBeforeEnter>
                 {projects
                   .filter((value) => value.type === activeTab)
                   .map((value) => (
@@ -73,11 +73,12 @@ const Projects = () => {
                         tags={value.tags}
                         picture={value.picture}
                         repoLink={value.repoLink}
+                        key={value.name}
                       />
                     </div>
                   ))}
-              </div>
-            </AnimatePresence>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>

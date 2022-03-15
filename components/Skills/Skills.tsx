@@ -60,8 +60,8 @@ const About = () => {
                 </a>
               ))}
             </motion.div>
-            <AnimatePresence exitBeforeEnter>
-              <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+            <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+              <AnimatePresence exitBeforeEnter>
                 {skills
                   .filter((value) => value.type === activeTab)
                   .map((value) => (
@@ -74,11 +74,12 @@ const About = () => {
                         title={value.title}
                         icon={value.icon}
                         variants={variants}
+                        key={value.title}
                       />
                     </div>
                   ))}
-              </div>
-            </AnimatePresence>
+              </AnimatePresence>
+            </div>
           </div>
         </div>
       </div>
