@@ -60,25 +60,25 @@ const About = () => {
                 </a>
               ))}
             </motion.div>
-            <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
-              {skills
-                .filter((value) => value.type === activeTab)
-                .map((value) => (
-                  <div
-                    className='tooltip'
-                    data-tip={value.title}
-                    key={value.title}
-                  >
-                    <AnimatePresence exitBeforeEnter>
+            <AnimatePresence exitBeforeEnter>
+              <div className='grid grid-cols-2 gap-6 md:grid-cols-4'>
+                {skills
+                  .filter((value) => value.type === activeTab)
+                  .map((value) => (
+                    <div
+                      className='tooltip'
+                      data-tip={value.title}
+                      key={value.title}
+                    >
                       <SkillBox
                         title={value.title}
                         icon={value.icon}
                         variants={variants}
                       />
-                    </AnimatePresence>
-                  </div>
-                ))}
-            </div>
+                    </div>
+                  ))}
+              </div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

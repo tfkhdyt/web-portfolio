@@ -59,12 +59,12 @@ const Projects = () => {
               ))}
             </motion.div>
             {/* content */}
-            <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
-              {projects
-                .filter((value) => value.type === activeTab)
-                .map((value) => (
-                  <div key={value.name}>
-                    <AnimatePresence exitBeforeEnter>
+            <AnimatePresence exitBeforeEnter>
+              <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+                {projects
+                  .filter((value) => value.type === activeTab)
+                  .map((value) => (
+                    <div key={value.name}>
                       <ProjectCard
                         variants={variants}
                         name={value.name}
@@ -74,10 +74,10 @@ const Projects = () => {
                         picture={value.picture}
                         repoLink={value.repoLink}
                       />
-                    </AnimatePresence>
-                  </div>
-                ))}
-            </div>
+                    </div>
+                  ))}
+              </div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

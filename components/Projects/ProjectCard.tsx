@@ -35,6 +35,7 @@ const ProjectCard = ({
       variants={variants}
       initial='fromLeft'
       whileInView='toRight'
+      exit='fromLeft'
       viewport={{ once: true }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
