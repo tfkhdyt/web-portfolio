@@ -64,9 +64,10 @@ const ProjectCard = ({
             <Link href={repoLink}>
               <a
                 //  data-theme='dracula'
-                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${name.replaceAll(' ', '-')}-repo-link ${
-                  isButtonClickable || 'pointer-events-none'
-                }`}
+                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${name.replaceAll(
+                  ' ',
+                  '-'
+                )}-repo-link ${isButtonClickable || 'pointer-events-none'}`}
                 target='_blank'
               >
                 <svg
