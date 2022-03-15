@@ -15,6 +15,7 @@ const ProjectCard = ({
 }: IProjectCard) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isButtonClickable, setIsButtonClickable] = useState(false)
+  const _name = name.replaceAll(' ', '-')
 
   const onHover = () => {
     setTimeout(() => {
@@ -64,10 +65,7 @@ const ProjectCard = ({
             <Link href={repoLink}>
               <a
                 //  data-theme='dracula'
-                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${name.replaceAll(
-                  ' ',
-                  '-'
-                )}-repo-link ${isButtonClickable || 'pointer-events-none'}`}
+                className={`group btn btn-outline btn-xs mt-1.5 umami--click--${_name}-repo-link ${isButtonClickable || 'pointer-events-none'}`}
                 target='_blank'
               >
                 <svg
