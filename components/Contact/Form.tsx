@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 
+import { trackEvent } from '../../lib/analytics/trackEvent'
 import { variants } from '../../animations/variants'
 import { errorHandling } from './errorHandling'
 
@@ -31,6 +32,7 @@ const Form = () => {
     if (!result) return
 
     toast.success('Message has been sent, thank you for reaching me out')
+    trackEvent('send-message', 'form')
     form.current!.reset()
 
     /* try {

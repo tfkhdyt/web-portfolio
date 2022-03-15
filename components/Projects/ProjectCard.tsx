@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { IProjectCard } from './index.d'
+import { trackEvent } from '../../lib/analytics/trackEvent'
 
 const ProjectCard = ({
   variants,
@@ -27,12 +28,6 @@ const ProjectCard = ({
   const onLeave = () => {
     setIsButtonClickable(false)
     setIsHovered(false)
-  }
-
-  const umami = (eventName: string) => {
-    if (window.umami && typeof window.umami.trackEvent === 'function') {
-      window.umami.trackEvent(eventName, 'click')
-    }
   }
 
   return (
@@ -70,7 +65,7 @@ const ProjectCard = ({
             </div>
             <div
               /* className={`umami--click--${_name}-repo-link`} */ onClick={() =>
-                umami(_name + '-repo-link')
+                trackEvent(_name + '-repo-link', 'click')
               }
             >
               <Link href={repoLink}>

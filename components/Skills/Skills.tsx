@@ -47,7 +47,10 @@ const About = () => {
                   onClick={() => handleTabClick(value)}
                   className={`tab tab-bordered ${
                     activeTab === value && 'tab-active'
-                  } shrink-0 space-x-2 transition-all duration-500 umami--click--${value.replace(/\s+/g, '-')}-tab`}
+                  } shrink-0 space-x-2 transition-all duration-500 umami--click--${value.replace(
+                    /\s+/g,
+                    '-'
+                  )}-tab`}
                   key={value}
                 >
                   <span>{value}</span>
