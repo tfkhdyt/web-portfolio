@@ -1,6 +1,8 @@
 declare global {
   interface Window {
-    umami: any
+    umami: {
+      trackEvent: (eventName: string, eventType: string) => void
+    }
   }
 }
 export {}

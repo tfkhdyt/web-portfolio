@@ -30,8 +30,8 @@ const ProjectCard = ({
   }
 
   const umami = (eventName: string) => {
-    if (window.umami && typeof window.umami === 'function') {
-      window.umami(eventName)
+    if (window.umami && typeof window.umami.trackEvent === 'function') {
+      window.umami.trackEvent(eventName, 'click')
     }
   }
 
