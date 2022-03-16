@@ -104,7 +104,7 @@ const Navbar = () => {
             <input
               data-toggle-theme='dracula,light'
               data-act-class='ACTIVECLASS'
-              className='toggle'
+              className='umami--change--switch-theme toggle'
               type='checkbox'
               defaultChecked={currentTheme == 'dracula' ? true : false}
             />
