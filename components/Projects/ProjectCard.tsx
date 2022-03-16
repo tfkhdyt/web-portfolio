@@ -13,6 +13,7 @@ const ProjectCard = ({
   tags,
   picture,
   repoLink,
+  isFirstRender,
 }: IProjectCard) => {
   const [isHovered, setIsHovered] = useState(false)
   const [isButtonClickable, setIsButtonClickable] = useState(false)
@@ -37,6 +38,11 @@ const ProjectCard = ({
       initial='fromLeft'
       whileInView='toRight'
       exit='exitToRight'
+      transition={{
+        duration: isFirstRender ? 1.5 : 0.5,
+        type: 'tween',
+        ease: 'backInOut',
+      }}
       viewport={{ once: true }}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}

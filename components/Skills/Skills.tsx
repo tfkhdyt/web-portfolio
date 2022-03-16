@@ -11,9 +11,11 @@ const About = () => {
     ...new Set(skills.map((value) => value.type)),
   ])
   const [activeTab, setActiveTab] = useState(category[0])
+  const [isFirstRender, setIsFirstRender] = useState(true)
 
   const handleTabClick = (name: string) => {
     setActiveTab(name)
+    if (isFirstRender) setIsFirstRender(false)
   }
 
   return (
@@ -75,6 +77,7 @@ const About = () => {
                         icon={value.icon}
                         variants={variants}
                         key={value.title}
+                        isFirstRender={isFirstRender}
                       />
                     </div>
                   ))}

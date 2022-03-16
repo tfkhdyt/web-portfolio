@@ -19,6 +19,6 @@ export const about = {
     'Coding has been my passion and hobby since I was 15 years old, and I love computer since I was a kid.',
     'Besides coding, I love listening to music. My favorite genres are Pop Punk, Post-hardcore, Metalcore, Nu-metal, and Electronicore, | I like playing games too. My favorite genre is First Person Shooter',
     'Sometimes I watch anime, but I prefer watching western movies and series, especially MCU (Marvel Cinematic Universe).',
-    'I spend lots of time on Facebook sharing memes and shitposts.',
+    'I spend a lot of time on Facebook sharing memes and shitposts.',
   ],
 }

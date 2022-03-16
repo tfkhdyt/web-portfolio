@@ -23,4 +23,5 @@ export interface IProjectCard {
   tags: string[]
   picture: string
   repoLink: string
+  isFirstRender: boolean
 }

@@ -19,4 +19,5 @@ export interface ISkillBox {
   title: string
   icon: string
   variants: Variants
+  isFirstRender: boolean
 }

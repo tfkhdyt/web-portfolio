@@ -11,9 +11,11 @@ const Projects = () => {
     ...new Set(projects.map((value) => value.type)),
   ])
   const [activeTab, setActiveTab] = useState(category[0])
+  const [isFirstRender, setIsFirstRender] = useState(true)
 
   const handleTabClick = (name: string) => {
     setActiveTab(name)
+    if (isFirstRender) setIsFirstRender(false)
   }
 
   return (
@@ -74,6 +76,7 @@ const Projects = () => {
                         picture={value.picture}
                         repoLink={value.repoLink}
                         key={value.name}
+                        isFirstRender={isFirstRender}
                       />
                     </div>
                   ))}

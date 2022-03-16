@@ -21,11 +21,18 @@ export const variants = {
   endFade: {
     opacity: 1,
   },
+  fromLeftFast: {
+    x: -25,
+    opacity: 0,
+    transition: {
+      duration: 5
+    }
+  },
   exitToRight: {
     x: 25,
     opacity: 0,
     transition: {
-      duration: 0.50
+      duration: 0.25
     }
   }
 }

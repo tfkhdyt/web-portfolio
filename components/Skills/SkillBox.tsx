@@ -2,12 +2,17 @@ import { motion } from 'framer-motion'
 
 import { ISkillBox } from './index.d'
 
-const SkillBox = ({ title, icon, variants }: ISkillBox) => (
+const SkillBox = ({ title, icon, variants, isFirstRender }: ISkillBox) => (
   <motion.div
     variants={variants}
     initial='fromLeft'
     whileInView='toRight'
     exit='exitToRight'
+    transition={{
+      duration: isFirstRender ? 1.5 : 0.5,
+      type: 'tween',
+      ease: 'backInOut',
+    }}
     viewport={{ once: true }}
   >
     <div
@@ -18,7 +23,7 @@ const SkillBox = ({ title, icon, variants }: ISkillBox) => (
           <img
             src={`/icons/${icon}`}
             alt={`${title} icon`}
-            className={`pointer-events-none h-16`}
+            className={`h-16`}
             height='100'
           />
         </div>
