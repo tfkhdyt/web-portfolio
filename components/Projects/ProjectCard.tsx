@@ -39,7 +39,7 @@ const ProjectCard = ({
       whileInView='toRight'
       exit='exitToRight'
       transition={{
-        duration: isFirstRender ? 1.5 : 0.5,
+        duration: isFirstRender ? 1.5 : 0.75,
         type: 'tween',
         ease: 'backInOut',
       }}
