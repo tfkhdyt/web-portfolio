@@ -4,13 +4,16 @@ import { menu } from '../Layout/data'
 
 import Icon from './Icon'
 
+const getIsThemeDark = () => {
+  if (typeof window !== 'undefined') {
+    const theme = window.localStorage.getItem('theme')
+    if (theme == 'light') return false
+    if (theme == 'dracula') return true
+  }
+}
+
 const Navbar = () => {
   const [scrollY, setScrollY] = useState<number>(0)
-  const [currentTheme, setCurrentTheme] = useState('')
-
-  useEffect(() => {
-    setCurrentTheme(localStorage.getItem('theme') || 'light')
-  })
 
   useEffect(() => {
     document
@@ -106,7 +109,7 @@ const Navbar = () => {
               data-act-class='ACTIVECLASS'
               className='umami--change--switch-theme toggle'
               type='checkbox'
-              defaultChecked={currentTheme == 'dracula' ? true : false}
+              defaultChecked={getIsThemeDark()}
             />
             {/* <input type='checkbox' className='toggle' /> */}
             <span className='label-text'>
