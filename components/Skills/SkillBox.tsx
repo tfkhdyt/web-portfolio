@@ -19,7 +19,7 @@ const SkillBox = ({ title, icon, variants, isFirstRender }: ISkillBox) => (
       className={`space-y-2 rounded-2xl bg-base-200 p-8 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square`}
     >
       {icon ? (
-        <div className='flex justify-center'>
+        <div className='flex justify-center items-center'>
           <img
             src={`/icons/${icon}`}
             alt={`${title} icon`}
