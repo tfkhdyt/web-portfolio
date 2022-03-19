@@ -123,7 +123,7 @@ const Form = () => {
             type='submit'
             className={`btn w-full md:w-fit ${
               isLoading && 'loading pointer-events-none opacity-50'
-            } umami--click--send-message no-animation transition-all duration-500`}
+            } no-animation transition-all duration-500`}
           >
             Send Message
           </button>
