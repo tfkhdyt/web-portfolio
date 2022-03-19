@@ -16,15 +16,14 @@ const SkillBox = ({ title, icon, variants, isFirstRender }: ISkillBox) => (
     viewport={{ once: true }}
   >
     <div
-      className={`space-y-2 rounded-2xl bg-base-200 p-6 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300`}
+      className={`space-y-2 rounded-2xl bg-base-200 p-8 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square`}
     >
       {icon ? (
         <div className='flex justify-center'>
           <img
             src={`/icons/${icon}`}
             alt={`${title} icon`}
-            className={`h-16`}
-            height='100'
+            className={`object-contain h-20`}
           />
         </div>
       ) : (
