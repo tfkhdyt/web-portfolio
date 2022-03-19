@@ -57,10 +57,10 @@ const About = () => {
                 <div className='group relative aspect-square h-fit w-36 rounded-full bg-base-100 md:w-5/6'>
                   <motion.div
                     variants={variants}
-                    initial={{ y: 150, opacity: 0 }}
+                    initial={{ y: 500, opacity: 0.9 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.9, ease: 'easeInOut', duration: 1 }}
+                    transition={{ delay: 0.5, ease: 'easeInOut', duration: 1 }}
                   >
                     <Image
                       src='/tfkhdyt_avatar.png'
@@ -104,7 +104,7 @@ const About = () => {
                         and here's my{' '}
                         <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
                           <a
-                            className='umami--click--music-playlist-link underline decoration-red-500 decoration-dotted decoration-2 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
+                            className='umami--click--music-playlist-link underline decoration-red-500 decoration-dotted decoration-3 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
                             target='_blank'
                           >
                             music playlist.
