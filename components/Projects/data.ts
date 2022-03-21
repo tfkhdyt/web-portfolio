@@ -24,6 +24,14 @@ export const projects = [
     repoLink: 'https://github.com/tfkhdyt/tugas-akhir-aljabar-linier-matriks',
   },
   {
+    name: 'KBBI Bot',
+    description: 'Indonesian Dictionary in Telegram using web scraping method',
+    type: 'Bot',
+    tags: ['TypeScript', 'Cheerio', 'Telegraf'],
+    picture: 'kbbi.jpg',
+    repoLink: 'https://github.com/tfkhdyt/kbbi-bot',
+  },
+  {
     name: 'Movie Bot',
     description: 'Telegram Bot to search movies information',
     type: 'Bot',
