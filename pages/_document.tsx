@@ -43,6 +43,7 @@ export default class MyDocument extends Document {
           <Script 
             data-website-id='285223d1-eb6c-4b6e-a2a2-c0ca69ce122c'
             src='https://umami.tfkhdyt.my.id/umami.js'
+            strategy='lazyOnload'
           />
         </Head>
         <body className='font-body'>
