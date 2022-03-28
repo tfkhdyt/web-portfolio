@@ -82,7 +82,7 @@ const Hero = () => {
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
-              className={`-mb-80 h-10 w-10 animate-bounce ${
+              className={`-mb-80 md:-mb-64 h-10 w-10 animate-bounce ${
                 scrollY >= 140 && 'pointer-events-none opacity-0'
               } transition-all duration-500`}
               fill='none'
