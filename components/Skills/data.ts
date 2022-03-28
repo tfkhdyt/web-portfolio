@@ -129,4 +129,9 @@ export const skills = [
     icon: 'socketio.svg',
     type: 'JS Framework',
   },
+  {
+    title: 'Redux Toolkit (Library)',
+    icon: 'redux.svg',
+    type: 'JS Framework',
+  },
 ]
