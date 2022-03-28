@@ -60,7 +60,7 @@ const About = () => {
                     initial={{ y: 500, opacity: 0.9 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.5, ease: 'easeInOut', duration: 1 }}
+                    transition={{ delay: 0.25, ease: 'easeInOut', duration: 1.5 }}
                   >
                     <Image
                       src='/tfkhdyt_avatar.png'
