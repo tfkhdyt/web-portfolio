@@ -57,7 +57,7 @@ const About = () => {
                 <div className='group relative aspect-square h-fit w-36 rounded-full bg-base-100 md:w-5/6'>
                   <motion.div
                     variants={variants}
-                    initial={{ y: 500, opacity: 0.9 }}
+                    initial={{ y: 25, opacity: 0.9 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.25, ease: 'easeInOut', duration: 1.5 }}

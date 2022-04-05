@@ -1,5 +1,14 @@
 export const projects = [
   {
+    name: '21 Cineplex API',
+    description:
+      'REST API that scrape the data from 21Cineplex website',
+    type: 'API',
+    tags: ['TypeScript', 'NestJS', 'Cheerio'],
+    picture: '21cineplex-api.jpg',
+    repoLink: 'https://github.com/tfkhdyt/21cineplex-api',
+  },
+  {
     name: 'Portfolio Website',
     description: "You're here",
     type: 'Website',
