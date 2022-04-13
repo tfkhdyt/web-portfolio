@@ -125,6 +125,11 @@ export const skills = [
     type: 'DBMS',
   },
   {
+    title: 'PostgreSQL',
+    icon: 'postgres.svg',
+    type: 'DBMS',
+  },
+  {
     title: 'Socket.io (Library)',
     icon: 'socketio.svg',
     type: 'JS Framework',
