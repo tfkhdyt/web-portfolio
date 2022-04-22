@@ -1,0 +1,23 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 info pnpm": {
+    "err": {
+      "name": "Error",
+      "message": "not found: next",
+      "code": "ENOENT",
+      "stack": "Error: not found: next\n    at getNotFoundError (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41585:51)\n    at Function.whichSync [as sync] (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41662:13)\n    at getCommandAbsolutePathSync (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43227:44)\n    at default_1 (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43236:32)\n    at /data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:178180:39"
+    }
+  },
+  "2 error pnpm": {
+    "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+    "prefix": "/data/data/com.termux/files/home/project/web-portfolio",
+    "err": {
+      "name": "pnpm",
+      "message": "not found: next",
+      "code": "ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL",
+      "stack": "Error: not found: next\n    at getNotFoundError (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41585:51)\n    at Function.whichSync [as sync] (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:41662:13)\n    at getCommandAbsolutePathSync (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43227:44)\n    at default_1 (/data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:43236:32)\n    at /data/data/com.termux/files/usr/lib/node_modules/pnpm/dist/pnpm.cjs:178180:39"
+    }
+  }
+}
