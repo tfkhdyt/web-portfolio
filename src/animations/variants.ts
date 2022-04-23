@@ -1,19 +1,19 @@
 export const variants = {
   fromBottom: {
     y: 25,
-    opacity: 0
+    opacity: 0,
   },
   toTop: {
     y: 0,
-    opacity: 1
+    opacity: 1,
   },
   fromLeft: {
     x: -25,
-    opacity: 0
+    opacity: 0,
   },
   toRight: {
     x: 0,
-    opacity: 1
+    opacity: 1,
   },
   startFade: {
     opacity: 0,
@@ -25,14 +25,14 @@ export const variants = {
     x: -25,
     opacity: 0,
     transition: {
-      duration: 5
-    }
+      duration: 5,
+    },
   },
   exitToRight: {
     x: 25,
     opacity: 0,
     transition: {
-      duration: 0.25
-    }
-  }
+      duration: 0.25,
+    },
+  },
 }

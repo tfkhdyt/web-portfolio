@@ -4,8 +4,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier -cw ./{pages,components}/**/*.{ts,tsx}",
-    "lint": "eslint --fix ./{pages,components}/**/*.{ts,tsx}"
+    "format": "prettier -cw ./src/**/*.{ts,tsx}",
+    "lint": "eslint --fix ./src/**/*.{ts,tsx}"
   },
   "dependencies": {
     "axios": "^0.26.1",
