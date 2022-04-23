@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <div
       className={`min-w-screen navbar sticky inset-x-0 top-0 z-50 ${
-        scrollY >= 140 ? 'bg-base-100/50 backdrop-blur' : 'bg-ghost'
+        scrollY >= 140 ? 'bg-base-100/75 backdrop-blur' : 'bg-ghost'
       } transition-all duration-500 lg:px-40`}
     >
       <div className='flex-none md:hidden'>

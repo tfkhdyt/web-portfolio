@@ -21,10 +21,7 @@ const About = () => {
         ></path>
       </svg>
       {/* content */}
-      <div
-        className='-my-px scroll-mt-24 bg-blue-500 text-accent-content'
-        id='about'
-      >
+      <div className='-my-px scroll-mt-24 bg-blue-500 text-base-100' id='about'>
         <div className='container mx-auto space-y-10 px-6 md:px-12 lg:px-56'>
           {/* title */}
           <motion.div
@@ -60,7 +57,11 @@ const About = () => {
                     initial={{ y: 25, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.25, ease: 'easeInOut', duration: 1.5 }}
+                    transition={{
+                      delay: 0.25,
+                      ease: 'easeInOut',
+                      duration: 1.5,
+                    }}
                   >
                     <Image
                       src='/tfkhdyt_avatar.png'
@@ -104,7 +105,7 @@ const About = () => {
                         and here's my{' '}
                         <Link href='https://youtube.com/playlist?list=PLN3wrmCuWZNHsNley2YK7G7KxU0ga5ESB'>
                           <a
-                            className='umami--click--music-playlist-link underline decoration-red-500 decoration-dotted decoration-3 underline-offset-1 transition-all duration-500 hover:font-bold hover:text-red-500'
+                            className='umami--click--music-playlist-link underline decoration-yellow-400 decoration-dotted decoration-3 underline-offset-4 transition-all duration-500 hover:font-bold hover:text-yellow-400'
                             target='_blank'
                           >
                             music playlist.

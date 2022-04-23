@@ -22,7 +22,7 @@ const Contact = () => {
       </svg>
       {/* content */}
       <div
-        className='-my-px scroll-mt-20 bg-blue-500 py-5 text-accent-content md:scroll-mt-24 md:py-0 md:pb-32'
+        className='-my-px scroll-mt-20 bg-blue-500 py-5 text-base-100 md:scroll-mt-24 md:py-0 md:pb-32'
         id='contact'
       >
         <div className='container mx-auto space-y-8 px-6 pb-12 md:px-12 lg:px-56'>

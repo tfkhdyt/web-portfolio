@@ -2,7 +2,13 @@ import { motion } from 'framer-motion'
 
 import { ISkillBox } from './index.d'
 
-const SkillBox = ({ title, icon, variants, isFirstRender }: ISkillBox) => (
+const SkillBox = ({
+  title,
+  icon,
+  isMainSkill,
+  variants,
+  isFirstRender,
+}: ISkillBox) => (
   <motion.div
     variants={variants}
     initial='fromLeft'
@@ -16,8 +22,21 @@ const SkillBox = ({ title, icon, variants, isFirstRender }: ISkillBox) => (
     viewport={{ once: true }}
   >
     <div
-      className={`space-y-2 rounded-2xl bg-base-200 p-8 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center`}
+      className={`space-y-2 rounded-2xl bg-base-200 p-8 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center relative`}
     >
+      {isMainSkill && (
+        <div className='absolute top-3 left-3'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='15'
+            height='15'
+            viewBox='0 0 24 24'
+            className='fill-warning'
+          >
+            <path d='M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z' />
+          </svg>
+        </div>
+      )}
       {icon ? (
         <img
           src={`/icons/${icon}`}

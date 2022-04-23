@@ -79,7 +79,7 @@ const Resume = () => {
       </svg>
       {/* content */}
       <div
-        className='-my-px scroll-mt-24 bg-blue-500 text-accent-content'
+        className='-my-px scroll-mt-24 bg-blue-500 text-base-100'
         id='resume'
       >
         <div className='container mx-auto space-y-8 px-6 md:px-12 lg:px-56'>

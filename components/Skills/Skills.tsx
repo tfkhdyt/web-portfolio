@@ -75,6 +75,7 @@ const About = () => {
                       <SkillBox
                         title={value.title}
                         icon={value.icon}
+                        isMainSkill={value.isMainSkill}
                         variants={variants}
                         key={value.title}
                         isFirstRender={isFirstRender}

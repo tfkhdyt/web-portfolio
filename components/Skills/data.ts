@@ -1,33 +1,41 @@
-export const skills = [
+import { ISkills } from '.'
+
+export const skills: ISkills[] = [
   {
     title: 'HTML',
     icon: 'html.svg',
     type: 'Language',
+    isMainSkill: true,
   },
   {
     title: 'CSS',
     icon: 'css.svg',
     type: 'Language',
+    isMainSkill: true,
   },
   {
     title: 'JavaScript',
     icon: 'js.svg',
     type: 'Language',
+    isMainSkill: true,
   },
   {
     title: 'TypeScript',
     icon: 'ts.svg',
     type: 'Language',
+    isMainSkill: true,
   },
   {
     title: 'React (Library)',
     icon: 'react.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'Next.js',
     icon: 'next.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'jQuery (Library)',
@@ -38,21 +46,25 @@ export const skills = [
     title: 'Bootstrap',
     icon: 'bootstrap.svg',
     type: 'CSS Framework',
+    isMainSkill: true,
   },
   {
     title: 'Tailwind CSS',
     icon: 'tailwind.svg',
     type: 'CSS Framework',
+    isMainSkill: true,
   },
   {
     title: 'daisyUI (Component)',
     icon: 'daisy.svg',
     type: 'CSS Framework',
+    isMainSkill: true,
   },
   {
     title: 'Node.js (Runtime)',
     icon: 'node.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'Java',
@@ -98,26 +110,31 @@ export const skills = [
     title: 'Express',
     icon: 'express.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'NestJS',
     icon: 'nest.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'Telegraf',
     icon: 'telegraf.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
   {
     title: 'MongoDB',
     icon: 'mongo.svg',
     type: 'DBMS',
+    isMainSkill: true,
   },
   {
     title: 'MySQL',
     icon: 'mysql.svg',
     type: 'DBMS',
+    isMainSkill: true,
   },
   {
     title: 'SQLite',
@@ -128,6 +145,7 @@ export const skills = [
     title: 'PostgreSQL',
     icon: 'postgres.svg',
     type: 'DBMS',
+    isMainSkill: true,
   },
   {
     title: 'Socket.io (Library)',
@@ -138,5 +156,11 @@ export const skills = [
     title: 'Redux Toolkit (Library)',
     icon: 'redux.svg',
     type: 'JS Framework',
+    isMainSkill: true,
   },
-]
+].map((value, index) => {
+  return {
+    id: index + 1,
+    ...value,
+  }
+})

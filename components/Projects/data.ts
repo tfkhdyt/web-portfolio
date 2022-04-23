@@ -49,8 +49,7 @@ export const projects = [
   },
   {
     name: '21 Cineplex API',
-    description:
-      'REST API that scrape the data from 21Cineplex website',
+    description: 'REST API that scrape the data from 21Cineplex website',
     type: 'API',
     tags: ['TypeScript', 'NestJS', 'Cheerio'],
     picture: '21cineplex-api.jpg',
