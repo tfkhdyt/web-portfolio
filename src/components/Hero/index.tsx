@@ -83,6 +83,7 @@ const Hero = () => {
             </motion.div>
           </div>
           <motion.div
+            variants={variants}
             initial='startFade'
             animate='endFade'
             className='grid place-items-center'
