@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import { variants } from '../../animations/variants'
+import styles from './Hero.module.css'
 
 import GradientText from '../GradientText'
 import SocialMediaIcons from '../SocialMediaIcons'
@@ -71,7 +73,13 @@ const Hero = () => {
               animate='toTop'
               className='hidden md:flex'
             >
-              <img src='/illustration3.svg' className='pointer-events-none' />
+              <Image
+                src='/illustration3.svg'
+                height={500}
+                width={500}
+                objectFit='scale-down'
+              />
+              {/* <img src='/illustration3.svg' className='pointer-events-none' /> */}
             </motion.div>
           </div>
           <motion.div
@@ -81,8 +89,32 @@ const Hero = () => {
             onClick={handleArrow}
           >
             <svg
+              width='40px'
+              height='100%'
+              viewBox='0 0 247 390'
+              version='1.1'
               xmlns='http://www.w3.org/2000/svg'
-              className={`-mb-80 md:-mb-64 h-10 w-10 animate-bounce ${
+              // xmlns:xlink='http://www.w3.org/1999/xlink'
+              className={`-mb-80 md:-mb-32 h-10 w-10 ${
+                scrollY >= 140 && 'pointer-events-none opacity-0'
+              } transition-all duration-500 [fill-rule:evenodd] [clip-rule:evenodd] [stroke-linecap:round] [stroke-linejoin:round] [stroke-miterlimit:1.5]`}
+            >
+              <path
+                id='wheel'
+                d='M123.359,79.775l0,72.843'
+                className={`[fill:none] [stroke:#fff] [stroke-width:20px] ${styles.wheel}`}
+              />
+              <path
+                id='mouse'
+                d='M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z'
+                className='[fill:none] [stroke:#fff] [stroke-width:20px]'
+              />
+            </svg>
+
+            {/*
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              className={`-mb-80 md:-mb-32 h-10 w-10 animate-bounce ${
                 scrollY >= 140 && 'pointer-events-none opacity-0'
               } transition-all duration-500`}
               fill='none'
@@ -96,6 +128,7 @@ const Hero = () => {
                 d='M19 14l-7 7m0 0l-7-7m7 7V3'
               />
             </svg>
+            */}
           </motion.div>
         </div>
       </div>

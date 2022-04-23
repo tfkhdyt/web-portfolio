@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 import { ISkillBox } from './index.d'
 
@@ -22,7 +23,7 @@ const SkillBox = ({
     viewport={{ once: true }}
   >
     <div
-      className={`space-y-2 rounded-2xl bg-base-200 p-8 shadow shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center relative`}
+      className={`space-y-2 rounded-2xl bg-base-200 p-8 lg:p-10 shadow-md shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center relative`}
     >
       {isMainSkill && (
         <div className='absolute top-3 left-3'>
@@ -38,12 +39,21 @@ const SkillBox = ({
         </div>
       )}
       {icon ? (
-        <img
+        <Image
           src={`/icons/${icon}`}
-          alt={`${title} icon`}
-          className={`object-contain h-20 md:h-22 lg:h-24`}
+          alt={title}
+          // className='h-10 md:h-22 lg:h-24'
+          // layout='responsive'
+          width={200}
+          height={200}
+          objectFit='scale-down'
         />
       ) : (
+        // <img
+        //   src={`/icons/${icon}`}
+        //   alt={`${title} icon`}
+        //   className={`object-contain h-20 md:h-22 lg:h-24`}
+        // />
         <p className='flex justify-center font-semibold leading-none text-base-content'>
           {title}
         </p>

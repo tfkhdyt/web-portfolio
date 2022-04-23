@@ -38,11 +38,6 @@ export const skills: ISkills[] = [
     isMainSkill: true,
   },
   {
-    title: 'jQuery (Library)',
-    icon: 'jquery.svg',
-    type: 'JS Framework',
-  },
-  {
     title: 'Bootstrap',
     icon: 'bootstrap.svg',
     type: 'CSS Framework',
@@ -137,14 +132,20 @@ export const skills: ISkills[] = [
     isMainSkill: true,
   },
   {
+    title: 'PostgreSQL',
+    icon: 'postgres.svg',
+    type: 'DBMS',
+    isMainSkill: true,
+  },
+  {
     title: 'SQLite',
     icon: 'sqlite.svg',
     type: 'DBMS',
   },
   {
-    title: 'PostgreSQL',
-    icon: 'postgres.svg',
-    type: 'DBMS',
+    title: 'Redux Toolkit (Library)',
+    icon: 'redux.svg',
+    type: 'JS Framework',
     isMainSkill: true,
   },
   {
@@ -153,14 +154,8 @@ export const skills: ISkills[] = [
     type: 'JS Framework',
   },
   {
-    title: 'Redux Toolkit (Library)',
-    icon: 'redux.svg',
+    title: 'jQuery (Library)',
+    icon: 'jquery.svg',
     type: 'JS Framework',
-    isMainSkill: true,
   },
-].map((value, index) => {
-  return {
-    id: index + 1,
-    ...value,
-  }
-})
+]
