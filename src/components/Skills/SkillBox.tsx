@@ -39,14 +39,19 @@ const SkillBox = ({
         </div>
       )}
       {icon ? (
-        <Image
+        // <Image
+        //   src={`/icons/${icon}`}
+        //   alt={title}
+        //   // className='h-10 md:h-22 lg:h-24'
+        //   // layout='responsive'
+        //   width={200}
+        //   height={200}
+        //   objectFit='scale-down'
+        // />
+        <img
           src={`/icons/${icon}`}
           alt={title}
-          // className='h-10 md:h-22 lg:h-24'
-          // layout='responsive'
-          width={200}
-          height={200}
-          objectFit='scale-down'
+          className={`object-contain h-20 md:h-22 lg:h-24`}
         />
       ) : (
         // <img
