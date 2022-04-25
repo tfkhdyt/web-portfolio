@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { IProjectCard } from './index.d'
-import { trackEvent } from '../../lib/analytics/trackEvent'
+import { IProjectCard } from './index.d';
+import { trackEvent } from '../../lib/analytics/trackEvent';
 
 const ProjectCard = ({
   variants,
@@ -15,21 +15,21 @@ const ProjectCard = ({
   repoLink,
   isFirstRender,
 }: IProjectCard) => {
-  const [isHovered, setIsHovered] = useState(false)
-  const [isButtonClickable, setIsButtonClickable] = useState(false)
-  const _name = name.replace(/\s+/g, '-')
+  const [isHovered, setIsHovered] = useState(false);
+  const [isButtonClickable, setIsButtonClickable] = useState(false);
+  const _name = name.replace(/\s+/g, '-');
 
   const onHover = () => {
     setTimeout(() => {
-      setIsButtonClickable(true)
-    }, 100)
-    setIsHovered(true)
-  }
+      setIsButtonClickable(true);
+    }, 100);
+    setIsHovered(true);
+  };
 
   const onLeave = () => {
-    setIsButtonClickable(false)
-    setIsHovered(false)
-  }
+    setIsButtonClickable(false);
+    setIsHovered(false);
+  };
 
   return (
     <motion.div
@@ -111,7 +111,7 @@ const ProjectCard = ({
         />
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

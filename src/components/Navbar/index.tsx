@@ -1,38 +1,38 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 
-import { menu } from '../Layout/data'
+import { menu } from '../Layout/data';
 
-import Icon from './Icon'
+import Icon from './Icon';
 
 const getIsThemeDark = () => {
   if (typeof window !== 'undefined') {
-    const theme = window.localStorage.getItem('theme')
-    if (theme == 'light') return false
-    if (theme == 'dracula') return true
+    const theme = window.localStorage.getItem('theme');
+    if (theme == 'light') return false;
+    if (theme == 'dracula') return true;
   }
-}
+};
 
 const Navbar = () => {
-  const [scrollY, setScrollY] = useState<number>(0)
+  const [scrollY, setScrollY] = useState<number>(0);
 
   useEffect(() => {
     document
       .querySelector('.drawer-content')!
       .addEventListener('scroll', () => {
-        const element: Element = document.querySelector('.drawer-content')!
+        const element: Element = document.querySelector('.drawer-content')!;
         // console.log(element.scrollTop)
-        setScrollY(element.scrollTop)
-      })
-  }, [])
+        setScrollY(element.scrollTop);
+      });
+  }, []);
 
   const handleDrawer = (target: string) => {
     setTimeout(() => {
       document.querySelector(target)!.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-      })
-    }, 150)
-  }
+      });
+    }, 150);
+  };
 
   return (
     <div
@@ -83,7 +83,7 @@ const Navbar = () => {
               //     {value.title}
               //   </a>
               // </li>
-            )
+            );
           })}
         </ul>
       </div>
@@ -126,7 +126,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

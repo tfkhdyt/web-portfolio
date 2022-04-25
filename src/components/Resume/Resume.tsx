@@ -1,6 +1,6 @@
-import { useRef, useEffect, useState } from 'react'
-import { Chart } from 'react-chartjs-2'
-import { motion } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react';
+import { Chart } from 'react-chartjs-2';
+import { motion } from 'framer-motion';
 import {
   Chart as ChartJS,
   LineController,
@@ -12,12 +12,17 @@ import {
   Tooltip,
   Legend,
   Filler,
-} from 'chart.js'
+} from 'chart.js';
 
-import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
-import { variants } from '../../animations/variants'
+import {
+  ips,
+  chartKuliahOptions,
+  chartSMKOptions,
+  nilaiSemester,
+} from './data';
+import { variants } from '../../animations/variants';
 
-import Card from './Card'
+import Card from './Card';
 
 ChartJS.register(
   LineController,
@@ -29,27 +34,27 @@ ChartJS.register(
   Tooltip,
   Legend,
   Filler
-)
-ChartJS.defaults.color = '#708090'
+);
+ChartJS.defaults.color = '#708090';
 
 const Resume = () => {
-  const chartKuliahref = useRef<ChartJS>(null)
-  const chartSMKref = useRef<ChartJS>(null)
-  const [kuliahDataSets, setKuliahDataSets] = useState({})
-  const [SMKDataSets, setSMKDataSets] = useState({})
+  const chartKuliahref = useRef<ChartJS>(null);
+  const chartSMKref = useRef<ChartJS>(null);
+  const [kuliahDataSets, setKuliahDataSets] = useState({});
+  const [SMKDataSets, setSMKDataSets] = useState({});
 
   useEffect(() => {
-    const chart = chartKuliahref.current
+    const chart = chartKuliahref.current;
     if (chart) {
       setKuliahDataSets({
         backgroundColor: createGradient(chart.ctx),
         // color: '#708090',
         fill: true,
         tension: 0.4,
-      })
+      });
     }
 
-    const chartSMK = chartSMKref.current
+    const chartSMK = chartSMKref.current;
     if (chartSMK) {
       setSMKDataSets({
         backgroundColor: createGradient(chartSMK.ctx),
@@ -57,16 +62,16 @@ const Resume = () => {
         // color: getComputedStyle(document.documentElement).getPropertyValue('text-base-content'),
         fill: true,
         tension: 0.4,
-      })
+      });
     }
-  }, [])
+  }, []);
 
   const createGradient = (ctx: CanvasRenderingContext2D) => {
-    const gradient = ctx.createLinearGradient(0, 0, 0, 150)
-    gradient.addColorStop(0, 'rgba(59, 130, 246, 1)')
-    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)')
-    return gradient
-  }
+    const gradient = ctx.createLinearGradient(0, 0, 0, 150);
+    gradient.addColorStop(0, 'rgba(59, 130, 246, 1)');
+    gradient.addColorStop(1, 'rgba(59, 130, 246, 0)');
+    return gradient;
+  };
 
   return (
     <div className='w-screen'>
@@ -191,7 +196,7 @@ const Resume = () => {
         <path d='M0,224L48,218.7C96,213,192,203,288,192C384,181,480,171,576,165.3C672,160,768,160,864,165.3C960,171,1056,181,1152,176C1248,171,1344,149,1392,138.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path>
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default Resume
+export default Resume;

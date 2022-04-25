@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-import { about } from './data'
-import { variants } from '../../animations/variants'
+import { about } from './data';
+import { variants } from '../../animations/variants';
 
-import GradientText from '../GradientText'
-import Link from 'next/link'
+import GradientText from '../GradientText';
+import Link from 'next/link';
 
 const About = () => {
   return (
@@ -95,9 +95,9 @@ const About = () => {
                 Googler.
               </p>
               {about.description.map((value, i) => {
-                let arr: string[] = []
+                let arr: string[] = [];
                 if (i == 3) {
-                  arr = value.split('|')
+                  arr = value.split('|');
                   return (
                     <div className='inline' key={i}>
                       {arr[0]}
@@ -114,13 +114,13 @@ const About = () => {
                       </span>
                       {arr[1]}
                     </div>
-                  )
+                  );
                 }
                 return (
                   <span key={i}>
                     <p>{value}</p>
                   </span>
-                )
+                );
               })}
             </motion.div>
           </div>
@@ -135,7 +135,7 @@ const About = () => {
         <path d='M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,186.7C672,181,768,203,864,208C960,213,1056,203,1152,208C1248,213,1344,235,1392,245.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z'></path>
       </svg>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

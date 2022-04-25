@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { motion } from 'framer-motion';
+// import Image from 'next/image';
 
-import { ISkillBox } from './index.d'
+import { ISkillBox } from './index.d';
 
 const SkillBox = ({
   title,
@@ -65,6 +65,6 @@ const SkillBox = ({
       )}
     </div>
   </motion.div>
-)
+);
 
-export default SkillBox
+export default SkillBox;

@@ -1,4 +1,4 @@
-import { IInputForm } from '.'
+import { IInputForm } from '.';
 
 const InputForm = ({ label, name, type = 'text', ...rest }: IInputForm) => {
   return (
@@ -14,6 +14,6 @@ const InputForm = ({ label, name, type = 'text', ...rest }: IInputForm) => {
         {...rest}
       />
     </div>
-  )
-}
-export default InputForm
+  );
+};
+export default InputForm;

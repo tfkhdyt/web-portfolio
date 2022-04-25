@@ -14,4 +14,4 @@ export default {
     'Portofolio web tfkhdyt',
     'Tfkhdyt web portfolio',
   ],
-}
+};

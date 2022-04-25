@@ -23,4 +23,4 @@ export const menu = [
     title: 'Contact',
     to: '#contact',
   },
-]
+];

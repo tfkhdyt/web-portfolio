@@ -1,4 +1,4 @@
-import Data from './data'
+import Data from './data';
 
 const MetaTags = () => {
   return (
@@ -22,7 +22,7 @@ const MetaTags = () => {
       <meta property='og:url' content={Data.link} />
       <link rel='image_src' href={Data.link + Data.thumbnail} />
     </>
-  )
-}
+  );
+};
 
-export default MetaTags
+export default MetaTags;

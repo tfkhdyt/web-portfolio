@@ -1,4 +1,4 @@
-import { ICardProps } from '.'
+import { ICardProps } from '.';
 
 const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
   return (
@@ -19,7 +19,7 @@ const Card = ({ title, location, time, jurusan, children }: ICardProps) => {
         <div className='mt-4'>{children}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

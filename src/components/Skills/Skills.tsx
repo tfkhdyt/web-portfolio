@@ -1,22 +1,22 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
-import { skills } from './data'
-import { variants } from '../../animations/variants'
+import { skills } from './data';
+import { variants } from '../../animations/variants';
 
-import SkillBox from './SkillBox'
+import SkillBox from './SkillBox';
 
 const About = () => {
   const [category] = useState<string[]>([
     ...new Set(skills.map((value) => value.type)),
-  ])
-  const [activeTab, setActiveTab] = useState(category[0])
-  const [isFirstRender, setIsFirstRender] = useState(true)
+  ]);
+  const [activeTab, setActiveTab] = useState(category[0]);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const handleTabClick = (name: string) => {
-    setActiveTab(name)
-    if (isFirstRender) setIsFirstRender(false)
-  }
+    setActiveTab(name);
+    if (isFirstRender) setIsFirstRender(false);
+  };
 
   return (
     <div>
@@ -89,7 +89,7 @@ const About = () => {
       </div>
       {/* ======== */}
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

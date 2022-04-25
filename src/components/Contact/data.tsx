@@ -1,5 +1,5 @@
-import { EmailIcon, TelegramIcon } from './icons'
-import { IContactSection } from './index.d'
+import { EmailIcon, TelegramIcon } from './icons';
+import { IContactSection } from './index.d';
 
 export const contacts: IContactSection[] = [
   {
@@ -12,4 +12,4 @@ export const contacts: IContactSection[] = [
     title: 'Telegram',
     content: '@tfkhdyt',
   },
-]
+];

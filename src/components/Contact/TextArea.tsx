@@ -1,4 +1,4 @@
-import { IInputForm } from '.'
+import { IInputForm } from '.';
 
 const TextArea = ({ label, name, ...rest }: IInputForm) => {
   return (
@@ -13,7 +13,7 @@ const TextArea = ({ label, name, ...rest }: IInputForm) => {
         {...rest}
       ></textarea>
     </div>
-  )
-}
+  );
+};
 
-export default TextArea
+export default TextArea;

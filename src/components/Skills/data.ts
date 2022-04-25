@@ -1,4 +1,4 @@
-import { ISkills } from '.'
+import { ISkills } from '.';
 
 export const skills: ISkills[] = [
   {
@@ -158,4 +158,4 @@ export const skills: ISkills[] = [
     icon: 'jquery.svg',
     type: 'JS Framework',
   },
-]
+];

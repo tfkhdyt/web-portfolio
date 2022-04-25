@@ -1,12 +1,12 @@
-export const ips = [3.5, 3.83, 3.9]
+export const ips = [3.5, 3.83, 3.9];
 const ipk: string = (
   ips.reduce((acc, cur) => acc + cur, 0) / ips.length
-).toFixed(2)
+).toFixed(2);
 
-export const nilaiSemester = [81.75, 83.96, 86.88, 86.17, 86.8, 87.15]
+export const nilaiSemester = [81.75, 83.96, 86.88, 86.17, 86.8, 87.15];
 const nilaiRataSemester: string = (
   nilaiSemester.reduce((acc, cur) => acc + cur, 0) / nilaiSemester.length
-).toFixed(2)
+).toFixed(2);
 
 export const chartKuliahOptions = {
   maintainAspectRatio: false,
@@ -33,7 +33,7 @@ export const chartKuliahOptions = {
       text: `Grade Point Average ${ipk}`,
     },
   },
-}
+};
 
 export const chartSMKOptions = {
   maintainAspectRatio: false,
@@ -60,4 +60,4 @@ export const chartSMKOptions = {
       text: `Grade Point Average ${nilaiRataSemester}`,
     },
   },
-}
+};

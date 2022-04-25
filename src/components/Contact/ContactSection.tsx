@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { IContactSection } from './index.d'
-import { variants } from '../../animations/variants'
+import { IContactSection } from './index.d';
+import { variants } from '../../animations/variants';
 
 const ContactSection = ({ icon, title, content }: IContactSection) => {
-  const Icon = icon
+  const Icon = icon;
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(content)
-  }
+    navigator.clipboard.writeText(content);
+  };
 
   return (
     <motion.div
@@ -37,7 +37,7 @@ const ContactSection = ({ icon, title, content }: IContactSection) => {
         </div>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default ContactSection
+export default ContactSection;

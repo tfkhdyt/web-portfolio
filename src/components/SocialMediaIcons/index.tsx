@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
-import data from './data'
+import data from './data';
 
 const SocialMediaIcons = ({ ...rest }) => {
   return (
@@ -26,10 +26,10 @@ const SocialMediaIcons = ({ ...rest }) => {
               </a>
             </Link>
           </div>
-        )
+        );
       })}
     </motion.div>
-  )
-}
+  );
+};
 
-export default SocialMediaIcons
+export default SocialMediaIcons;

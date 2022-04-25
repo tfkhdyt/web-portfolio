@@ -1,21 +1,21 @@
-import { useRef } from 'react'
+import { useRef } from 'react';
 
-import { LayoutProps } from './index.d'
-import { menu } from './data'
+import { LayoutProps } from './index.d';
+import { menu } from './data';
 
-import Navbar from '../Navbar'
+import Navbar from '../Navbar';
 
 const Layout = ({ children }: LayoutProps) => {
-  const checkbox = useRef<HTMLInputElement>(null)
+  const checkbox = useRef<HTMLInputElement>(null);
 
   const handleDrawer = (target: string) => {
     setTimeout(() => {
       document.querySelector(target)!.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
-      })
-    }, 150)
-  }
+      });
+    }, 150);
+  };
 
   return (
     <div className='drawer h-screen w-full'>
@@ -46,12 +46,12 @@ const Layout = ({ children }: LayoutProps) => {
                   {value.title}
                 </label>
               </li>
-            )
+            );
           })}
         </ul>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -35,4 +35,4 @@ export const variants = {
       duration: 0.25,
     },
   },
-}
+};

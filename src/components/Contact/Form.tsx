@@ -1,25 +1,25 @@
-import { ChangeEvent, useState, useRef, FormEvent } from 'react'
-import { motion } from 'framer-motion'
-import { toast } from 'react-toastify'
-import axios from 'axios'
+import { ChangeEvent, useState, useRef, FormEvent } from 'react';
+import { motion } from 'framer-motion';
+import { toast } from 'react-toastify';
+import axios from 'axios';
 
-import { trackEvent } from '../../lib/analytics/trackEvent'
-import { variants } from '../../animations/variants'
-import { errorHandling } from './errorHandling'
+import { trackEvent } from '../../lib/analytics/trackEvent';
+import { variants } from '../../animations/variants';
+import { errorHandling } from './errorHandling';
 
-import InputForm from './InputForm'
-import TextArea from './TextArea'
+import InputForm from './InputForm';
+import TextArea from './TextArea';
 
 const Form = () => {
-  const [name, setName] = useState<string>()
-  const [email, setEmail] = useState<string>()
-  const [message, setMessage] = useState<string>()
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const form = useRef<HTMLFormElement>(null)
+  const [name, setName] = useState<string>();
+  const [email, setEmail] = useState<string>();
+  const [message, setMessage] = useState<string>();
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const form = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
 
     const result = await axios
       .post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message', {
@@ -27,13 +27,13 @@ const Form = () => {
         email,
         message,
       })
-      .catch((err) => errorHandling(err))
-    setIsLoading(false)
-    if (!result) return
+      .catch((err) => errorHandling(err));
+    setIsLoading(false);
+    if (!result) return;
 
-    toast.success('Message has been sent, thank you for reaching me out')
-    trackEvent('send-message', 'form')
-    form.current!.reset()
+    toast.success('Message has been sent, thank you for reaching me out');
+    trackEvent('send-message', 'form');
+    form.current!.reset();
 
     /* try {
       await axios.post(process.env.NEXT_PUBLIC_MESSAGE_FORM_API + '/message', {
@@ -64,7 +64,7 @@ const Form = () => {
       }
     }
     setIsLoading(false) */
-  }
+  };
 
   return (
     <motion.div
@@ -131,7 +131,7 @@ const Form = () => {
         {/*</div>*/}
       </form>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

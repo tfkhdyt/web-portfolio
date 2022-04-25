@@ -1,10 +1,10 @@
-import SocialMediaIcons from '../SocialMediaIcons'
-import { motion } from 'framer-motion'
+import SocialMediaIcons from '../SocialMediaIcons';
+import { motion } from 'framer-motion';
 
-import { variants } from '../../animations/variants'
+import { variants } from '../../animations/variants';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   return (
     <div className='w-screen bg-slate-800'>
       <div className='container'>
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

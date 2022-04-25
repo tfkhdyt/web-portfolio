@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { contacts } from './data'
-import { variants } from '../../animations/variants'
+import { contacts } from './data';
+import { variants } from '../../animations/variants';
 
-import ContactSection from './ContactSection'
-import Form from './Form'
+import ContactSection from './ContactSection';
+import Form from './Form';
 
 // import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'
 
@@ -53,7 +53,7 @@ const Contact = () => {
       </div>
       {/* ======== */}
     </div>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

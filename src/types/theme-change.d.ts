@@ -1,1 +1,1 @@
-declare module 'theme-change'
+declare module 'theme-change';

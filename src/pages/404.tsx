@@ -1,17 +1,17 @@
-import { themeChange } from 'theme-change'
-import { useEffect } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { themeChange } from 'theme-change';
+import { useEffect } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
-import { variants } from '../animations/variants'
+import { variants } from '../animations/variants';
 
-import GradientText from '../components/GradientText'
+import GradientText from '../components/GradientText';
 
 const _404 = () => {
   useEffect(() => {
-    themeChange(false)
-  }, [])
+    themeChange(false);
+  }, []);
 
   return (
     <div className='min-h-screen min-w-screen grid place-items-center'>
@@ -62,7 +62,7 @@ const _404 = () => {
         </div>
       </motion.div>
     </div>
-  )
+  );
 
   /* return (
     <div className='min-h-screen min-w-screen grid place-items-center'>
@@ -81,6 +81,6 @@ const _404 = () => {
         </div>
       </div>
       ) */
-}
+};
 
-export default _404
+export default _404;

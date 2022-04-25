@@ -184,4 +184,4 @@ export const projects = [
     picture: 'spotify-dl.jpg',
     repoLink: 'https://github.com/tfkhdyt/SpotifyDL',
   },
-]
+];

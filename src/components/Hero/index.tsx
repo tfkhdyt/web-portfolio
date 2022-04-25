@@ -1,32 +1,32 @@
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
-import { variants } from '../../animations/variants'
-import styles from './Hero.module.css'
+import { variants } from '../../animations/variants';
+import styles from './Hero.module.css';
 
-import GradientText from '../GradientText'
-import SocialMediaIcons from '../SocialMediaIcons'
+import GradientText from '../GradientText';
+import SocialMediaIcons from '../SocialMediaIcons';
 
 const Hero = () => {
-  const [scrollY, setScrollY] = useState<number>(0)
+  const [scrollY, setScrollY] = useState<number>(0);
 
   useEffect(() => {
     document
       .querySelector('.drawer-content')!
       .addEventListener('scroll', () => {
-        const element: Element = document.querySelector('.drawer-content')!
+        const element: Element = document.querySelector('.drawer-content')!;
         // console.log(element.scrollTop)
-        setScrollY(element.scrollTop)
-      })
-  }, [])
+        setScrollY(element.scrollTop);
+      });
+  }, []);
 
   const handleArrow = () => {
     document.querySelector('#about')!.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
-    })
-  }
+    });
+  };
 
   return (
     <div
@@ -136,7 +136,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

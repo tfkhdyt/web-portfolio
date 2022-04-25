@@ -1,22 +1,22 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
 
-import { projects } from './data'
-import { variants } from '../../animations/variants'
+import { projects } from './data';
+import { variants } from '../../animations/variants';
 
-import ProjectCard from './ProjectCard'
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const [category] = useState<string[]>([
     ...new Set(projects.map((value) => value.type)),
-  ])
-  const [activeTab, setActiveTab] = useState(category[0])
-  const [isFirstRender, setIsFirstRender] = useState(true)
+  ]);
+  const [activeTab, setActiveTab] = useState(category[0]);
+  const [isFirstRender, setIsFirstRender] = useState(true);
 
   const handleTabClick = (name: string) => {
-    setActiveTab(name)
-    if (isFirstRender) setIsFirstRender(false)
-  }
+    setActiveTab(name);
+    if (isFirstRender) setIsFirstRender(false);
+  };
 
   return (
     <div>
@@ -87,7 +87,7 @@ const Projects = () => {
       </div>
       {/* ======== */}
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode } from 'react';
 
 const GradientText = ({
   children,
@@ -6,10 +6,10 @@ const GradientText = ({
   from,
   to,
 }: {
-  children: ReactNode
-  style?: string
-  from: string
-  to: string
+  children: ReactNode;
+  style?: string;
+  from: string;
+  to: string;
 }) => {
   return (
     <span
@@ -17,7 +17,7 @@ const GradientText = ({
     >
       {children}
     </span>
-  )
-}
+  );
+};
 
-export default GradientText
+export default GradientText;

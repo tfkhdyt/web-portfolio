@@ -1,13 +1,13 @@
 const getAge = (dateString: string) => {
-  const today = new Date()
-  const birthDate = new Date(dateString)
-  let age = today.getFullYear() - birthDate.getFullYear()
-  const m = today.getMonth() - birthDate.getMonth()
+  const today = new Date();
+  const birthDate = new Date(dateString);
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
   if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-    age--
+    age--;
   }
-  return age
-}
+  return age;
+};
 
 export const about = {
   picture: '/avatar.jpg',
@@ -21,4 +21,4 @@ export const about = {
     'Sometimes I watch anime, but I prefer watching western movies and series, especially MCU (Marvel Cinematic Universe).',
     'I spend a lot of time on Facebook sharing memes and shitposts.',
   ],
-}
+};
