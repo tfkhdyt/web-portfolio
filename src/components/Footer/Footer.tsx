@@ -19,7 +19,7 @@ const Footer = () => {
             <p className='text-lg font-bold'>Reach me out on</p>
             <SocialMediaIcons />
             <p className='pt-5 text-sm font-semibold'>
-              © {currentYear} Taufik Hidayat. All Rights Reserved
+              © {currentYear} ./tfkhdyt • All Rights Reserved
             </p>
           </motion.div>
         </div>
