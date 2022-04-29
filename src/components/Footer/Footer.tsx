@@ -27,7 +27,7 @@ const Footer = () => {
             {menu.map((value) => {
               return (
                 <p
-                  className='text-slate-400'
+                  className='text-slate-400 w-fit'
                   key={value.title}
                   onClick={() => handleDrawer(value.to)}
                 >
@@ -41,7 +41,7 @@ const Footer = () => {
             {socialMedia.map((value) => {
               return (
                 <Link href={value.link} key={value.title}>
-                  <a className='text-slate-400 block' target='_blank'>
+                  <a className='text-slate-400 block w-fit' target='_blank'>
                     {value.title}
                   </a>
                 </Link>
