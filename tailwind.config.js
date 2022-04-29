@@ -4,7 +4,6 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Be Vietnam Pro', 'Fira Sans', 'sans-serif'],
-        mono: ['Fira Code', 'monospace']
       },
     },
   },
