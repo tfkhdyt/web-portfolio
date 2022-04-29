@@ -8,7 +8,6 @@ import Head from 'next/head';
 import Footer from '../components/Footer/Footer';
 
 import Layout from '../components/Layout';
-// import Layout from '../components/Layout'
 import Hero from '../components/Hero';
 import About from '../components/About/About';
 import Skills from '../components/Skills/Skills';
@@ -16,6 +15,7 @@ import Resume from '../components/Resume/Resume';
 import Projects from '../components/Projects/Projects';
 import MetaTags from '../components/MetaTags/MetaTags';
 import Contact from '../components/Contact/Contact';
+import { BackToTop } from '../components/BackToTop/BackToTop';
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -55,6 +55,7 @@ const Home: NextPage = () => {
           <Contact />
           <Footer />
         </Layout>
+        <BackToTop />
       </MotionConfig>
     </>
   );

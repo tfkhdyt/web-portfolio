@@ -1,13 +1,13 @@
-import { useRef } from 'react';
-
 import { LayoutProps } from './index.d';
 import { menu } from './data';
 
 import Navbar from '../Navbar';
+import { useDispatch } from 'react-redux';
+import { setIsMenuOpened } from '../../redux/slices/menu.slice';
 // import Footer from '../Footer/Footer';
 
 const Layout = ({ children }: LayoutProps) => {
-  const checkbox = useRef<HTMLInputElement>(null);
+  const dispatch = useDispatch();
 
   const handleDrawer = (target: string) => {
     setTimeout(() => {
@@ -25,7 +25,7 @@ const Layout = ({ children }: LayoutProps) => {
           id='my-drawer-3'
           type='checkbox'
           className='drawer-toggle'
-          ref={checkbox}
+          onChange={() => dispatch(setIsMenuOpened())}
         />
         <div className='drawer-content flex flex-col overflow-x-hidden'>
           {/* Navbar */}
