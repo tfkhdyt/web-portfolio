@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { menu } from '../Layout/data';
 
 import Icon from './Icon';
+import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
 
 const getIsThemeDark = () => {
   if (typeof window !== 'undefined') {
@@ -25,19 +26,10 @@ const Navbar = () => {
       });
   }, []);
 
-  const handleDrawer = (target: string) => {
-    setTimeout(() => {
-      document.querySelector(target)!.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }, 150);
-  };
-
   return (
     <div
-      className={`min-w-screen navbar sticky inset-x-0 top-0 z-50 ${
-        scrollY >= 140 ? 'bg-base-100/75 backdrop-blur' : 'bg-ghost'
+      className={`w-screen navbar sticky inset-x-0 top-0 z-50 ${
+        scrollY >= 140 ? 'bg-base-100/50 backdrop-blur' : 'bg-ghost'
       } transition-all duration-500 lg:px-40`}
     >
       <div className='flex-none md:hidden'>

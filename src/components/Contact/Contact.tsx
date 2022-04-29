@@ -46,7 +46,7 @@ const Contact = () => {
               ))}
             </div>
             {/* end of info contact */}
-            <div className='divider before:bg-base-300/10 after:bg-base-300/10 md:divider-horizontal'></div>
+            <div className='divider before:bg-base-300/20 after:bg-base-300/20 md:divider-horizontal'></div>
             <Form />
           </div>
         </div>
