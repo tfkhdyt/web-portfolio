@@ -29,8 +29,10 @@ const Navbar = () => {
   return (
     <div
       className={`w-screen navbar sticky inset-x-0 top-0 z-50 ${
-        scrollY >= 140 ? 'bg-base-100/50 backdrop-blur' : 'bg-ghost'
-      } transition-all duration-500 lg:px-40`}
+        scrollY >= 140
+          ? 'bg-base-100/50 backdrop-blur border-b'
+          : 'bg-ghost border-b-0'
+      } transition-all duration-200 ease-in-out lg:px-40 border-base-content/25`}
     >
       <div className='flex-none md:hidden'>
         <label htmlFor='my-drawer-3' className='btn btn-ghost btn-square'>

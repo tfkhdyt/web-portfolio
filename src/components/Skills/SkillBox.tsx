@@ -23,7 +23,7 @@ const SkillBox = ({
     viewport={{ once: true }}
   >
     <div
-      className={`space-y-2 rounded-2xl bg-base-200 p-8 lg:p-10 shadow-md shadow-base-300/75 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center relative`}
+      className={`space-y-2 rounded-2xl bg-base-200 p-8 lg:p-10 shadow shadow-base-content/20 transition duration-500 hover:bg-base-300 w-full aspect-square flex justify-center items-center relative`}
     >
       {isMainSkill && (
         <div className='absolute top-3 left-3'>

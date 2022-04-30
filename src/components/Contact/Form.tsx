@@ -106,7 +106,7 @@ const Form = () => {
           <TextArea
             label='Message'
             name='message'
-            placeholder="Assalamu'alaikum"
+            placeholder="Assalamu'alaikum..."
             onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
               setMessage(e.target.value)
             }

@@ -23,7 +23,9 @@ const Footer = () => {
             </p>
           </div>
           <div className='space-y-1'>
-            <p className='font-bold text-lg'>Explore</p>
+            <p className='font-bold text-lg underline decoration-wavy underline-offset-2 decoration-1'>
+              Quick links
+            </p>
             {menu.map((value) => {
               return (
                 <p
@@ -37,7 +39,9 @@ const Footer = () => {
             })}
           </div>
           <div className='space-y-1'>
-            <p className='font-bold text-lg'>Reach me out on</p>
+            <p className='font-bold text-lg underline decoration-wavy underline-offset-2 decoration-1'>
+              Reach me out on
+            </p>
             {socialMedia.map((value) => {
               return (
                 <Link href={value.link} key={value.title}>
