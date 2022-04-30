@@ -18,9 +18,9 @@ specifiers:
   postcss: ^8.4.13
   prettier: ^2.6.2
   prettier-plugin-tailwindcss: ^0.1.10
-  react: ^17.0.2
+  react: latest
   react-chartjs-2: ^4.1.0
-  react-dom: ^17.0.2
+  react-dom: latest
   react-redux: ^8.0.1
   react-toastify: ^8.2.0
   tailwindcss: ^3.0.24
@@ -28,18 +28,18 @@ specifiers:
   typescript: 4.5.4
 
 dependencies:
-  '@reduxjs/toolkit': 1.8.1_react-redux@8.0.1+react@17.0.2
+  '@reduxjs/toolkit': 1.8.1_react-redux@8.0.1+react@18.1.0
   axios: 0.26.1
   chart.js: 3.7.1
   daisyui: 2.14.2_1824c569936d24bc346301fad9d96c12
-  framer-motion: 6.3.3_react-dom@17.0.2+react@17.0.2
-  next: 12.1.5_react-dom@17.0.2+react@17.0.2
+  framer-motion: 6.3.3_react-dom@18.1.0+react@18.1.0
+  next: 12.1.5_react-dom@18.1.0+react@18.1.0
   next-pwa: 5.5.2_next@12.1.5
-  react: 17.0.2
-  react-chartjs-2: 4.1.0_chart.js@3.7.1+react@17.0.2
-  react-dom: 17.0.2_react@17.0.2
-  react-redux: 8.0.1_b3482aaf5744fc7c2aeb7941b0e0a78f
-  react-toastify: 8.2.0_react-dom@17.0.2+react@17.0.2
+  react: 18.1.0
+  react-chartjs-2: 4.1.0_chart.js@3.7.1+react@18.1.0
+  react-dom: 18.1.0_react@18.1.0
+  react-redux: 8.0.1_26afd6b1a6f2b7939e5897cf9077ea93
+  react-toastify: 8.2.0_react-dom@18.1.0+react@18.1.0
   theme-change: 2.0.2
 
 devDependencies:
@@ -1399,7 +1399,7 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
-  /@reduxjs/toolkit/1.8.1_react-redux@8.0.1+react@17.0.2:
+  /@reduxjs/toolkit/1.8.1_react-redux@8.0.1+react@18.1.0:
     resolution: {integrity: sha512-Q6mzbTpO9nOYRnkwpDlFOAbQnd3g7zj7CtHAZWz5SzE5lcV97Tf8f3SzOO8BoPOMYBFgfZaqTUZqgGu+a0+Fng==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18
@@ -1411,8 +1411,8 @@ packages:
         optional: true
     dependencies:
       immer: 9.0.12
-      react: 17.0.2
-      react-redux: 8.0.1_b3482aaf5744fc7c2aeb7941b0e0a78f
+      react: 18.1.0
+      react-redux: 8.0.1_26afd6b1a6f2b7939e5897cf9077ea93
       redux: 4.2.0
       redux-thunk: 2.4.1_redux@4.2.0
       reselect: 4.1.5
@@ -2478,7 +2478,7 @@ packages:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
     dev: true
 
-  /framer-motion/6.3.3_react-dom@17.0.2+react@17.0.2:
+  /framer-motion/6.3.3_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-wo0dCnoq5vn4L8YVOPO9W54dliH78vDaX0Lj+bSPUys6Nt5QaehrS3uaYa0q5eVeikUgtTjz070UhQ94thI5Sw==}
     peerDependencies:
       react: '>=16.8 || ^17.0.0 || ^18.0.0'
@@ -2487,8 +2487,8 @@ packages:
       framesync: 6.0.1
       hey-listen: 1.0.8
       popmotion: 11.0.3
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
       style-value-types: 5.0.0
       tslib: 2.4.0
     optionalDependencies:
@@ -3048,7 +3048,7 @@ packages:
       babel-loader: 8.2.5
       clean-webpack-plugin: 4.0.0
       globby: 11.1.0
-      next: 12.1.5_react-dom@17.0.2+react@17.0.2
+      next: 12.1.5_react-dom@18.1.0+react@18.1.0
       terser-webpack-plugin: 5.3.1
       workbox-webpack-plugin: 6.5.3
       workbox-window: 6.5.3
@@ -3062,7 +3062,7 @@ packages:
       - webpack
     dev: false
 
-  /next/12.1.5_react-dom@17.0.2+react@17.0.2:
+  /next/12.1.5_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-YGHDpyfgCfnT5GZObsKepmRnne7Kzp7nGrac07dikhutWQug7hHg85/+sPJ4ZW5Q2pDkb+n0FnmLkmd44htIJQ==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -3083,9 +3083,9 @@ packages:
       '@next/env': 12.1.5
       caniuse-lite: 1.0.30001334
       postcss: 8.4.5
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-      styled-jsx: 5.0.1_react@17.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
+      styled-jsx: 5.0.1_react@18.1.0
     optionalDependencies:
       '@next/swc-android-arm-eabi': 12.1.5
       '@next/swc-android-arm64': 12.1.5
@@ -3403,25 +3403,24 @@ packages:
       safe-buffer: 5.2.1
     dev: false
 
-  /react-chartjs-2/4.1.0_chart.js@3.7.1+react@17.0.2:
+  /react-chartjs-2/4.1.0_chart.js@3.7.1+react@18.1.0:
     resolution: {integrity: sha512-AsUihxEp8Jm1oBhbEovE+w50m9PVNhz1sfwEIT4hZduRC0m14gHWHd0cUaxkFDb8HNkdMIGzsNlmVqKiOpU74g==}
     peerDependencies:
       chart.js: ^3.5.0
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       chart.js: 3.7.1
-      react: 17.0.2
+      react: 18.1.0
     dev: false
 
-  /react-dom/17.0.2_react@17.0.2:
-    resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
+  /react-dom/18.1.0_react@18.1.0:
+    resolution: {integrity: sha512-fU1Txz7Budmvamp7bshe4Zi32d0ll7ect+ccxNu9FlObT605GOEB8BfO4tmRJ39R5Zj831VCpvQ05QPBW5yb+w==}
     peerDependencies:
-      react: 17.0.2
+      react: ^18.1.0
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
-      react: 17.0.2
-      scheduler: 0.20.2
+      react: 18.1.0
+      scheduler: 0.22.0
     dev: false
 
   /react-is/16.13.1:
@@ -3431,7 +3430,7 @@ packages:
     resolution: {integrity: sha512-Fl7FuabXsJnV5Q1qIOQwx/sagGF18kogb4gpfcG4gjLBWO0WDiiz1ko/ExayuxE7InyQkBLkxRFG5oxY6Uu3Kg==}
     dev: false
 
-  /react-redux/8.0.1_b3482aaf5744fc7c2aeb7941b0e0a78f:
+  /react-redux/8.0.1_26afd6b1a6f2b7939e5897cf9077ea93:
     resolution: {integrity: sha512-LMZMsPY4DYdZfLJgd7i79n5Kps5N9XVLCJJeWAaPYTV+Eah2zTuBjTxKtNEbjiyitbq80/eIkm55CYSLqAub3w==}
     peerDependencies:
       '@types/react': ^16.8 || ^17.0 || ^18.0
@@ -3457,29 +3456,28 @@ packages:
       '@types/react': 17.0.38
       '@types/use-sync-external-store': 0.0.3
       hoist-non-react-statics: 3.3.2
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
       react-is: 18.1.0
-      use-sync-external-store: 1.1.0_react@17.0.2
+      use-sync-external-store: 1.1.0_react@18.1.0
     dev: false
 
-  /react-toastify/8.2.0_react-dom@17.0.2+react@17.0.2:
+  /react-toastify/8.2.0_react-dom@18.1.0+react@18.1.0:
     resolution: {integrity: sha512-Pg2Ju7NngAamarFvLwqrFomJ57u/Ay6i6zfLurt/qPynWkAkOthu6vxfqYpJCyNhHRhR4hu7+bySSeWWJu6PAg==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
     dependencies:
       clsx: 1.1.1
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
     dev: false
 
-  /react/17.0.2:
-    resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
+  /react/18.1.0:
+    resolution: {integrity: sha512-4oL8ivCz5ZEPyclFQXaNksK3adutVS8l2xzZU0cqEFrE9Sb7fC0EFK5uEk74wIreL1DERyjvsU915j1pcT2uEQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /readdirp/3.6.0:
@@ -3639,11 +3637,10 @@ packages:
     resolution: {integrity: sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==}
     dev: false
 
-  /scheduler/0.20.2:
-    resolution: {integrity: sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==}
+  /scheduler/0.22.0:
+    resolution: {integrity: sha512-6QAm1BgQI88NPYymgGQLCZgvep4FyePDWFpXVK+zNSUgHwlqpJy8VEh8Et0KxTACS4VWwMousBElAZOH9nkkoQ==}
     dependencies:
       loose-envify: 1.4.0
-      object-assign: 4.1.1
     dev: false
 
   /schema-utils/2.7.1:
@@ -3810,7 +3807,7 @@ packages:
       tslib: 2.4.0
     dev: false
 
-  /styled-jsx/5.0.1_react@17.0.2:
+  /styled-jsx/5.0.1_react@18.1.0:
     resolution: {integrity: sha512-+PIZ/6Uk40mphiQJJI1202b+/dYeTVd9ZnMPR80pgiWbjIwvN2zIp4r9et0BgqBuShh48I0gttPlAXA7WVvBxw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -3823,7 +3820,7 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      react: 17.0.2
+      react: 18.1.0
     dev: false
 
   /supports-color/5.5.0:
@@ -4047,12 +4044,12 @@ packages:
     dependencies:
       punycode: 2.1.1
 
-  /use-sync-external-store/1.1.0_react@17.0.2:
+  /use-sync-external-store/1.1.0_react@18.1.0:
     resolution: {integrity: sha512-SEnieB2FPKEVne66NpXPd1Np4R1lTNKfjuy3XdIoPQKYBAFdzbzSZlSn1KJZUiihQLQC5Znot4SBz1EOTBwQAQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      react: 17.0.2
+      react: 18.1.0
     dev: false
 
   /util-deprecate/1.0.2:
