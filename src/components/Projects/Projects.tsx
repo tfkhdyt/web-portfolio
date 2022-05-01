@@ -1,19 +1,18 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
-import { projects } from './data';
+import { ProjectType } from './index.d';
 import { variants } from '../../animations/variants';
 
 import ProjectCard from './ProjectCard';
+import { projects } from './data';
 
 const Projects = () => {
-  const [category] = useState<string[]>([
-    ...new Set(projects.map((value) => value.type)),
-  ]);
-  const [activeTab, setActiveTab] = useState(category[0]);
+  const category = Object.values(ProjectType);
+  const [activeTab, setActiveTab] = useState(ProjectType.WEB);
   const [isFirstRender, setIsFirstRender] = useState(true);
 
-  const handleTabClick = (name: string) => {
+  const handleTabClick = (name: ProjectType) => {
     setActiveTab(name);
     if (isFirstRender) setIsFirstRender(false);
   };
