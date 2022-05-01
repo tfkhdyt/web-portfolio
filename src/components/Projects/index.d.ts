@@ -25,3 +25,20 @@ export interface IProjectCard {
   repoLink: string;
   isFirstRender: boolean;
 }
+
+export enum ProjectType {
+  WEB = 'Website',
+  BOT = 'Bot',
+  CLI = 'CLI',
+  API = 'API',
+  MISC = 'Misc',
+}
+
+export interface Project {
+  name: string;
+  description: string;
+  type: ProjectType;
+  tags: string[];
+  picture: string;
+  repoLink: string;
+}

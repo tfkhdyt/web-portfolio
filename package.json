@@ -5,7 +5,7 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier -cw ./src/**/*.{ts,tsx}",
-    "lint": "eslint --fix ./src/**/*.{ts,tsx}"
+    "lint": "eslint --fix ./src"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
