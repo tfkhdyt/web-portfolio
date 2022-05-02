@@ -52,25 +52,15 @@ const About = () => {
                   />
                 </div> */}
                 <div className='group relative aspect-square h-fit w-36 rounded-full bg-base-100 md:w-5/6'>
-                  <motion.div
-                    variants={variants}
-                    initial={{ y: 25, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: 0.25,
-                      ease: 'easeInOut',
-                      duration: 1.5,
-                    }}
-                  >
+                  <div>
                     <Image
-                      src='/tfkhdyt_avatar.png'
+                      src='/tfkhdyt_avatar.jpg'
                       width={500}
                       height={500}
-                      className='absolute transition-all duration-500 ease-in-out group-hover:translate-y-6 group-hover:scale-150 md:group-hover:translate-y-8'
+                      className='absolute transition-all duration-500 ease-in-out group-hover:translate-y-4 group-hover:translate-x-0.5 md:group-hover:translate-x-2 group-hover:scale-125 md:group-hover:translate-y-6'
                       alt='Foto gweh'
                     />
-                  </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </div>
