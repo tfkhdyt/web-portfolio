@@ -18,12 +18,16 @@ const Visitors = () => {
   );
 
   if (error) console.log(error);
-  if (!data) return 'Loading';
 
   return (
-    <p className='text-xs font-semibold text-slate-600'>
-      Total Visitors: {data ? data.pageviews.value : 'Loading...'}
-    </p>
+    <div className='flex items-center text-xs font-semibold text-slate-600'>
+      Total Visitors:{' '}
+      {data ? (
+        data.pageviews.value
+      ) : (
+        <div className='animate-pulse ml-1 w-12 h-3 rounded-sm bg-slate-600 '></div>
+      )}
+    </div>
   );
 };
 
