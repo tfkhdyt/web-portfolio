@@ -9,6 +9,7 @@ import { menu } from '../Layout/data';
 import Money from './Money';
 // import CV from './CV';
 import Chart from './Chart';
+import Visitors from './Visitors';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -87,10 +88,11 @@ const Footer = () => {
           </div>
         </div>
         <div className='divider before:bg-slate-300/10 after:bg-slate-300/10'></div>
-        <div className='my-4 md:my-6'>
-          <p className='text-xs font-semibold flex justify-center text-slate-200'>
+        <div className='mt-2 mb-6 space-y-2 md:space-y-0 flex flex-col md:flex-row md:justify-between items-center'>
+          <p className='text-xs font-semibold text-slate-400'>
             © {currentYear} Taufik Hidayat • All Rights Reserved
           </p>
+          <Visitors />
         </div>
       </div>
     </div>
