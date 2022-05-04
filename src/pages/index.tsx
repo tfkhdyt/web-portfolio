@@ -1,11 +1,11 @@
+import type { GetServerSideProps } from 'next';
 import { ToastContainer, Slide } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.min.css';
 import { MotionConfig } from 'framer-motion';
 import { themeChange } from 'theme-change';
-import type { NextPage } from 'next';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Head from 'next/head';
-import Footer from '../components/Footer/Footer';
+import axios from 'axios';
 
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
@@ -16,8 +16,41 @@ import Projects from '../components/Projects/Projects';
 import MetaTags from '../components/MetaTags/MetaTags';
 import Contact from '../components/Contact/Contact';
 import { BackToTop } from '../components/BackToTop/BackToTop';
+import Footer from '../components/Footer/Footer';
+import { setPageViews } from '../redux/slices/umami.slice';
 
-const Home: NextPage = () => {
+import 'react-toastify/dist/ReactToastify.min.css';
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const data = await axios
+    .get('http://localhost:3000/api/umami/stats')
+    .catch((err) => {
+      throw new Error(err.message);
+    });
+  return {
+    props: {
+      data: data.data,
+    },
+  };
+};
+
+interface IValue {
+  value: number;
+}
+
+interface IPageViews {
+  pageviews: IValue;
+}
+
+interface IVisitorsProps {
+  data: IPageViews;
+}
+
+const Home = ({ data }: IVisitorsProps) => {
+  const dispatch = useDispatch();
+
+  dispatch(setPageViews(data.pageviews.value));
+
   useEffect(() => {
     themeChange(false);
     // 👆 false parameter is required for react project

@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import menuReducer from './slices/menu.slice';
+import umamiReducer from './slices/umami.slice';
 
 export const store = configureStore({
   reducer: {
     menu: menuReducer,
+    umami: umamiReducer,
   },
 });
 
