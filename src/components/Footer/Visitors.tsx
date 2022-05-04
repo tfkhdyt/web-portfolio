@@ -21,19 +21,19 @@ import { GetServerSideProps } from 'next';
 //   };
 // };
 
-interface IValue {
-  value: number;
-}
+// interface IValue {
+//   value: number;
+// }
+//
+// interface IPageViews {
+//   pageviews: IValue;
+// }
+//
+// interface IVisitorsProps {
+//   data: IPageViews;
+// }
 
-interface IPageViews {
-  pageviews: IValue;
-}
-
-interface IVisitorsProps {
-  data: IPageViews;
-}
-
-const Visitors = ({ data }: IVisitorsProps) => {
+const Visitors = () => {
   // const fetcher = async (url: string) => {
   //   return axios
   //     .get(url, {
@@ -53,11 +53,11 @@ const Visitors = ({ data }: IVisitorsProps) => {
   return (
     <div className='flex items-center text-xs font-semibold text-slate-600'>
       Total Visitors:{' '}
-      {data ? (
+      {/* {data ? (
         data.pageviews.value
-      ) : (
+      ) : ( */}
         <div className='animate-pulse ml-1 w-12 h-3 rounded-sm bg-slate-600 '></div>
-      )}
+      {/* )} */}
     </div>
   );
 };
