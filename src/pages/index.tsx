@@ -2,8 +2,8 @@ import type { GetServerSideProps } from 'next';
 import { ToastContainer, Slide } from 'react-toastify';
 import { MotionConfig } from 'framer-motion';
 import { themeChange } from 'theme-change';
-import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Head from 'next/head';
 import axios from 'axios';
 
@@ -22,11 +22,9 @@ import { setPageViews } from '../redux/slices/umami.slice';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await axios
-    .get('http://localhost:3000/api/umami/stats')
-    .catch((err) => {
-      throw new Error(err.message);
-    });
+  const data = await axios.get('/api/umami/stats').catch((err) => {
+    throw new Error(err.message);
+  });
   return {
     props: {
       data: data.data,
