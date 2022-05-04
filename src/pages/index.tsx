@@ -21,8 +21,10 @@ import { setPageViews } from '../redux/slices/umami.slice';
 
 import 'react-toastify/dist/ReactToastify.min.css';
 
+const BASE_URL = process.env.BASE_URL;
+
 export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await axios.get('/api/umami/stats').catch((err) => {
+  const data = await axios.get(`${BASE_URL}/api/umami/stats`).catch((err) => {
     throw new Error(err.message);
   });
   return {
