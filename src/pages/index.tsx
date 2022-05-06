@@ -1,4 +1,4 @@
-import type { GetServerSideProps } from 'next';
+// import type { GetServerSideProps } from 'next';
 import { ToastContainer, Slide } from 'react-toastify';
 import { MotionConfig } from 'framer-motion';
 import { themeChange } from 'theme-change';
@@ -20,41 +20,56 @@ import Footer from '../components/Footer/Footer';
 import { setPageViews } from '../redux/slices/umami.slice';
 
 import 'react-toastify/dist/ReactToastify.min.css';
+import useSWR from 'swr';
+
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const data = await axios.get(`${BASE_URL}/api/umami/stats`).catch((err) => {
+//     throw new Error(err.message);
+//   });
+//   return {
+//     props: {
+//       data: data.data,
+//     },
+//   };
+// };
+//
+// interface IValue {
+//   value: number;
+// }
+//
+// interface IPageViews {
+//   pageviews: IValue;
+// }
+//
+// interface IVisitorsProps {
+//   data: IPageViews;
+// }
 
 const BASE_URL = process.env.BASE_URL;
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const data = await axios.get(`${BASE_URL}/api/umami/stats`).catch((err) => {
-    throw new Error(err.message);
+const umamiClient = axios.create({
+  baseURL: BASE_URL,
+});
+
+const fetcher = async (url: string) => {
+  const { data } = await umamiClient.get(url).catch((err) => {
+    throw err;
   });
-  return {
-    props: {
-      data: data.data,
-    },
-  };
+  if (!data) return null;
+  return data;
 };
 
-interface IValue {
-  value: number;
-}
-
-interface IPageViews {
-  pageviews: IValue;
-}
-
-interface IVisitorsProps {
-  data: IPageViews;
-}
-
-const Home = ({ data }: IVisitorsProps) => {
+const Home = () => {
+  const { data, error } = useSWR('/api/umami/stats', fetcher);
   const dispatch = useDispatch();
 
-  dispatch(setPageViews(data.pageviews.value));
+  if (data) dispatch(setPageViews(data.pageviews.value));
 
   useEffect(() => {
     themeChange(false);
-    // 👆 false parameter is required for react project
   }, []);
+
+  if (error) console.error(error);
 
   return (
     <>
