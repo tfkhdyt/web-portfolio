@@ -1,28 +1,27 @@
-import { useRef, useEffect, useState } from 'react';
-import { Chart } from 'react-chartjs-2';
-import { motion } from 'framer-motion';
 import {
-  Chart as ChartJS,
-  LineController,
   CategoryScale,
+  Chart as ChartJS,
+  Filler,
+  Legend,
+  LineController,
+  LineElement,
   LinearScale,
   PointElement,
-  LineElement,
   Title,
   Tooltip,
-  Legend,
-  Filler,
 } from 'chart.js';
+import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { Chart } from 'react-chartjs-2';
 
+import { variants } from '../../animations/variants';
+import Card from './Card';
 import {
-  ips,
   chartKuliahOptions,
   chartSMKOptions,
+  ips,
   nilaiSemester,
 } from './data';
-import { variants } from '../../animations/variants';
-
-import Card from './Card';
 
 ChartJS.register(
   LineController,

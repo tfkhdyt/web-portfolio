@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 
-import { IProjectCard } from './index.d';
 import { trackEvent } from '../../lib/analytics/trackEvent';
+import { IProjectCard } from './index.d';
 
 const ProjectCard = ({
   variants,

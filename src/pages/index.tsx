@@ -1,29 +1,29 @@
 // import type { GetServerSideProps } from 'next';
-import { ToastContainer, Slide } from 'react-toastify';
+import axios from 'axios';
 import { MotionConfig } from 'framer-motion';
-import { themeChange } from 'theme-change';
+import Head from 'next/head';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import Head from 'next/head';
-import axios from 'axios';
+import { Slide, ToastContainer } from 'react-toastify';
+import useSWR from 'swr';
+import { themeChange } from 'theme-change';
 
-import Layout from '../components/Layout';
-import Hero from '../components/Hero';
 import About from '../components/About/About';
-import Skills from '../components/Skills/Skills';
-import Resume from '../components/Resume/Resume';
-import Projects from '../components/Projects/Projects';
-import MetaTags from '../components/MetaTags/MetaTags';
-import Contact from '../components/Contact/Contact';
 import { BackToTop } from '../components/BackToTop/BackToTop';
+import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
+import Hero from '../components/Hero';
+import Layout from '../components/Layout';
+import MetaTags from '../components/MetaTags/MetaTags';
+import Projects from '../components/Projects/Projects';
+import Resume from '../components/Resume/Resume';
+import Skills from '../components/Skills/Skills';
 import {
   setPageViewsAllTime,
   setPageViewsLast30Days,
 } from '../redux/slices/umami.slice';
 
 import 'react-toastify/dist/ReactToastify.min.css';
-import useSWR from 'swr';
 
 // export const getServerSideProps: GetServerSideProps = async () => {
 //   const data = await axios.get(`${BASE_URL}/api/umami/stats`).catch((err) => {

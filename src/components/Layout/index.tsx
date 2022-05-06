@@ -1,9 +1,9 @@
-import { LayoutProps } from './index.d';
-import { menu } from './data';
-
-import Navbar from '../Navbar';
 import { useDispatch } from 'react-redux';
+
 import { setIsMenuOpened } from '../../redux/slices/menu.slice';
+import Navbar from '../Navbar';
+import { menu } from './data';
+import { LayoutProps } from './index.d';
 // import Footer from '../Footer/Footer';
 
 const Layout = ({ children }: LayoutProps) => {

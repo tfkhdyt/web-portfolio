@@ -1,12 +1,11 @@
-import { ChangeEvent, useState, useRef, FormEvent } from 'react';
-import { motion } from 'framer-motion';
-import { toast } from 'react-toastify';
 import axios from 'axios';
+import { motion } from 'framer-motion';
+import { ChangeEvent, FormEvent, useRef, useState } from 'react';
+import { toast } from 'react-toastify';
 
-import { trackEvent } from '../../lib/analytics/trackEvent';
 import { variants } from '../../animations/variants';
+import { trackEvent } from '../../lib/analytics/trackEvent';
 import { errorHandling } from './errorHandling';
-
 import InputForm from './InputForm';
 import TextArea from './TextArea';
 

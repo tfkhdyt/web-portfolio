@@ -1,11 +1,10 @@
-import { themeChange } from 'theme-change';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { themeChange } from 'theme-change';
 
 import { variants } from '../animations/variants';
-
 import GradientText from '../components/GradientText';
 
 const _404 = () => {

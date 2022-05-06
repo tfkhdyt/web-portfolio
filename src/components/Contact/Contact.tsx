@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
 
-import { contacts } from './data';
 import { variants } from '../../animations/variants';
-
 import ContactSection from './ContactSection';
+import { contacts } from './data';
 import Form from './Form';
 
 // import { ips, chartKuliahOptions, chartSMKOptions, nilaiSemester } from './data'

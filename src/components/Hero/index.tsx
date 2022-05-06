@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 import { variants } from '../../animations/variants';
-import styles from './Hero.module.css';
-
 import GradientText from '../GradientText';
 import SocialMediaIcons from '../SocialMediaIcons';
+import styles from './Hero.module.css';
 
 const Hero = () => {
   const [scrollY, setScrollY] = useState<number>(0);

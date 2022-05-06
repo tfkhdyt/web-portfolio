@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-import { about } from './data';
-import { variants } from '../../animations/variants';
-
-import GradientText from '../GradientText';
 import Link from 'next/link';
+
+import { variants } from '../../animations/variants';
+import GradientText from '../GradientText';
+import { about } from './data';
 
 const About = () => {
   return (

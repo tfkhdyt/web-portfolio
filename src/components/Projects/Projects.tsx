@@ -1,11 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { useState } from 'react';
 
-import { ProjectType } from './index.d';
 import { variants } from '../../animations/variants';
-
-import ProjectCard from './ProjectCard';
 import { projects } from './data';
+import { ProjectType } from './index.d';
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
   const category = Object.values(ProjectType);

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
-import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
 import useScroll from '../../hooks/useScroll';
+import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
 import { RootState } from '../../redux/store';
 import { Rocket } from './Rocket';
 

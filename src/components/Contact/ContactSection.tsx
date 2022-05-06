@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { IContactSection } from './index.d';
 import { variants } from '../../animations/variants';
+import { IContactSection } from './index.d';
 
 const ContactSection = ({ icon, title, content }: IContactSection) => {
   const Icon = icon;

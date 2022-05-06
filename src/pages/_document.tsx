@@ -1,9 +1,9 @@
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from 'next/document';
 // import Script from 'next/script'
 

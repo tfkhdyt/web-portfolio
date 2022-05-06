@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 
-import { menu } from '../Layout/data';
-
-import Icon from './Icon';
 import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
+import { menu } from '../Layout/data';
+import Icon from './Icon';
 
 const getIsThemeDark = () => {
   if (typeof window !== 'undefined') {

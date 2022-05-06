@@ -4,11 +4,11 @@ import Link from 'next/link';
 // import { variants } from '../../animations/variants';
 // import SocialMediaIcons from '../SocialMediaIcons';
 import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
-import socialMedia from '../SocialMediaIcons/data';
 import { menu } from '../Layout/data';
+import socialMedia from '../SocialMediaIcons/data';
+import Chart from './Chart';
 import Money from './Money';
 // import CV from './CV';
-import Chart from './Chart';
 import Visitors from './Visitors';
 
 const Footer = () => {

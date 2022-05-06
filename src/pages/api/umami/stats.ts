@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { NextApiRequest, NextApiResponse } from 'next';
 import { sub } from 'date-fns';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const USERNAME = process.env.UMAMI_USERNAME;
 const PASSWORD = process.env.UMAMI_PASSWORD;
