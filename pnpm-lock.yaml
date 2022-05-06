@@ -10,6 +10,7 @@ specifiers:
   axios: ^0.26.1
   chart.js: ^3.7.1
   daisyui: ^2.14.2
+  date-fns: ^2.28.0
   eslint: ^8.14.0
   eslint-plugin-react: ^7.29.4
   framer-motion: ^6.3.3
@@ -33,6 +34,7 @@ dependencies:
   axios: 0.26.1
   chart.js: 3.7.1
   daisyui: 2.14.3_dasmk2mtnuslynddah5ntwlmci
+  date-fns: 2.28.0
   framer-motion: 6.3.3_ef5jwxihqo6n7gxfmzogljlgcm
   next: 12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   next-pwa: 5.5.2_next@12.1.6
@@ -2096,6 +2098,11 @@ packages:
       tailwindcss: 3.0.24
     transitivePeerDependencies:
       - ts-node
+    dev: false
+
+  /date-fns/2.28.0:
+    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
+    engines: {node: '>=0.11'}
     dev: false
 
   /debug/4.3.4:

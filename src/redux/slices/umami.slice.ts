@@ -1,22 +1,34 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
+interface IPageViews {
+  allTime: number;
+  last30Days: number;
+}
+
 interface InitialState {
-  pageviews: number;
+  pageviews: IPageViews;
 }
 
 const initialState: InitialState = {
-  pageviews: 0,
+  pageviews: {
+    allTime: 0,
+    last30Days: 0,
+  },
 };
 
 export const umamiSlice = createSlice({
   name: 'umami',
   initialState,
   reducers: {
-    setPageViews: (state, action: PayloadAction<number>) => {
-      state.pageviews = action.payload;
+    setPageViewsAllTime: (state, action: PayloadAction<number>) => {
+      state.pageviews.allTime = action.payload;
+    },
+    setPageViewsLast30Days: (state, action: PayloadAction<number>) => {
+      state.pageviews.last30Days = action.payload;
     },
   },
 });
 
-export const { setPageViews } = umamiSlice.actions;
+export const { setPageViewsAllTime, setPageViewsLast30Days } =
+  umamiSlice.actions;
 export default umamiSlice.reducer;

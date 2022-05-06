@@ -17,7 +17,10 @@ import MetaTags from '../components/MetaTags/MetaTags';
 import Contact from '../components/Contact/Contact';
 import { BackToTop } from '../components/BackToTop/BackToTop';
 import Footer from '../components/Footer/Footer';
-import { setPageViews } from '../redux/slices/umami.slice';
+import {
+  setPageViewsAllTime,
+  setPageViewsLast30Days,
+} from '../redux/slices/umami.slice';
 
 import 'react-toastify/dist/ReactToastify.min.css';
 import useSWR from 'swr';
@@ -60,16 +63,27 @@ const fetcher = async (url: string) => {
 };
 
 const Home = () => {
-  const { data, error } = useSWR('/api/umami/stats', fetcher);
+  const { data: pageviewsAllTime, error: pageviewsAllTimeError } = useSWR(
+    '/api/umami/stats',
+    fetcher
+  );
+  const { data: pageviewsLast30Days, error: pageviewsLast30DaysError } = useSWR(
+    '/api/umami/stats?mode=last30Days',
+    fetcher
+  );
   const dispatch = useDispatch();
 
-  if (data) dispatch(setPageViews(data.pageviews.value));
+  if (pageviewsAllTime)
+    dispatch(setPageViewsAllTime(pageviewsAllTime.pageviews.value));
+  if (pageviewsLast30Days)
+    dispatch(setPageViewsLast30Days(pageviewsLast30Days.pageviews.value));
 
   useEffect(() => {
     themeChange(false);
   }, []);
 
-  if (error) console.error(error);
+  if (pageviewsAllTimeError) console.error(pageviewsAllTimeError);
+  if (pageviewsLast30DaysError) console.error(pageviewsLast30DaysError);
 
   return (
     <>
