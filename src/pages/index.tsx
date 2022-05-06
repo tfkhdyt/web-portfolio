@@ -20,6 +20,7 @@ import Resume from '../components/Resume/Resume';
 import Skills from '../components/Skills/Skills';
 import {
   setPageViewsAllTime,
+  setPageViewsLast24Hours,
   setPageViewsLast30Days,
 } from '../redux/slices/umami.slice';
 
@@ -71,12 +72,16 @@ const Home = () => {
     '/api/umami/stats?mode=last30Days',
     fetcher
   );
+  const { data: pageviewsLast24Hours, error: pageviewsLast24HoursError } =
+    useSWR('/api/umami/stats?mode=last24Hours', fetcher);
   const dispatch = useDispatch();
 
   if (pageviewsAllTime)
     dispatch(setPageViewsAllTime(pageviewsAllTime.pageviews.value));
   if (pageviewsLast30Days)
     dispatch(setPageViewsLast30Days(pageviewsLast30Days.pageviews.value));
+  if (pageviewsLast24Hours)
+    dispatch(setPageViewsLast24Hours(pageviewsLast24Hours.pageviews.value));
 
   useEffect(() => {
     themeChange(false);
@@ -84,6 +89,7 @@ const Home = () => {
 
   if (pageviewsAllTimeError) console.error(pageviewsAllTimeError);
   if (pageviewsLast30DaysError) console.error(pageviewsLast30DaysError);
+  if (pageviewsLast24HoursError) console.error(pageviewsLast24HoursError);
 
   return (
     <>

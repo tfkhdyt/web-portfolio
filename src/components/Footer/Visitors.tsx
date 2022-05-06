@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '../../redux/store';
 import People from './People';
+import TextWithTooltip from './TextWithTooltip';
 
 const Visitors = () => {
   const pageviewsAllTime = useSelector(
@@ -10,20 +11,25 @@ const Visitors = () => {
   const pageviewsLast30Days = useSelector(
     (state: RootState) => state.umami.pageviews.last30Days
   );
+  const pageviewsLast24Hours = useSelector(
+    (state: RootState) => state.umami.pageviews.last24Hours
+  );
 
   return (
     <div className='flex items-center text-xs font-semibold text-slate-500'>
       <People />
       {' : '}
-      {pageviewsAllTime || pageviewsLast30Days ? (
-        <span className='space-x-1'>
-          <span className='tooltip ml-1' data-tip='Last 30 days'>
-            {pageviewsLast30Days.toLocaleString('id-ID')}
-          </span>
-          <span>/</span>
-          <span className='tooltip' data-tip='All time'>
-            {pageviewsAllTime.toLocaleString('id-ID')}
-          </span>
+      {pageviewsAllTime || pageviewsLast30Days || pageviewsLast24Hours ? (
+        <span className='divide-x divide-slate-600'>
+          <TextWithTooltip
+            tooltipLabel='Last 24 hours'
+            value={pageviewsLast24Hours}
+          />
+          <TextWithTooltip
+            tooltipLabel='Last 30 days'
+            value={pageviewsLast30Days}
+          />
+          <TextWithTooltip tooltipLabel='All time' value={pageviewsAllTime} />
         </span>
       ) : (
         // `${pageviewsLast30Days.toLocaleString(

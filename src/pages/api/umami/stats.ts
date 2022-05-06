@@ -41,6 +41,8 @@ const umamiAPI = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (mode === 'last30Days')
     startDate = sub(currentDate, { days: 30 }).getTime();
+  else if (mode === 'last24Hours')
+    startDate = sub(currentDate, { hours: 24 }).getTime();
 
   // get token from umami, with given username and password from .env file
   const token = await getTokenFromUmami(USERNAME as string, PASSWORD as string);
