@@ -35,14 +35,10 @@ const getTokenFromUmami = async (username: string, password: string) => {
 };
 
 const umamiAPI = async (req: NextApiRequest, res: NextApiResponse) => {
-  const { mode } = req.query;
-  let startDate = 0;
   const currentDate = Date.now();
-
-  if (mode === 'last30Days')
-    startDate = sub(currentDate, { days: 30 }).getTime();
-  else if (mode === 'last24Hours')
-    startDate = sub(currentDate, { hours: 24 }).getTime();
+  const startDateAllTime = 0;
+  const startDateLast24Hours = sub(currentDate, { hours: 24 }).getTime();
+  const startDateLast30Days = sub(currentDate, { days: 30 }).getTime();
 
   // get token from umami, with given username and password from .env file
   const token = await getTokenFromUmami(USERNAME as string, PASSWORD as string);
@@ -55,13 +51,29 @@ const umamiAPI = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   // get pageviews from umami `/api/website/1/pageviews`
-  const pageviews = await umami.get(
-    `/api/website/1/stats?start_at=${startDate}&end_at=${currentDate}`,
+  const { data: allTime } = await umami.get(
+    `/api/website/1/stats?start_at=${startDateAllTime}&end_at=${currentDate}`,
     {
       headers: { Authorization: `Bearer ${token}` },
     }
   );
-  return res.status(200).send(pageviews.data);
+  const { data: last24Hours } = await umami.get(
+    `/api/website/1/stats?start_at=${startDateLast24Hours}&end_at=${currentDate}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+  const { data: last30Days } = await umami.get(
+    `/api/website/1/stats?start_at=${startDateLast30Days}&end_at=${currentDate}`,
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+  return res.status(200).send({
+    allTime: allTime.uniques.value,
+    last24Hours: last24Hours.uniques.value,
+    last30Days: last30Days.uniques.value,
+  });
 };
 
 export default umamiAPI;

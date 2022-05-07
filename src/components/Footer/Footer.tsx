@@ -4,6 +4,7 @@ import Link from 'next/link';
 // import { variants } from '../../animations/variants';
 // import SocialMediaIcons from '../SocialMediaIcons';
 import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
+import { IPageViews } from '../../redux/slices/umami.slice';
 import { menu } from '../Layout/data';
 import socialMedia from '../SocialMediaIcons/data';
 import Chart from './Chart';
@@ -11,7 +12,7 @@ import Money from './Money';
 // import CV from './CV';
 import Visitors from './Visitors';
 
-const Footer = () => {
+const Footer = ({ visitors }: { visitors: IPageViews }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -92,7 +93,7 @@ const Footer = () => {
           <p className='text-xs font-semibold text-slate-400'>
             © {currentYear} Taufik Hidayat • All Rights Reserved
           </p>
-          <Visitors />
+          <Visitors data={visitors} />
         </div>
       </div>
     </div>

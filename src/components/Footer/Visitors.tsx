@@ -1,35 +1,32 @@
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
-import { RootState } from '../../redux/store';
+import { IPageViews } from '../../redux/slices/umami.slice';
+// import { RootState } from '../../redux/store';
 import People from './People';
 import TextWithTooltip from './TextWithTooltip';
 
-const Visitors = () => {
-  const pageviewsAllTime = useSelector(
-    (state: RootState) => state.umami.pageviews.allTime
-  );
-  const pageviewsLast30Days = useSelector(
-    (state: RootState) => state.umami.pageviews.last30Days
-  );
-  const pageviewsLast24Hours = useSelector(
-    (state: RootState) => state.umami.pageviews.last24Hours
-  );
+const Visitors = ({ data }: { data: IPageViews }) => {
+  // const { last24Hours, last30Days, allTime } = useSelector(
+  //   (state: RootState) => state.umami.pageviews
+  // );
+
+  // if (allTime) console.log('All time:', allTime);
 
   return (
     <div className='flex items-center text-xs font-semibold text-slate-500'>
       <People />
       {' : '}
-      {pageviewsAllTime || pageviewsLast30Days || pageviewsLast24Hours ? (
+      {data ? (
         <span className='divide-x divide-slate-600'>
           <TextWithTooltip
             tooltipLabel='Last 24 hours'
-            value={pageviewsLast24Hours}
+            value={data.last24Hours}
           />
           <TextWithTooltip
             tooltipLabel='Last 30 days'
-            value={pageviewsLast30Days}
+            value={data.last30Days}
           />
-          <TextWithTooltip tooltipLabel='All time' value={pageviewsAllTime} />
+          <TextWithTooltip tooltipLabel='All time' value={data.allTime} />
         </span>
       ) : (
         // `${pageviewsLast30Days.toLocaleString(

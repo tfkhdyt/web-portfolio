@@ -7,11 +7,11 @@ import { store } from '../redux/store';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AnimatePresence exitBeforeEnter>
-      <Provider store={store}>
+    <Provider store={store}>
+      <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />
-      </Provider>
-    </AnimatePresence>
+      </AnimatePresence>
+    </Provider>
   );
 }
 
