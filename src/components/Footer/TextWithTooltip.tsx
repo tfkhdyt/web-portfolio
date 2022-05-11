@@ -5,7 +5,7 @@ interface ITextWithTooltip {
 
 const TextWithTooltip = ({ tooltipLabel, value }: ITextWithTooltip) => {
   return (
-    <span className='tooltip px-1' data-tip={tooltipLabel}>
+    <span className='tooltip px-1 cursor-pointer' data-tip={tooltipLabel}>
       {value.toLocaleString('id-ID')}
     </span>
   );

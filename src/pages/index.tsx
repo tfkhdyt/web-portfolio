@@ -101,7 +101,7 @@ const Home = () => {
           <Resume />
           <Projects />
           <Contact />
-          {data && <Footer visitors={data} />}
+          <Footer visitors={data} />
         </Layout>
         <BackToTop />
       </MotionConfig>

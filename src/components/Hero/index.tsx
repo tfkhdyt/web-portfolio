@@ -97,7 +97,7 @@ const Hero = () => {
               // xmlns:xlink='http://www.w3.org/1999/xlink'
               className={`-mb-80 md:-mb-72 lg:-mb-32 h-10 w-10 ${
                 scrollY >= 140 && 'pointer-events-none opacity-0'
-              } transition-all duration-500 [fill-rule:evenodd] [clip-rule:evenodd] [stroke-linecap:round] [stroke-linejoin:round] [stroke-miterlimit:1.5]`}
+              } transition-all duration-500 [fill-rule:evenodd] [clip-rule:evenodd] [stroke-linecap:round] [stroke-linejoin:round] [stroke-miterlimit:1.5] cursor-pointer`}
             >
               <path
                 id='wheel'

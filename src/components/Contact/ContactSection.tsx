@@ -31,7 +31,7 @@ const ContactSection = ({ icon, title, content }: IContactSection) => {
             title === 'Telegram' ? ' username' : ''
           }`}
         >
-          <p onClick={handleCopy} className='text-base-200'>
+          <p onClick={handleCopy} className='text-base-200 cursor-pointer'>
             {content}
           </p>
         </div>

@@ -64,7 +64,7 @@ const Footer = ({ visitors }: { visitors: IPageViews }) => {
             {menu.map((value) => {
               return (
                 <p
-                  className='text-slate-400 w-fit'
+                  className='text-slate-400 w-fit cursor-pointer'
                   key={value.title}
                   onClick={() => handleDrawer(value.to)}
                 >
