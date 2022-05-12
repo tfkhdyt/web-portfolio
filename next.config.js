@@ -5,9 +5,9 @@ const withPWA = require('next-pwa');
 module.exports = withPWA({
   reactStrictMode: true,
   compiler: {
-    // removeConsole: {
-    //   exclude: ['error'],
-    // },
+    removeConsole: {
+      exclude: ['error'],
+    },
   },
   swcMinify: true,
   pwa: {
