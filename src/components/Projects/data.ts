@@ -18,6 +18,14 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/tfkhdyt/web-portfolio',
   },
   {
+    name: 'Random Quote Generator',
+    description: 'A web app that will generate a random quote for you',
+    type: ProjectType.WEB,
+    tags: ['TypeScript', 'Next.js', 'Tailwind CSS'],
+    picture: 'quotes.png',
+    repoLink: 'https://github.com/tfkhdyt/random-quote-generator',
+  },
+  {
     name: 'Full Stack Roadmap',
     description: 'Roadmap to become a Full Stack Developer',
     type: ProjectType.WEB,
