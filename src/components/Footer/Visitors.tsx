@@ -1,16 +1,27 @@
-// import { useSelector } from 'react-redux';
+import axios from 'axios';
+import useSWR from 'swr';
 
-import { IPageViews } from '../../redux/slices/umami.slice';
-// import { RootState } from '../../redux/store';
 import People from './People';
 import TextWithTooltip from './TextWithTooltip';
 
-const Visitors = ({ data }: { data: IPageViews }) => {
-  // const { last24Hours, last30Days, allTime } = useSelector(
-  //   (state: RootState) => state.umami.pageviews
-  // );
+const BASE_URL = process.env.BASE_URL;
 
-  // if (allTime) console.log('All time:', allTime);
+const umamiClient = axios.create({
+  baseURL: BASE_URL,
+});
+
+const fetcher = async (url: string) => {
+  const { data } = await umamiClient.get(url).catch((err) => {
+    throw err;
+  });
+  if (!data) return null;
+  return data;
+};
+
+const Visitors = () => {
+  const { data, error } = useSWR('/api/umami/stats', fetcher);
+
+  if (error) console.error(error);
 
   return (
     <div className='flex items-center text-xs font-semibold text-slate-500'>
@@ -29,9 +40,6 @@ const Visitors = ({ data }: { data: IPageViews }) => {
           <TextWithTooltip tooltipLabel='All time' value={data.allTime} />
         </span>
       ) : (
-        // `${pageviewsLast30Days.toLocaleString(
-        //   'id-ID'
-        // )} / ${pageviewsAllTime.toLocaleString('id-ID')}`
         <div className='animate-pulse ml-1 w-12 h-3 rounded-sm bg-slate-500 '></div>
       )}
     </div>

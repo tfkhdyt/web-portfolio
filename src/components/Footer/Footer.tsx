@@ -1,18 +1,13 @@
 import Link from 'next/link';
-// import { motion } from 'framer-motion';
 
-// import { variants } from '../../animations/variants';
-// import SocialMediaIcons from '../SocialMediaIcons';
 import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
-import { IPageViews } from '../../redux/slices/umami.slice';
 import { menu } from '../Layout/data';
 import socialMedia from '../SocialMediaIcons/data';
 import Chart from './Chart';
 import Money from './Money';
-// import CV from './CV';
 import Visitors from './Visitors';
 
-const Footer = ({ visitors }: { visitors: IPageViews }) => {
+const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -93,55 +88,11 @@ const Footer = ({ visitors }: { visitors: IPageViews }) => {
           <p className='text-xs font-semibold text-slate-400'>
             © {currentYear} Taufik Hidayat • All Rights Reserved
           </p>
-          <Visitors data={visitors} />
+          <Visitors />
         </div>
       </div>
     </div>
   );
-
-  /* return (
-    <div className='w-screen'>
-    <div className='bg-slate-800 -mb-2 px-6 md:px-56 py-10 mx-auto'>
-        <div className='grid w-full w-screen place-items-center py-6 text-slate-200'>
-        <div className='grid grid-cols-1 md:grid-cols-3 w-screen text-slate-200 gap-6 w-full'>
-          <div className='space-y-1 mb-4 md:mb-0'>
-            <p className='font-black text-3xl'>./tfkhdyt</p>
-            <p className='font-thin text-sm text-slate-400'>
-              Junior Full Stack TypeScript Developer
-            </p>
-          </div>
-          <div className='space-y-1'>
-            <p className='font-bold'>Explore</p>
-            {menu.map((value) => {
-              return (
-                <p
-                  className='text-slate-400'
-                  key={value.title}
-                  onClick={() => handleDrawer(value.to)}
-                >
-                  {value.title}
-                </p>
-              );
-            })}
-          </div>
-          <div className='font-bold'>Reach me out on</div>
-          <motion.div
-            variants={variants}
-            initial='fromBottom'
-            whileInView='toTop'
-            viewport={{ once: true }}
-            className='flex flex-col items-center space-y-2'
-          >
-            <p className='text-lg font-bold'>Reach me out on</p>
-            <SocialMediaIcons />
-            <p className='pt-5 text-sm font-semibold'>
-              © {currentYear} ./tfkhdyt • All Rights Reserved
-            </p>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  ); */
 };
 
 export default Footer;
