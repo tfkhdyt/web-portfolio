@@ -4,7 +4,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Be Vietnam Pro', 'Fira Sans', 'sans-serif'],
-        mono: ['Fira Code', 'monospace']
+        mono: ['Fira Code', 'monospace'],
       },
     },
   },
@@ -13,4 +13,4 @@ module.exports = {
     themes: ['light', 'dracula'],
     logs: false,
   },
-}
+};

@@ -70,9 +70,9 @@ const umamiAPI = async (req: NextApiRequest, res: NextApiResponse) => {
     }
   );
   return res.status(200).send({
-    allTime: allTime.uniques.value,
-    last24Hours: last24Hours.uniques.value,
-    last30Days: last30Days.uniques.value,
+    allTime: allTime.pageviews.value,
+    last24Hours: last24Hours.pageviews.value,
+    last30Days: last30Days.pageviews.value,
   });
 };
 
