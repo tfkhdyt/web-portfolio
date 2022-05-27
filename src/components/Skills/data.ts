@@ -177,6 +177,12 @@ export const skills: ISkills[] = [
     isMainSkill: true,
   },
   {
+    title: 'Android',
+    icon: 'android.svg',
+    type: 'Operating System',
+    isMainSkill: true,
+  },
+  {
     title: 'Manjaro (Distro)',
     icon: 'manjaro.svg',
     type: 'Operating System',
