@@ -158,4 +158,42 @@ export const skills: ISkills[] = [
     icon: 'jquery.svg',
     type: 'JS Framework',
   },
+  {
+    title: 'EndeavourOS (Distro)',
+    icon: 'endeavouros.svg',
+    type: 'Operating System',
+    isMainSkill: true,
+  },
+  {
+    title: 'Arch Linux (Distro)',
+    icon: 'arch.svg',
+    type: 'Operating System',
+    isMainSkill: true,
+  },
+  {
+    title: 'GNU/Linux',
+    icon: 'linux.png',
+    type: 'Operating System',
+    isMainSkill: true,
+  },
+  {
+    title: 'Manjaro (Distro)',
+    icon: 'manjaro.svg',
+    type: 'Operating System',
+  },
+  {
+    title: 'Windows 10',
+    icon: 'win10.svg',
+    type: 'Operating System',
+  },
+  {
+    title: 'Windows 7',
+    icon: 'win7.png',
+    type: 'Operating System',
+  },
+  {
+    title: 'Windows xp',
+    icon: 'winxp.png',
+    type: 'Operating System',
+  },
 ];
