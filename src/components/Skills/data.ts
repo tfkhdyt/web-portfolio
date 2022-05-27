@@ -198,7 +198,7 @@ export const skills: ISkills[] = [
     type: 'Operating System',
   },
   {
-    title: 'Windows xp',
+    title: 'Windows XP',
     icon: 'winxp.png',
     type: 'Operating System',
   },
