@@ -26,6 +26,12 @@ export const skills: ISkills[] = [
     isMainSkill: true,
   },
   {
+    title: 'Golang',
+    icon: 'golang.svg',
+    type: 'Language',
+    isMainSkill: true,
+  },
+  {
     title: 'React (Library)',
     icon: 'react.svg',
     type: 'JS Framework',
@@ -96,11 +102,7 @@ export const skills: ISkills[] = [
     icon: 'ejs.svg',
     type: 'Language',
   },
-  {
-    title: 'Golang',
-    icon: 'golang.svg',
-    type: 'Language',
-  },
+
   {
     title: 'Express',
     icon: 'express.svg',
