@@ -19,3 +19,7 @@
 img {
   pointer-events: none;
 }
+
+[data-theme='dracula'] {
+  color-scheme: dark;
+}
