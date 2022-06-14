@@ -113,11 +113,14 @@ const Resume = () => {
                 time='Jan 2019 - Mar 2019'
               >
                 <ul className='ml-6 list-disc font-light'>
-                  <li>Web Hosting Service</li>
-                  <li>Google SEO</li>
-                  <li>Database Management</li>
-                  <li>E-commerce Website Development</li>
-                  <li>Blog Article Publishing</li>
+                  <li>Developed an e-commerce website for resellers</li>
+                  <li>
+                    Deployed websites that have been finished by the team to web
+                    hosting service
+                  </li>
+                  <li>Managed a company product list database</li>
+                  <li>Published articles for client’s company blog</li>
+                  <li>Improved client’s website Seach Engine Optimization</li>
                 </ul>
               </Card>
             </motion.div>
