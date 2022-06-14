@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 import { variants } from '../../animations/variants';
@@ -34,7 +35,7 @@ const Hero = () => {
     >
       <div className='hero-content'>
         <div className='max-w-md px-4 md:max-w-3xl lg:max-w-5xl'>
-          <div className='flex grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
+          <div className='grid grid-cols-1 items-center gap-x-4 md:grid-cols-2'>
             <motion.div
               variants={variants}
               initial='fromLeft'
@@ -65,6 +66,24 @@ const Hero = () => {
                   }}
                 />
               </div>
+              <Link href='https://drive.google.com/file/d/1NJcXYr5SZNkxt03KKaiDNNYoc2_cCWBj/view?usp=sharing'>
+                <a
+                  className='flex justify-center items-center px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 mt-6 space-x-2 w-fit'
+                  target='_blank'
+                >
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 24 24'
+                    fill='currentColor'
+                    className='h-5 w-5'
+                  >
+                    <path d='M19.479 10.092c-.212-3.951-3.473-7.092-7.479-7.092-4.005 0-7.267 3.141-7.479 7.092-2.57.463-4.521 2.706-4.521 5.408 0 3.037 2.463 5.5 5.5 5.5h13c3.037 0 5.5-2.463 5.5-5.5 0-2.702-1.951-4.945-4.521-5.408zm-7.479 6.908l-4-4h3v-4h2v4h3l-4 4z' />
+                  </svg>
+                  <span>Download CV</span>
+                </a>
+              </Link>
             </motion.div>
             <motion.div
               variants={variants}
