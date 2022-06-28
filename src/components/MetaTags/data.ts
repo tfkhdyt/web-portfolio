@@ -1,11 +1,11 @@
 export default {
   header: 'TAUFIK HIDAYAT - Portfolio Website',
   title: 'TAUFIK HIDAYAT - Portfolio Website',
-  favicon: '/thumbnail.jpg',
+  favicon: '/favicon.ico',
   link: 'https://tfkhdyt.my.id',
   deskripsi:
     "Hi everyone, my name is Taufik Hidayat. I'm a Full Stack Developer, Informatics Student, YouTuber, Free/Libre and Open Source Software Enthusiast, and Professional Googler.",
-  thumbnail: '/thumbnail.jpg',
+  thumbnail: '/thumbnail-720.png',
   keywords: [
     'Portofolio web taufik',
     'Taufik web portfolio',

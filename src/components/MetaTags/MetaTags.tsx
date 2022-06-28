@@ -21,6 +21,7 @@ const MetaTags = () => {
       <meta property='og:type' content='website' />
       <meta property='og:url' content={Data.link} />
       <link rel='image_src' href={Data.link + Data.thumbnail} />
+      <link rel='icon' type='image/x-icon' href={Data.link + Data.favicon} />
     </>
   );
 };
