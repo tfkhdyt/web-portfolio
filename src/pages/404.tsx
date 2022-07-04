@@ -6,8 +6,8 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { themeChange } from 'theme-change';
 
-import { variants } from '../animations/variants';
-import GradientText from '../components/GradientText';
+import { variants } from '@/animations/variants';
+import GradientText from '@/components/GradientText';
 
 const _404 = () => {
   const router = useRouter();
@@ -30,7 +30,7 @@ const _404 = () => {
           exit='fromBottom'
           key='404'
           transition={{ duration: 1.5, type: 'tween', ease: 'backInOut' }}
-          className='flex grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md items-center container px-4 md:max-w-3xl lg:max-w-5xl -mt-24 md:-mt-0'
+          className='grid grid-cols-1 md:grid-cols-2 gap-4 max-w-md items-center container px-4 md:max-w-3xl lg:max-w-5xl -mt-24 md:-mt-0'
         >
           <div className='mx-auto w-10/12 md:w-full md:order-last'>
             <Link href='https://storyset.com/people'>

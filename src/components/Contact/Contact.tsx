@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { variants } from '../../animations/variants';
+import { variants } from '@/animations/variants';
+
 import ContactSection from './ContactSection';
 import { contacts } from './data';
 import Form from './Form';

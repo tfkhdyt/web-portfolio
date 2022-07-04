@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
-import { variants } from '../../animations/variants';
+import { variants } from '@/animations/variants';
+
 import { IContactSection } from './index.d';
 
 const ContactSection = ({ icon, title, content }: IContactSection) => {

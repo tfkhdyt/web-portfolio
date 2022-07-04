@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux';
 
-import useScroll from '../../hooks/useScroll';
-import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
-import { RootState } from '../../redux/store';
+import useScroll from '@/hooks/useScroll';
+import { handleDrawer } from '@/lib/scroll-to-section/scroll-to-section';
+import { RootState } from '@/redux/store';
+
 import { Rocket } from './Rocket';
 
 export function BackToTop() {

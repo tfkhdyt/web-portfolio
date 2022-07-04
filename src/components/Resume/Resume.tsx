@@ -14,7 +14,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { Chart } from 'react-chartjs-2';
 
-import { variants } from '../../animations/variants';
+import { variants } from '@/animations/variants';
+
 import Card from './Card';
 import {
   chartKuliahOptions,

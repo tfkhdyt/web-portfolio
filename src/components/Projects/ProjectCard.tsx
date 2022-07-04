@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { trackEvent } from '../../lib/analytics/trackEvent';
+import { trackEvent } from '@/lib/analytics/trackEvent';
+
 import { IProjectCard } from './index.d';
 
 const ProjectCard = ({

@@ -3,7 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-import { variants } from '../../animations/variants';
+import { variants } from '@/animations/variants';
+
 import GradientText from '../GradientText';
 import SocialMediaIcons from '../SocialMediaIcons';
 import styles from './Hero.module.css';

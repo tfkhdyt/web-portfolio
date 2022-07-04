@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-import { handleDrawer } from '../../lib/scroll-to-section/scroll-to-section';
+import { handleDrawer } from '@/lib/scroll-to-section/scroll-to-section';
+
 import { menu } from '../Layout/data';
 import socialMedia from '../SocialMediaIcons/data';
 import Chart from './Chart';

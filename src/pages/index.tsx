@@ -4,16 +4,16 @@ import { useEffect } from 'react';
 import { Slide, ToastContainer } from 'react-toastify';
 import { themeChange } from 'theme-change';
 
-import About from '../components/About/About';
-import { BackToTop } from '../components/BackToTop/BackToTop';
-import Contact from '../components/Contact/Contact';
-import Footer from '../components/Footer/Footer';
-import Hero from '../components/Hero';
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags/MetaTags';
-import Projects from '../components/Projects/Projects';
-import Resume from '../components/Resume/Resume';
-import Skills from '../components/Skills/Skills';
+import About from '@/components/About/About';
+import { BackToTop } from '@/components/BackToTop/BackToTop';
+import Contact from '@/components/Contact/Contact';
+import Footer from '@/components/Footer/Footer';
+import Hero from '@/components/Hero';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags/MetaTags';
+import Projects from '@/components/Projects/Projects';
+import Resume from '@/components/Resume/Resume';
+import Skills from '@/components/Skills/Skills';
 
 import 'react-toastify/dist/ReactToastify.min.css';
 

@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 
-import { setIsMenuOpened } from '../../redux/slices/menu.slice';
+import { setIsMenuOpened } from '@/redux/slices/menu.slice';
+
 import Navbar from '../Navbar';
 import { menu } from './data';
 import { LayoutProps } from './index.d';
