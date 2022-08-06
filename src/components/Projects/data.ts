@@ -18,6 +18,14 @@ export const projects: Project[] = [
     repoLink: 'https://github.com/tfkhdyt/web-portfolio',
   },
   {
+    name: 'Gatotkaca',
+    description: 'Metaseach-engine, based on SearXNG',
+    type: ProjectType.WEB,
+    tags: ['Python', 'SearXNG'],
+    picture: 'gatotkaca.png',
+    repoLink: 'https://github.com/tfkhdyt/gatotkaca',
+  },
+  {
     name: 'Random Quote Generator',
     description: 'A web app that will generate a random quote for you',
     type: ProjectType.WEB,
