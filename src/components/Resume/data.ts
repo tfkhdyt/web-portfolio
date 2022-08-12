@@ -20,7 +20,7 @@ export const chartKuliahOptions = {
     y: {
       display: true,
       // beginAtZero: true,
-      min: 3.4,
+      min: 3.0,
       // max: 4.0,
       /* ticks: {
         stepSize: 0.5,

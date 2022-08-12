@@ -66,6 +66,14 @@ const Resume = () => {
     }
   }, []);
 
+  const createSemesterArray = (numberOfSemester: number) => {
+    const array: string[] = [];
+    for (let index = 1; index <= numberOfSemester; index++) {
+      array.push(String(index));
+    }
+    return array;
+  };
+
   const createGradient = (ctx: CanvasRenderingContext2D) => {
     const gradient = ctx.createLinearGradient(0, 0, 0, 150);
     gradient.addColorStop(0, 'rgba(59, 130, 246, 1)');
@@ -171,7 +179,7 @@ const Resume = () => {
                       type='line'
                       ref={chartKuliahref}
                       data={{
-                        labels: ['1', '2', '3'],
+                        labels: createSemesterArray(ips.length),
                         datasets: [
                           {
                             ...kuliahDataSets,
