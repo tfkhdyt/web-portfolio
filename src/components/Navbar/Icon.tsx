@@ -3,7 +3,8 @@ function Icon() {
     <svg
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 400 400'
-      className='h-6 w-6 fill-base-content'
+      className='h-6 w-6'
+      fill='currentColor'
     >
       <g>
         <path
