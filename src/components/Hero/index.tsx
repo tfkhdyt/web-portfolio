@@ -53,7 +53,7 @@ const Hero = () => {
                   to='to-violet-600'
                   style='inline font-semibold'
                 >
-                  Full Stack Developer
+                  Junior Full Stack Developer
                 </GradientText>{' '}
                 from Bandung, Indonesia
               </p>

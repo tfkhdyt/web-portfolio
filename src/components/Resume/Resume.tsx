@@ -171,7 +171,7 @@ const Resume = () => {
                 <Card
                   title='University'
                   location='Universitas Bale Bandung'
-                  jurusan='Informatics Engineering'
+                  jurusan='Computer Science'
                   time='2020 - Now'
                 >
                   <div className='min-h-[200px] text-base-content'>

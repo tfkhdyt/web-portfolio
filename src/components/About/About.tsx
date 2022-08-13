@@ -80,9 +80,7 @@ const About = () => {
                 >
                   Taufik Hidayat
                 </GradientText>
-                . I'm a Full Stack Developer, Informatics Student, YouTuber,
-                Free/Libre and Open Source Software Enthusiast, and Professional
-                Googler.
+                . I'm a Junior Full Stack Developer, Computer Science Student, YouTuber, Free/Libre and Open Source Software Enthusiast, and Google-fu.
               </p>
               {about.description.map((value, i) => {
                 let arr: string[] = [];

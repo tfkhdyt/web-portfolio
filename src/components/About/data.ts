@@ -14,7 +14,7 @@ export const about = {
   description: [
     `I live in Bandung, Indonesia. I was born in Majalengka, 1 April 2002. I'm ${getAge(
       '2002-04-01'
-    )} years old. I'm an Informatics Student from Universitas Bale Bandung. `,
+    )} years old. I'm an Computer Science Student from Universitas Bale Bandung. `,
     'My main tech stack is MN3 Stack (MongoDB, NestJS, Next.js, Node.js).',
     'Coding has been my passion and hobby since I was 15 years old, and I love computer since I was a kid.',
     'Besides coding, I love listening to music. My favorite genres are Pop Punk, Post-hardcore, Metalcore, Nu-metal, and Electronicore, | I like playing games too. My favorite genre is First Person Shooter',

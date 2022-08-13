@@ -4,7 +4,7 @@ export default {
   favicon: '/favicon.ico',
   link: 'https://www.tfkhdyt.my.id',
   deskripsi:
-    "Hi everyone, my name is Taufik Hidayat. I'm a Full Stack Developer, Informatics Student, YouTuber, Free/Libre and Open Source Software Enthusiast, and Professional Googler.",
+    "Hi everyone, my name is Taufik Hidayat. I'm a Junior Full Stack Developer, Computer Science Student, YouTuber, Free/Libre and Open Source Software Enthusiast, and Google-fu.",
   thumbnail: '/thumbnail-720.png',
   keywords: [
     'Portofolio web taufik',
