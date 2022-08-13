@@ -19,9 +19,9 @@ const fetcher = async (url: string) => {
 };
 
 const Visitors = () => {
-  const { data, error } = useSWR('/api/umami/stats', fetcher);
+  const { data } = useSWR('/api/umami/stats', fetcher);
 
-  if (error) console.error(error);
+  // if (error) console.error(error);
 
   return (
     <div className='flex items-center text-xs font-semibold text-slate-500'>
