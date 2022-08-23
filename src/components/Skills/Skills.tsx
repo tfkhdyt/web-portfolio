@@ -42,7 +42,7 @@ const About = () => {
               initial='fromBottom'
               whileInView='toTop'
               viewport={{ once: true }}
-              className='tabs flex flex-nowrap justify-start overflow-x-auto md:justify-center'
+              className='tabs flex flex-nowrap justify-start overflow-x-auto lg:justify-center'
             >
               {category.map((value) => (
                 <a
